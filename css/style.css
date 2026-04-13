@@ -138,10 +138,11 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.85rem, 5vw, 2.75rem);
   color: var(--c-primary);
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .section-subtitle {
@@ -787,6 +788,55 @@ button { cursor: pointer; font-family: inherit; }
 .doc-avatar-ent      { background: linear-gradient(135deg, #9333ea, #c084fc); }
 .doc-avatar-physio   { background: linear-gradient(135deg, #047857, #10b981); }
 .doc-avatar-sm       { width: 64px; height: 64px; font-size: 1.3rem; }
+
+/* Ownership & Leadership Styles */
+.owner-card {
+  border: 2px solid rgba(26, 54, 93, 0.1);
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  position: relative;
+}
+.owner-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-green));
+}
+.owner-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--c-primary);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--r-full);
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(26, 54, 93, 0.2);
+}
+.owner-tag {
+  display: inline-block;
+  background: var(--c-primary-dark);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--r-full);
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--c-primary-light);
+  margin-bottom: 0.75rem;
+}
 
 /* ──────────────────────────────────────────────────────────────
    MULTI-SPECIALTY SUB-CARDS (Treatments Page)
@@ -1762,14 +1812,27 @@ footer {
 
 @media (max-width: 768px) {
   .popup-modal-grid { grid-template-columns: 1fr; }
-  .popup-image { height: 200px; }
-  .popup-content { padding: 2rem; }
+  .popup-image { height: 180px; }
+  .popup-content { padding: 2rem 1.5rem; text-align: center; }
   .popup-content h4 { font-size: 1.5rem; }
+  .popup-benefits { align-items: center; }
+  #vc-booking-popup.modal-mode { max-width: 90vw; }
 }
 
 @keyframes chatAppear { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 @media (max-width: 480px) {
-  #vc-chatbot-container { bottom: 6rem; right: 1.25rem; }
-  #vc-chatbot-window { width: calc(100vw - 2.5rem); right: 0; }
+  .container { padding: 0 1.25rem; }
+  .hero-title { font-size: 2rem; }
+  .stats-inner { grid-template-columns: 1fr 1fr; }
+  .treatment-grid { grid-template-columns: 1fr; }
+  .cta-banner h2 { font-size: 1.6rem; }
+  .prp-banner { padding: 2rem 1.5rem; text-align: center; }
+  .prp-inner { justify-items: center; }
+  .hero-stat-num { font-size: 1.5rem; }
+  #vc-chatbot-container { bottom: 6rem; right: 1rem; }
+  #vc-chatbot-window { width: calc(100vw - 2rem); right: 0; }
+  #vc-booking-popup.modal-mode { max-width: 95vw; border-radius: var(--r-lg); }
+  .popup-content { padding: 1.5rem 1rem; }
+  .popup-content h4 { font-size: 1.35rem; }
 }

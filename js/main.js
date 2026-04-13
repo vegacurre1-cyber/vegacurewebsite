@@ -279,7 +279,7 @@ function initBookingPopup() {
         <button class="popup-close" id="vc-popup-close" aria-label="Close"><i class="fas fa-times"></i></button>
         <div class="popup-modal-grid">
           <div class="popup-image">
-            <img src="/expert-consultation.png" alt="Expert Consultation">
+            <img src="./expert-consultation.png" alt="Expert Consultation">
           </div>
           <div class="popup-content">
             <span class="popup-tag">Limited Time Offer</span>
