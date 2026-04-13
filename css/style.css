@@ -758,6 +758,8 @@ button { cursor: pointer; font-family: inherit; }
 .spec-icon.green { background: var(--c-green-bg); color: var(--c-green-dark); }
 .spec-icon.teal { background: #e0f2fe; color: var(--c-teal); }
 .spec-icon.gold { background: #fef3c7; color: #d97706; }
+.spec-icon.purple { background: #f3e8ff; color: #9333ea; }
+.spec-icon.red { background: #fee2e2; color: var(--c-red); }
 
 .specialty-card:hover .spec-icon { transform: scale(1.1); }
 .specialty-card h3 { font-size: 1.3rem; margin-bottom: 0.75rem; }
