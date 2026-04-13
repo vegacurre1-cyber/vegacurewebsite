@@ -281,9 +281,9 @@ button { cursor: pointer; font-family: inherit; }
   position: relative;
   z-index: 1001;
 }
-.top-bar .container { display: flex; justify-content: space-between; align-items: center; }
-.top-bar-left, .top-bar-right { display: flex; gap: 1.5rem; align-items: center; }
-.top-bar-item { display: flex; align-items: center; gap: 0.4rem; }
+.top-bar .container { display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+.top-bar-left, .top-bar-right { display: flex; gap: 2rem; align-items: center; flex-shrink: 0; }
+.top-bar-item { display: flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
 .top-bar-item i { color: var(--c-green); font-size: 0.75rem; }
 
 .emergency-pill {
@@ -1524,6 +1524,8 @@ footer {
   .hero-img-side { display: none; }
   .hero { min-height: 0; }
   .hero-title { font-size: 3.2rem; }
+  .top-bar { font-size: 0.78rem; }
+  .top-bar-left, .top-bar-right { gap: 1rem; }
 }
 
 @media (max-width: 768px) {
