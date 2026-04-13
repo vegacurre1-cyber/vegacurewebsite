@@ -17,7 +17,13 @@
     <div class="container">
       <div class="top-bar-left">
         <span class="top-bar-item"><i class="fas fa-map-marker-alt"></i> 2nd Floor, Shop No. 24 & 25, 3rd A Cross, Bhuvaneshwari Nagar,<br>Dasarahalli Main Road, Hebbal Kempapura, Bengaluru - 560024</span>
-        <span class="top-bar-item"><i class="fas fa-clock"></i> Mon – Sat: 10 AM – 8:30 PM | Sun: 10 AM – 12 PM (Prior Appt)</span>
+        <span class="top-bar-item">
+          <i class="fas fa-clock"></i> 
+          <div class="timing-stack">
+            <span>Mon – Sat: 10 AM – 8:30 PM</span>
+            <span>Sun: 10 AM – 12 PM (Prior Appt)</span>
+          </div>
+        </span>
       </div>
       <div class="top-bar-right">
         <span class="top-bar-item"><i class="fas fa-phone-alt"></i> +91 63641 23431</span>
@@ -37,9 +43,28 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/about.html" class="nav-link">About &amp; Doctors</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li class="nav-item-dropdown">
+          <a class="nav-link">Doctors <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/about.html#doctors" class="dropdown-item"><i class="fas fa-user-md"></i> All Specialists</a></li>
+            <div class="dropdown-divider"></div>
+            <li><a href="/about.html#ortho-doc" class="dropdown-item">Orthopedics</a></li>
+            <li><a href="/about.html#dental-doc" class="dropdown-item">Dental Care</a></li>
+            <li><a href="/about.html#peds-doc" class="dropdown-item">Pediatrics</a></li>
+            <li><a href="/about.html#obgyn-doc" class="dropdown-item">Gynaecology</a></li>
+            <li><a href="/about.html#physio-doc" class="dropdown-item">Physiotherapy</a></li>
+          </ul>
+        </li>
         <li><a href="/treatments.html" class="nav-link active">Treatments</a></li>
-        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item-dropdown">
+          <a class="nav-link">Contact <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/contact.html" class="dropdown-item"><i class="fas fa-map-location-dot"></i> Visit Clinic</a></li>
+            <li><a href="https://wa.me/916364123431" class="dropdown-item" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
+            <li><a href="mailto:vegacurre@gmail.com" class="dropdown-item"><i class="fas fa-envelope"></i> Email Us</a></li>
+          </ul>
+        </li>
         <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav">Book Appointment</a></li>
       </ul>
     </div>
@@ -63,10 +88,11 @@
     <div class="container">
       <div class="subnav-inner">
         <a href="#ortho"      class="subnav-link active" data-section="ortho"><i class="fas fa-bone"></i> Orthopedics</a>
-        <a href="#dental"     class="subnav-link" data-section="dental"><i class="fas fa-tooth"></i> Dental Care</a>
         <a href="#prp"        class="subnav-link" data-section="prp"><i class="fas fa-syringe"></i> PRP & Regenerative</a>
+        <a href="#dental"     class="subnav-link" data-section="dental"><i class="fas fa-tooth"></i> Dental Care</a>
         <a href="#pediatrics" class="subnav-link" data-section="pediatrics"><i class="fas fa-baby"></i> Pediatrics</a>
         <a href="#obgyn"      class="subnav-link" data-section="obgyn"><i class="fas fa-female"></i> Gynaecology</a>
+        <a href="#physio-sec" class="subnav-link" data-section="physio-sec"><i class="fas fa-person-walking"></i> Physiotherapy</a>
         <a href="#specialty"  class="subnav-link" data-section="specialty"><i class="fas fa-stethoscope"></i> Other Specialties</a>
         <a href="#general"    class="subnav-link" data-section="general"><i class="fas fa-plus-circle"></i> General & Lab</a>
       </div>
@@ -197,7 +223,47 @@
     </div>
   </section>
 
-  <!-- ░░░ DENTAL ░░░ -->
+  <!-- ░░░ PEDIATRICS ░░░ -->
+  <section id="pediatrics" class="category-section">
+    <div class="container">
+      <div class="category-header reveal">
+        <div class="cat-icon peds"><i class="fas fa-baby"></i></div>
+        <div>
+          <h2>Pediatrics &amp; Child Health</h2>
+          <p class="section-subtitle">Compassionate care for infants, children, and adolescents by <strong>Dr. S P Kumar</strong></p>
+        </div>
+      </div>
+
+      <div class="treatment-grid reveal">
+        <div class="treatment-card">
+          <div class="tc-icon gold"><i class="fas fa-syringe"></i></div>
+          <div class="tc-text"><strong>Immunization &amp; Vaccinations</strong><span>Complete National & Optional vaccination schedules</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon gold"><i class="fas fa-chart-line"></i></div>
+          <div class="tc-text"><strong>Growth &amp; Development Monitoring</strong><span>Tracking physical and cognitive milestones</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon gold"><i class="fas fa-vial"></i></div>
+          <div class="tc-text"><strong>Newborn &amp; Infant Care</strong><span>Neonatal checkups, nutrition advice, and screening</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon gold"><i class="fas fa-thermometer-half"></i></div>
+          <div class="tc-text"><strong>Infectious Disease Management</strong><span>Fever, respiratory infections, and seasonal illnesses</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon gold"><i class="fas fa-apple-alt"></i></div>
+          <div class="tc-text"><strong>Childhood Nutrition &amp; Wellness</strong><span>Dietary planning for anemia, obesity, and picky eaters</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon gold"><i class="fas fa-brain"></i></div>
+          <div class="tc-text"><strong>Adolescent Health</strong><span>Puberty-related guidance and mental wellness support</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ DENTAL (Shifted here) ░░░ -->
   <section id="dental" class="category-section">
     <div class="container">
       <div class="category-header reveal">
@@ -266,48 +332,6 @@
     </div>
   </section>
 
-
-
-  <!-- ░░░ PEDIATRICS ░░░ -->
-  <section id="pediatrics" class="category-section">
-    <div class="container">
-      <div class="category-header reveal">
-        <div class="cat-icon peds"><i class="fas fa-baby"></i></div>
-        <div>
-          <h2>Pediatrics &amp; Child Health</h2>
-          <p class="section-subtitle">Compassionate care for infants, children, and adolescents by <strong>Dr. S P Kumar</strong></p>
-        </div>
-      </div>
-
-      <div class="treatment-grid reveal">
-        <div class="treatment-card">
-          <div class="tc-icon gold"><i class="fas fa-syringe"></i></div>
-          <div class="tc-text"><strong>Immunization &amp; Vaccinations</strong><span>Complete National & Optional vaccination schedules</span></div>
-        </div>
-        <div class="treatment-card">
-          <div class="tc-icon gold"><i class="fas fa-chart-line"></i></div>
-          <div class="tc-text"><strong>Growth &amp; Development Monitoring</strong><span>Tracking physical and cognitive milestones</span></div>
-        </div>
-        <div class="treatment-card">
-          <div class="tc-icon gold"><i class="fas fa-vial"></i></div>
-          <div class="tc-text"><strong>Newborn &amp; Infant Care</strong><span>Neonatal checkups, nutrition advice, and screening</span></div>
-        </div>
-        <div class="treatment-card">
-          <div class="tc-icon gold"><i class="fas fa-thermometer-half"></i></div>
-          <div class="tc-text"><strong>Infectious Disease Management</strong><span>Fever, respiratory infections, and seasonal illnesses</span></div>
-        </div>
-        <div class="treatment-card">
-          <div class="tc-icon gold"><i class="fas fa-apple-alt"></i></div>
-          <div class="tc-text"><strong>Childhood Nutrition &amp; Wellness</strong><span>Dietary planning for anemia, obesity, and picky eaters</span></div>
-        </div>
-        <div class="treatment-card">
-          <div class="tc-icon gold"><i class="fas fa-brain"></i></div>
-          <div class="tc-text"><strong>Adolescent Health</strong><span>Puberty-related guidance and mental wellness support</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ░░░ OBGYN ░░░ -->
   <section id="obgyn" class="category-section">
     <div class="container">
@@ -343,6 +367,46 @@
         <div class="treatment-card">
           <div class="tc-icon obgyn"><i class="fas fa-user-nurse"></i></div>
           <div class="tc-text"><strong>Menopause Management</strong><span>Relief for symptoms and bone health monitoring</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ PHYSIOTHERAPY (Standalone Section) ░░░ -->
+  <section id="physio-sec" class="category-section">
+    <div class="container">
+      <div class="category-header reveal">
+        <div class="cat-icon physio"><i class="fas fa-person-walking"></i></div>
+        <div>
+          <h2>Advanced Physiotherapy &amp; Rehab</h2>
+          <p class="section-subtitle">Led by <strong>Dr. Rajeev Kumar (PT)</strong> — MPT, specialising in post-op &amp; sports rehab</p>
+        </div>
+      </div>
+
+      <div class="treatment-grid reveal">
+        <div class="treatment-card">
+          <div class="tc-icon green"><i class="fas fa-check"></i></div>
+          <div class="tc-text"><strong>Post-Surgical Rehab</strong><span>Ortho &amp; Joint Replacement recovery protocols</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon green"><i class="fas fa-check"></i></div>
+          <div class="tc-text"><strong>Sports Injury Rehab</strong><span>ACL, meniscus, and muscle strain physical therapy</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon green"><i class="fas fa-check"></i></div>
+          <div class="tc-text"><strong>Neuro Rehabilitation</strong><span>Stroke, Parkinson’s, and mobility restoration</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon green"><i class="fas fa-check"></i></div>
+          <div class="tc-text"><strong>Back &amp; Neck Pain</strong><span>Advanced manual therapy and ergonomic correction</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon green"><i class="fas fa-check"></i></div>
+          <div class="tc-text"><strong>Dry Needling &amp; Taping</strong><span>Modern techniques for trigger point release and support</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon green"><i class="fas fa-check"></i></div>
+          <div class="tc-text"><strong>Ergonomic Consultation</strong><span>Workplace assessment for chronic pain prevention</span></div>
         </div>
       </div>
     </div>

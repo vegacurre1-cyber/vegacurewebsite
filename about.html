@@ -24,7 +24,13 @@
     <div class="container">
       <div class="top-bar-left">
         <span class="top-bar-item"><i class="fas fa-map-marker-alt"></i> 2nd Floor, Shop No. 24 & 25, 3rd A Cross, Bhuvaneshwari Nagar,<br>Dasarahalli Main Road, Hebbal Kempapura, Bengaluru - 560024</span>
-        <span class="top-bar-item"><i class="fas fa-clock"></i> Mon – Sat: 10 AM – 8:30 PM | Sun: 10 AM – 12 PM (Prior Appt)</span>
+        <span class="top-bar-item">
+          <i class="fas fa-clock"></i> 
+          <div class="timing-stack">
+            <span>Mon – Sat: 10 AM – 8:30 PM</span>
+            <span>Sun: 10 AM – 12 PM (Prior Appt)</span>
+          </div>
+        </span>
       </div>
       <div class="top-bar-right">
         <span class="top-bar-item"><i class="fas fa-phone-alt"></i> +91 63641 23431</span>
@@ -44,9 +50,28 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/about.html" class="nav-link active">About &amp; Doctors</a></li>
+        <li><a href="/about.html" class="nav-link active">About</a></li>
+        <li class="nav-item-dropdown">
+          <a class="nav-link">Doctors <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/about.html#doctors" class="dropdown-item"><i class="fas fa-user-md"></i> All Specialists</a></li>
+            <div class="dropdown-divider"></div>
+            <li><a href="/about.html#ortho-doc" class="dropdown-item">Orthopedics</a></li>
+            <li><a href="/about.html#dental-doc" class="dropdown-item">Dental Care</a></li>
+            <li><a href="/about.html#peds-doc" class="dropdown-item">Pediatrics</a></li>
+            <li><a href="/about.html#obgyn-doc" class="dropdown-item">Gynaecology</a></li>
+            <li><a href="/about.html#physio-doc" class="dropdown-item">Physiotherapy</a></li>
+          </ul>
+        </li>
         <li><a href="/treatments.html" class="nav-link">Treatments</a></li>
-        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item-dropdown">
+          <a class="nav-link">Contact <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/contact.html" class="dropdown-item"><i class="fas fa-map-location-dot"></i> Visit Clinic</a></li>
+            <li><a href="https://wa.me/916364123431" class="dropdown-item" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
+            <li><a href="mailto:vegacurre@gmail.com" class="dropdown-item"><i class="fas fa-envelope"></i> Email Us</a></li>
+          </ul>
+        </li>
         <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav">Book Appointment</a></li>
       </ul>
     </div>
@@ -145,7 +170,7 @@
         <h2 class="section-title reveal">Meet Our Founders & Owners</h2>
       </div>
 
-      <div class="grid-2 mb-5">
+      <div class="grid-2 mb-5" id="ortho-doc">
         <!-- Owner 1 -->
         <div class="doctor-card owner-card reveal">
           <div class="owner-badge">Hospital Owner</div>
@@ -161,7 +186,7 @@
         </div>
 
         <!-- Owner 2 -->
-        <div class="doctor-card owner-card reveal">
+        <div class="doctor-card owner-card reveal" id="dental-doc">
           <div class="owner-badge">Hospital Owner</div>
           <div class="doc-avatar doc-avatar-dental">PT</div>
           <h3 class="doc-name">Dr. Priya Trimukhe</h3>
@@ -183,7 +208,7 @@
       <div class="doctors-grid reveal">
 
         <!-- Neuro -->
-        <div class="doctor-card">
+        <div class="doctor-card" id="neuro-doc">
           <div class="doc-avatar doc-avatar-neuro">SG</div>
           <h3 class="doc-name">Dr. Shishirakumar A Goudar</h3>
           <div class="doc-qual">MBBS · MD General Medicine<br>DNB Neurology</div>
@@ -193,7 +218,7 @@
         </div>
 
         <!-- OBG -->
-        <div class="doctor-card">
+        <div class="doctor-card" id="obgyn-doc">
           <div class="doc-avatar doc-avatar-obgyn">MS</div>
           <h3 class="doc-name">Dr. Madhuri Saha</h3>
           <div class="doc-qual">MBBS · DNB · PDDMLE<br>Fellowship in Minimal Access Surgery (FMAS)</div>
@@ -203,7 +228,7 @@
         </div>
 
         <!-- Pediatrics Team -->
-        <div class="doctor-card">
+        <div class="doctor-card" id="peds-doc">
           <div class="doc-avatar doc-avatar-peds">SK</div>
           <h3 class="doc-name">Dr. S P Kumar</h3>
           <div class="doc-qual">MBBS · DCH · FID</div>
@@ -222,7 +247,7 @@
         </div>
 
         <!-- Surgery Team -->
-        <div class="doctor-card">
+        <div class="doctor-card" id="surgery-doc">
           <div class="doc-avatar doc-avatar-surgery">KV</div>
           <h3 class="doc-name">Dr. Kalaivani V.</h3>
           <div class="doc-qual">MBBS · MS (General Surgeon)<br>FRCS · FIAGES · FALS (Hernia)</div>
@@ -242,7 +267,7 @@
         </div>
 
         <!-- ENT -->
-        <div class="doctor-card">
+        <div class="doctor-card" id="ent-doc">
           <div class="doc-avatar doc-avatar-ent">SS</div>
           <h3 class="doc-name">Dr. Sahana Shilankur S</h3>
           <div class="doc-qual">MBBS · DLO</div>
@@ -252,7 +277,7 @@
         </div>
 
         <!-- Physiotherapy Team -->
-        <div class="doctor-card">
+        <div class="doctor-card" id="physio-doc">
           <div class="doc-avatar doc-avatar-physio">RK</div>
           <h3 class="doc-name">Dr. Rajeev Kumar (PT)</h3>
           <div class="doc-qual">BPT · MPT (Physiotherapy)</div>

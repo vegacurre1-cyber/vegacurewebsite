@@ -27,13 +27,41 @@ if (mobileMenuBtn && navLinks) {
     }
   });
 
-  // Close when a nav link is clicked
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+  // Close when a nav link is clicked (unless it's a dropdown toggle)
+  navLinks.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const dropdown = link.closest('.nav-item-dropdown');
+      if (dropdown && window.innerWidth <= 768) {
+        // Toggle dropdown on mobile click
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Close other open dropdowns first
+        navLinks.querySelectorAll('.nav-item-dropdown.open').forEach(openD => {
+          if (openD !== dropdown) openD.classList.remove('open');
+        });
+        
+        dropdown.classList.toggle('open');
+      } else {
+        // Normal link behavior
+        navLinks.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+      }
+    });
+  });
+
+  // Handle dropdown internal links (prevent bubble-up that closes the menu incorrectly)
+  navLinks.querySelectorAll('.dropdown-item').forEach(item => {
+    item.addEventListener('click', () => {
       navLinks.classList.remove('open');
       mobileMenuBtn.setAttribute('aria-expanded', 'false');
       const icon = mobileMenuBtn.querySelector('i');
       if (icon) icon.className = 'fas fa-bars';
+      // Remove 'open' class from parent dropdown so it's fresh next time
+      const dropdown = item.closest('.nav-item-dropdown');
+      if (dropdown) dropdown.classList.remove('open');
     });
   });
 }
