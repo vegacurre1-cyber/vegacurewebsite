@@ -449,7 +449,7 @@ button { cursor: pointer; font-family: inherit; }
   cursor: pointer;
 }
 .nav-link i.fa-chevron-down { font-size: 0.7rem; opacity: 0.6; transition: var(--t); }
-.nav-link:hover, .nav-link.active { color: var(--c-primary); background: var(--c-primary-bg); }
+.nav-link:hover, .nav-link.active { color: var(--c-primary); }
 .nav-link:hover i.fa-chevron-down { transform: translateY(2px); }
 
 .dropdown-menu {
