@@ -52,20 +52,83 @@
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/about.html" class="nav-link active">About</a></li>
         <li class="nav-item-dropdown">
-          <a class="nav-link">Doctors <i class="fas fa-chevron-down"></i></a>
+          <a href="/about.html#doctors" class="nav-link active">Doctors <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
             <li><a href="/about.html#doctors" class="dropdown-item"><i class="fas fa-user-md"></i> All Specialists</a></li>
             <div class="dropdown-divider"></div>
-            <li><a href="/about.html#ortho-doc" class="dropdown-item">Orthopedics</a></li>
-            <li><a href="/about.html#dental-doc" class="dropdown-item">Dental Care</a></li>
-            <li><a href="/about.html#peds-doc" class="dropdown-item">Pediatrics</a></li>
-            <li><a href="/about.html#obgyn-doc" class="dropdown-item">Gynaecology</a></li>
-            <li><a href="/about.html#physio-doc" class="dropdown-item">Physiotherapy</a></li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=ortho" class="dropdown-item">Orthopedics <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=ortho#ortho-doc" class="submenu-item">Dr. Prashanthkumar</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=dental" class="dropdown-item">Dental Care <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=dental#dental-doc" class="submenu-item">Dr. Priya Trimukhe</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=pediatrics" class="dropdown-item">Pediatrics <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=pediatrics#pediatrics-doc" class="submenu-item">Dr. S P Kumar</a></li>
+                <li><a href="/about.html?dept=pediatrics#pediatrics-doc" class="submenu-item">Dr. Varsha Hegde</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=obgyn" class="dropdown-item">Gynaecology <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=obgyn#obgyn-doc" class="submenu-item">Dr. Madhuri Saha</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=physio" class="dropdown-item">Physiotherapy <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=physio#physiotherapy-doc" class="submenu-item">Dr. Rajeev Kumar</a></li>
+                <li><a href="/about.html?dept=physio#physiotherapy-doc" class="submenu-item">Dr. Dhatri R Padsalgi</a></li>
+                <li><a href="/about.html?dept=physio#physiotherapy-doc" class="submenu-item">Dr. Abhishek</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=neurology" class="dropdown-item">Neurology <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=neurology#neurology-doc" class="submenu-item">Dr. Shishirakumar A Goudar</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=surgery" class="dropdown-item">Surgery <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=surgery#surgery-doc" class="submenu-item">Dr. Kalaivani V.</a></li>
+                <li><a href="/about.html?dept=surgery#surgery-doc" class="submenu-item">Dr. Palaniappan Ramanathan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=ent" class="dropdown-item">ENT <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/about.html?dept=ent#ent-doc" class="submenu-item">Dr. Sahana Shilankur S</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
-        <li><a href="/treatments.html" class="nav-link">Treatments</a></li>
         <li class="nav-item-dropdown">
-          <a class="nav-link">Contact <i class="fas fa-chevron-down"></i></a>
+          <a href="/treatments.html" class="nav-link">Treatments <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu treatment-dropdown">
+            <li><a href="/treatments.html" class="dropdown-item"><i class="fas fa-th-large"></i> All Treatments</a></li>
+            <div class="dropdown-divider"></div>
+            <li><a href="/treatments/ortho.html" class="dropdown-item"><i class="fas fa-bone"></i> Orthopedics &amp; Sports Medicine</a></li>
+            <li><a href="/treatments/dental.html" class="dropdown-item"><i class="fas fa-tooth"></i> Advanced Dental Care</a></li>
+            <li><a href="/treatments/pediatrics.html" class="dropdown-item"><i class="fas fa-baby"></i> Pediatrics &amp; Child Health</a></li>
+            <li><a href="/treatments/gynaecology.html" class="dropdown-item"><i class="fas fa-female"></i> Obstetrics &amp; Gynaecology</a></li>
+            <li><a href="/treatments/physiotherapy.html" class="dropdown-item"><i class="fas fa-person-walking"></i> Advanced Physiotherapy</a></li>
+            <li><a href="/treatments/neurology.html" class="dropdown-item"><i class="fas fa-brain"></i> Neurology</a></li>
+            <li><a href="/treatments/ent.html" class="dropdown-item"><i class="fas fa-ear-listen"></i> ENT — Ear, Nose &amp; Throat</a></li>
+            <li><a href="/treatments/surgery.html" class="dropdown-item"><i class="fas fa-procedures"></i> General &amp; Laparoscopic Surgery</a></li>
+            <li><a href="/treatments/diabetes.html" class="dropdown-item"><i class="fas fa-heartbeat"></i> Diabetes &amp; Endocrinology</a></li>
+            <li><a href="/treatments/pulmonology.html" class="dropdown-item"><i class="fas fa-lungs"></i> Pulmonology &amp; Allergy</a></li>
+          </ul>
+        </li>
+        <li class="nav-item-dropdown">
+          <a href="/contact.html" class="nav-link">Contact <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu">
             <li><a href="/contact.html" class="dropdown-item"><i class="fas fa-map-location-dot"></i> Visit Clinic</a></li>
             <li><a href="https://wa.me/916364123431" class="dropdown-item" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
@@ -78,7 +141,7 @@
   </nav>
 
   <!-- ░░░ PAGE HERO ░░░ -->
-  <header class="page-hero">
+  <header class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop');">
     <div class="container page-hero-content reveal">
       <div class="breadcrumb">
         <a href="/">Home</a>
@@ -89,6 +152,36 @@
       <p>10+ board-certified specialists committed to delivering compassionate, world-class care — all under one roof.</p>
     </div>
   </header>
+  
+  <!-- ░░░ DYNAMIC FILTER BANNER ░░░ -->
+  <div class="filter-active-banner">
+    <div class="container">
+      <div class="filter-banner-inner">
+        <div class="filter-info">
+          <i class="fas fa-filter text-primary"></i>
+          <h2>Department View</h2>
+          <span id="active-dept-tag" class="tag">Orthopedics</span>
+        </div>
+        <a href="/about.html" class="btn btn-outline btn-sm">Show All Doctors</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Dynamic Department Hero (Shown only when filtered) -->
+    <section id="dept-hero-section" class="section pb-0 doctor-specialized-section" style="display: none;">
+      <div class="container">
+        <div class="department-hero">
+          <img id="dept-hero-img" src="./images/dept-ortho.png" alt="Department">
+          <div class="department-hero-overlay">
+            <div>
+              <span class="tag tag-green mb-3">Centre of Excellence</span>
+              <h1 id="dept-hero-title">Department of Orthopedics</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <!-- ░░░ OUR STORY ░░░ -->
   <section class="section">
@@ -156,33 +249,40 @@
     </div>
   </section>
 
-  <!-- ░░░ DOCTORS GRID ░░░ -->
-  <section class="section" id="doctors">
-    <div class="container">
-      <div class="section-header center">
-        <div class="section-eyebrow reveal"><i class="fas fa-user-md"></i> Our Specialists</div>
-        <h2 class="section-title reveal">Meet All Our Doctors</h2>
-        <p class="section-subtitle reveal">Every specialist on our panel is carefully selected for their qualifications, experience, and commitment to patient care.</p>
-      </div>
+    <!-- ░░░ DOCTORS GRID ░░░ -->
+    <section id="doctors" class="section bg-light doctor-specialized-section">
+      <div class="container">
+        <div class="section-header center mb-5" id="all-doctors-header">
+          <div class="section-eyebrow reveal"><i class="fas fa-user-md"></i> Our Medical Team</div>
+          <h2 class="section-title reveal">Meet Our Specialists</h2>
+          <p class="section-subtitle reveal">World-class experts dedicated to your health and well-being. Hover over profiles to see qualifications.</p>
+        </div>
 
-      <div class="section-header">
+        <div class="section-header reveal mb-4" id="dept-doctors-header" style="display: none;">
+          <h2 class="section-title">Meet Our <span id="dept-name-inline">Orthopedic</span> Specialists</h2>
+          <p>Expert clinicians specializing in advanced <span id="dept-focus-inline">musculoskeletal</span> care.</p>
+        </div>
+
+      <div class="section-header" id="founders-header">
         <div class="section-tag reveal">Medical Leadership</div>
         <h2 class="section-title reveal">Meet Our Founders & Owners</h2>
       </div>
 
       <div class="grid-2 mb-5" id="ortho-doc">
         <!-- Owner 1 -->
-        <div class="doctor-card owner-card doc-theme-ortho reveal">
+        <div class="doctor-card owner-card doc-theme-ortho reveal active-dept" data-dept="ortho">
           <div class="doc-top-banner">
             <div class="owner-badge">Hospital Owner</div>
             <div class="doc-photo-ring">
-              <div class="doc-avatar doc-avatar-ortho">PK</div>
+              <div class="doc-avatar">
+                <img src="./images/dr-prashanthkumar.jpg" alt="Dr. Prashanthkumar">
+              </div>
             </div>
           </div>
           <div class="doc-card-body">
-            <h3 class="doc-name">Dr. Prashat Kumar</h3>
+            <h3 class="doc-name">Dr. Prashanthkumar</h3>
             <div class="doc-spec-badge">Orthopedics &amp; Sports Medicine</div>
-            <div class="doc-qual">MBBS · D Ortho · DNB · FIJR · Fellowship in Joint Replacement</div>
+            <div class="doc-qual">MBBS, D Ortho, (DNB), FIJR · Fellowship in Joint Replacement</div>
             <p class="doc-bio">Consultant Orthopedic Surgeon and Trauma Specialist. Expert in Joint Replacement, Arthroscopy, ACL/PCL reconstruction, Osteoarthritis management, and pioneering Ortho Regenerative Therapy (PRP/GFC).</p>
             <div class="doc-timing"><i class="far fa-clock"></i><span>10:00 AM – 8:30 PM | Sun: 10 AM – 12 PM (Prior Appt)</span></div>
             <div class="doc-card-cta">
@@ -192,7 +292,7 @@
         </div>
 
         <!-- Owner 2 -->
-        <div class="doctor-card owner-card doc-theme-dental reveal" id="dental-doc">
+        <div class="doctor-card owner-card doc-theme-dental reveal active-dept" id="dental-doc" data-dept="dental">
           <div class="doc-top-banner">
             <div class="owner-badge">Hospital Owner</div>
             <div class="doc-photo-ring">
@@ -212,15 +312,15 @@
         </div>
       </div>
 
-      <div class="section-header">
+      <div class="section-header" id="visiting-header">
         <div class="section-tag reveal">Specialist Panel</div>
         <h2 class="section-title reveal">Our Visiting Specialists</h2>
       </div>
 
       <div class="doctors-grid reveal">
 
-        <!-- Neuro -->
-        <div class="doctor-card doc-theme-neuro" id="neuro-doc">
+        <!-- Neurology -->
+        <div class="doctor-card doc-theme-neuro" id="neurology-doc" data-dept="neurology">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-neuro">SG</div>
@@ -229,7 +329,7 @@
           <div class="doc-card-body">
             <h3 class="doc-name">Dr. Shishirakumar A Goudar</h3>
             <div class="doc-spec-badge">Neurology Specialist</div>
-            <div class="doc-qual">MBBS · MD General Medicine · DNB Neurology</div>
+            <div class="doc-qual">MBBS · MD General Medicine · (DNB) Neurology</div>
             <p class="doc-bio">Expert in stroke, epilepsy, migraines, neuropathy, and complex nervous system disorders. Dedicated to advanced neurological rehabilitation.</p>
             <div class="doc-timing"><i class="far fa-calendar-check"></i><span>By Prior Appointment</span></div>
             <div class="doc-card-cta">
@@ -239,7 +339,7 @@
         </div>
 
         <!-- OBG -->
-        <div class="doctor-card doc-theme-obgyn" id="obgyn-doc">
+        <div class="doctor-card doc-theme-obgyn" id="obgyn-doc" data-dept="obgyn">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-obgyn">MS</div>
@@ -248,7 +348,7 @@
           <div class="doc-card-body">
             <h3 class="doc-name">Dr. Madhuri Saha</h3>
             <div class="doc-spec-badge">Obstetrician &amp; Gynaecologist</div>
-            <div class="doc-qual">MBBS · DNB · PDDMLE · FMAS</div>
+            <div class="doc-qual">MBBS · (DNB) · PDDMLE · FMAS</div>
             <p class="doc-bio">Specialist in women's health, minimal access surgery, antenatal care, and comprehensive holistic gynaecology.</p>
             <div class="doc-timing"><i class="far fa-clock"></i><span>MON, WED, FRI &amp; THU: 5 PM – 7 PM</span></div>
             <div class="doc-card-cta">
@@ -257,8 +357,7 @@
           </div>
         </div>
 
-        <!-- Pediatrics -->
-        <div class="doctor-card doc-theme-peds" id="peds-doc">
+        <div class="doctor-card doc-theme-peds" id="pediatrics-doc" data-dept="pediatrics">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-peds">SK</div>
@@ -276,7 +375,7 @@
           </div>
         </div>
 
-        <div class="doctor-card doc-theme-peds">
+        <div class="doctor-card doc-theme-peds" data-dept="pediatrics">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-peds">VH</div>
@@ -295,7 +394,7 @@
         </div>
 
         <!-- Surgery -->
-        <div class="doctor-card doc-theme-surgery" id="surgery-doc">
+        <div class="doctor-card doc-theme-surgery" id="surgery-doc" data-dept="surgery">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-surgery">KV</div>
@@ -314,7 +413,7 @@
         </div>
 
         <!-- Surgical Oncology -->
-        <div class="doctor-card doc-theme-surgery">
+        <div class="doctor-card doc-theme-surgery" data-dept="surgery">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-surgery">PR</div>
@@ -333,7 +432,7 @@
         </div>
 
         <!-- ENT -->
-        <div class="doctor-card doc-theme-ent" id="ent-doc">
+        <div class="doctor-card doc-theme-ent" id="ent-doc" data-dept="ent">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-ent">SS</div>
@@ -352,7 +451,7 @@
         </div>
 
         <!-- Physiotherapy Lead -->
-        <div class="doctor-card doc-theme-physio" id="physio-doc">
+        <div class="doctor-card doc-theme-physio" id="physiotherapy-doc" data-dept="physio">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-physio">RK</div>
@@ -370,7 +469,7 @@
           </div>
         </div>
 
-        <div class="doctor-card doc-theme-physio">
+        <div class="doctor-card doc-theme-physio" data-dept="physio">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-physio">DP</div>
@@ -388,7 +487,7 @@
           </div>
         </div>
 
-        <div class="doctor-card doc-theme-physio">
+        <div class="doctor-card doc-theme-physio" data-dept="physio">
           <div class="doc-top-banner">
             <div class="doc-photo-ring">
               <div class="doc-avatar doc-avatar-physio">AB</div>
@@ -469,13 +568,18 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Specialities</h4>
+          <h4>Treatments</h4>
           <div class="footer-links">
-            <a href="/treatments.html#ortho"><i class="fas fa-chevron-right"></i> Orthopedics</a>
-            <a href="/treatments.html#prp"><i class="fas fa-chevron-right"></i> Regenerative PRP</a>
-            <a href="/treatments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a>
-            <a href="/treatments.html#obgyn"><i class="fas fa-chevron-right"></i> Gynaecology</a>
-            <a href="/treatments.html#specialty"><i class="fas fa-chevron-right"></i> Other Specialties</a>
+            <a href="/treatments/ortho.html"><i class="fas fa-chevron-right"></i> Orthopedics</a>
+            <a href="/treatments/dental.html"><i class="fas fa-chevron-right"></i> Dental Care</a>
+            <a href="/treatments/pediatrics.html"><i class="fas fa-chevron-right"></i> Pediatrics</a>
+            <a href="/treatments/gynaecology.html"><i class="fas fa-chevron-right"></i> Gynaecology</a>
+            <a href="/treatments/physiotherapy.html"><i class="fas fa-chevron-right"></i> Physiotherapy</a>
+            <a href="/treatments/neurology.html"><i class="fas fa-chevron-right"></i> Neurology</a>
+            <a href="/treatments/ent.html"><i class="fas fa-chevron-right"></i> ENT</a>
+            <a href="/treatments/surgery.html"><i class="fas fa-chevron-right"></i> Surgery</a>
+            <a href="/treatments/diabetes.html"><i class="fas fa-chevron-right"></i> Diabetes</a>
+            <a href="/treatments/pulmonology.html"><i class="fas fa-chevron-right"></i> Pulmonology</a>
           </div>
         </div>
         <div class="footer-col">

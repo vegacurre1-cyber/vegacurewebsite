@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Appointment | Vega Curre Multispeciality Clinic</title>
-  <meta name="description" content="Book your consultation at Vega Curre Multispeciality Clinic, Bengaluru. Choose your specialist, pick a date, and confirm instantly via WhatsApp." />
+  <title>Advanced Dental Care | Vega Curre Multispeciality Clinic</title>
+  <meta name="description" content="Pain-free dentistry, dental implants, Invisalign, smile makeovers & full cosmetic dental care at Vega Curre Clinic, Hebbal Kempapura, Bengaluru. Led by Dr. Priya Trimukhe — BDS." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="icon" type="image/png" href="/logo.png" />
@@ -12,12 +12,18 @@
 </head>
 <body>
 
-  <!-- ░░░ TOP BAR ░░░ -->
+  <!-- TOP BAR -->
   <div class="top-bar">
     <div class="container">
       <div class="top-bar-left">
-        <span class="top-bar-item"><i class="fas fa-map-marker-alt"></i> Hebbal Kempapura, Bengaluru — 560024</span>
-        <span class="top-bar-item"><i class="fas fa-clock"></i> Mon – Sat: 10 AM – 8 PM</span>
+        <span class="top-bar-item"><i class="fas fa-map-marker-alt"></i> 2nd Floor, Shop No. 24 &amp; 25, 3rd A Cross, Bhuvaneshwari Nagar,<br>Dasarahalli Main Road, Hebbal Kempapura, Bengaluru - 560024</span>
+        <span class="top-bar-item">
+          <i class="fas fa-clock"></i>
+          <div class="timing-stack">
+            <span>Mon – Sat: 10 AM – 8:30 PM</span>
+            <span>Sun: 10 AM – 12 PM (Prior Appt)</span>
+          </div>
+        </span>
       </div>
       <div class="top-bar-right">
         <span class="top-bar-item"><i class="fas fa-phone-alt"></i> +91 63641 23431</span>
@@ -26,11 +32,11 @@
     </div>
   </div>
 
-  <!-- ░░░ NAVBAR ░░░ -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="/" class="navbar-brand">
-        <img src="./logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" />
+        <img src="/logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" />
       </a>
       <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
         <i class="fas fa-bars"></i>
@@ -98,7 +104,7 @@
           </ul>
         </li>
         <li class="nav-item-dropdown">
-          <a href="/treatments.html" class="nav-link">Treatments <i class="fas fa-chevron-down"></i></a>
+          <a href="/treatments.html" class="nav-link active">Treatments <i class="fas fa-chevron-down"></i></a>
           <ul class="dropdown-menu treatment-dropdown">
             <li><a href="/treatments.html" class="dropdown-item"><i class="fas fa-th-large"></i> All Treatments</a></li>
             <div class="dropdown-divider"></div>
@@ -122,151 +128,148 @@
             <li><a href="mailto:vegacurre@gmail.com" class="dropdown-item"><i class="fas fa-envelope"></i> Email Us</a></li>
           </ul>
         </li>
-        <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav active">Book Appointment</a></li>
+        <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav">Book Appointment</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ░░░ BOOKING PAGE ░░░ -->
-  <section class="booking-page">
+  <!-- PAGE HERO -->
+  <header class="page-hero" style="background-image: url('../images/hero-dental.png');">
+    <div class="container page-hero-content reveal">
+      <div class="breadcrumb">
+        <a href="/">Home</a>
+        <i class="fas fa-chevron-right breadcrumb-sep"></i>
+        <a href="/treatments.html">Treatments</a>
+        <i class="fas fa-chevron-right breadcrumb-sep"></i>
+        <span>Advanced Dental Care</span>
+      </div>
+      <h1>Advanced Dental Care</h1>
+      <p>Pain-free dentistry, cosmetic smile design, implants, Invisalign and complete oral health management — all in a relaxed, modern dental suite at Vega Curre.</p>
+    </div>
+  </header>
+
+  <!-- DOCTOR HEADER & TREATMENTS -->
+  <section class="category-section">
     <div class="container">
-      <div class="booking-layout reveal">
-
-        <!-- Left Sidebar -->
-        <div class="booking-sidebar">
-          <div class="booking-sidebar-content">
-            <div class="brand-icon booking-brand-icon"><i class="fas fa-heartbeat"></i></div>
-            <h2>Book Your Consultation</h2>
-            <p>Fill out the form and we'll confirm your appointment via WhatsApp — usually within minutes.</p>
-
-            <div class="sidebar-info-list">
-              <div class="sidebar-info-item">
-                <div class="sidebar-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-                <div class="sidebar-info-text">
-                  <strong>Our Location</strong>
-                  <span>2nd Floor, Shop 24 &amp; 25, Bhuvaneshwari Nagar, Dasarahalli Main Rd, Hebbal Kempapura, Bengaluru – 560024</span>
-                </div>
-              </div>
-              <div class="sidebar-info-item">
-                <div class="sidebar-info-icon"><i class="fas fa-clock"></i></div>
-                <div class="sidebar-info-text">
-                  <strong>Clinic Hours</strong>
-                  <span>Monday – Saturday: 10:00 AM – 8:00 PM<br>Sunday: By Prior Appointment</span>
-                </div>
-              </div>
-              <div class="sidebar-info-item">
-                <div class="sidebar-info-icon"><i class="fas fa-phone-alt"></i></div>
-                <div class="sidebar-info-text">
-                  <strong>Call or WhatsApp</strong>
-                  <span>+91 63641 23431</span>
-                </div>
-              </div>
-              <div class="sidebar-info-item">
-                <div class="sidebar-info-icon"><i class="fas fa-flask"></i></div>
-                <div class="sidebar-info-text">
-                  <strong>In-House Diagnostics</strong>
-                  <span>TestEasy Lab &amp; Digital X-Ray available on-site</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Direct WhatsApp CTA -->
-            <a
-              href="https://wa.me/916364123431?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20at%20Vega%20Curre."
-              class="btn btn-wa btn-block mt-4"
-              target="_blank"
-              rel="noopener"
-            >
-              <i class="fab fa-whatsapp"></i> Chat Directly on WhatsApp
+      <div class="category-header reveal">
+        <div class="cat-icon dental"><i class="fas fa-tooth"></i></div>
+        <div>
+          <h2>Advanced Dental Care</h2>
+          <p class="section-subtitle">Led by <strong>Dr. Priya Trimukhe</strong> — BDS Dental Surgeon, specialising in pain-free &amp; cosmetic dentistry</p>
+          <div class="mt-1">
+            <a href="https://maps.app.goo.gl/kSCHFgLFajGhSn5z5" target="_blank" rel="noopener" class="gmb-link btn-sm">
+              <i class="fab fa-google"></i> Verified Dental Surgeon on Google
             </a>
           </div>
         </div>
+      </div>
 
-        <!-- Right Form Panel -->
-        <div class="booking-form-panel">
-          <h3>Request an Appointment</h3>
-          <p>Your details are sent securely to our clinic via WhatsApp. We'll confirm your slot promptly.</p>
-
-          <form id="bookingForm" novalidate>
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label for="name" class="form-label">Full Name <span class="form-required">*</span></label>
-                <input type="text" id="name" name="name" class="form-control" required placeholder="e.g. Ramesh Kumar" autocomplete="name" />
-              </div>
-              <div class="form-group">
-                <label for="phone" class="form-label">Mobile Number <span class="form-required">*</span></label>
-                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+91 98765 43210" autocomplete="tel" />
-              </div>
-            </div>
-
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label for="date" class="form-label">Preferred Date <span class="form-required">*</span></label>
-                <input type="date" id="date" name="date" class="form-control" required />
-              </div>
-              <div class="form-group">
-                <label for="time" class="form-label">Preferred Time</label>
-                <select id="time" name="time" class="form-control">
-                  <option value="" disabled selected>Choose a slot...</option>
-                  <optgroup label="Morning">
-                    <option value="10:00 AM">10:00 AM</option>
-                    <option value="10:30 AM">10:30 AM</option>
-                    <option value="11:00 AM">11:00 AM</option>
-                    <option value="11:30 AM">11:30 AM</option>
-                    <option value="12:00 PM">12:00 PM</option>
-                    <option value="12:30 PM">12:30 PM</option>
-                  </optgroup>
-                  <optgroup label="Evening">
-                    <option value="5:00 PM">5:00 PM</option>
-                    <option value="5:30 PM">5:30 PM</option>
-                    <option value="6:00 PM">6:00 PM</option>
-                    <option value="6:30 PM">6:30 PM</option>
-                    <option value="7:00 PM">7:00 PM</option>
-                    <option value="7:30 PM">7:30 PM</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="department" class="form-label">Speciality / Department <span class="form-required">*</span></label>
-              <select id="department" name="department" class="form-control" required>
-                <option value="" disabled selected>Select a speciality...</option>
-                <option value="Orthopedics">Orthopedics &amp; Sports Medicine</option>
-                <option value="PRP Therapy">PRP Knee Rejuvenation Therapy</option>
-                <option value="Dental">Dental &amp; Cosmetic Dentistry</option>
-                <option value="Pediatrics">Pediatrics</option>
-                <option value="Gynecology">Obstetrics &amp; Gynaecology</option>
-                <option value="Neurology">Neurology</option>
-                <option value="ENT">ENT (Ear, Nose &amp; Throat)</option>
-                <option value="General Surgery">General / Laparoscopic Surgery</option>
-                <option value="Pulmonology">Pulmonology &amp; Allergy</option>
-                <option value="Diabetes">Diabetes Management</option>
-                <option value="Physiotherapy">Physiotherapy &amp; Rehabilitation</option>
-                <option value="Laboratory">Laboratory / Diagnostics</option>
-                <option value="General">General Consultation</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message" class="form-label">Symptoms / Additional Notes</label>
-              <textarea id="message" name="message" class="form-control" rows="4" placeholder="Briefly describe your symptoms or any specific concerns (optional)..."></textarea>
-            </div>
-
-            <!-- Privacy note -->
-            <p class="form-note"><i class="fas fa-lock"></i> Your details are only shared with the Vega Curre clinic team via WhatsApp and are never stored or sold.</p>
-
-            <button type="submit" class="btn btn-primary btn-block btn-lg">
-              <i class="fab fa-whatsapp"></i> Send Request via WhatsApp
-            </button>
-          </form>
+      <div class="treatment-grid reveal">
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-tooth"></i></div>
+          <div class="tc-text"><strong>Root Canal Treatment</strong><span>Single &amp; multi-visit RCT with modern rotary systems</span></div>
         </div>
-
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-teeth"></i></div>
+          <div class="tc-text"><strong>Crown &amp; Bridge Fixations</strong><span>Ceramic, zirconia, and metal-free restorations</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-fill-drip"></i></div>
+          <div class="tc-text"><strong>Tooth Fillings &amp; Cavity Management</strong><span>Composite and glass-ionomer tooth-coloured fillings</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-align-center"></i></div>
+          <div class="tc-text"><strong>Invisalign &amp; Clear Aligners</strong><span>Modern, invisible orthodontic smile corrections</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-soap"></i></div>
+          <div class="tc-text"><strong>Professional Teeth Cleaning</strong><span>Scaling, polishing, and deep cleaning (SRP)</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-cut"></i></div>
+          <div class="tc-text"><strong>Simple &amp; Surgical Extractions</strong><span>Wisdom tooth removal and impacted tooth surgery</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-align-center"></i></div>
+          <div class="tc-text"><strong>Orthodontic Treatment (Braces)</strong><span>Metal braces, ceramic braces, and Damon systems</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-baby"></i></div>
+          <div class="tc-text"><strong>Pedodontic Treatment</strong><span>Paediatric dentistry, fluoride application, pit &amp; fissure sealing</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-teeth-open"></i></div>
+          <div class="tc-text"><strong>Dental Implants</strong><span>Single tooth and full-arch implant rehabilitation</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-smile-beam"></i></div>
+          <div class="tc-text"><strong>Dentures — Complete &amp; Partial</strong><span>Acrylic, flexible, and precision dentures</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-star"></i></div>
+          <div class="tc-text"><strong>Teeth Whitening</strong><span>In-office laser whitening and take-home kits</span></div>
+        </div>
+        <div class="treatment-card">
+          <div class="tc-icon teal"><i class="fas fa-magic"></i></div>
+          <div class="tc-text"><strong>Smile Makeover</strong><span>Veneers, composite bonding, and full smile design</span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ░░░ FOOTER ░░░ -->
+  <!-- WHY CHOOSE US -->
+  <section class="category-section bg-light">
+    <div class="container">
+      <div class="grid-2 reveal mb-5">
+        <div class="reveal-left">
+          <h3 class="text-primary mb-3">Pain-Free Dentistry Promise</h3>
+          <p class="text-muted story-text mb-3">Dr. Priya Trimukhe specialises in ensuring your dental experience is completely comfortable. Using advanced local anaesthesia techniques and modern rotary instruments, even root canals and surgical extractions are performed with minimal discomfort.</p>
+          <p class="text-muted story-text mb-4">We use only BIS-certified materials — zirconia crowns, ceramic bridges, and medical-grade implant systems — ensuring both longevity and aesthetics that look completely natural.</p>
+          <a href="/booking.html?dept=Dental" class="btn btn-primary btn-lg">Book Dental Consultation</a>
+        </div>
+        <div class="reveal-right">
+          <img src="/images/dept-dental.png" alt="Pain-Free Dentistry at Vega Curre" class="about-story-img" style="border-radius: 24px; box-shadow: var(--shadow-lg); width: 100%; height: 100%; object-fit: cover;" />
+        </div>
+      </div>
+
+      <div class="reveal mt-5">
+        <div class="prp-banner">
+          <div class="prp-inner prp-inner-full">
+            <div>
+              <div class="prp-tag"><i class="fas fa-award"></i> Premier Smile Centre</div>
+              <h3>Why Choose Vega Curre Dental?</h3>
+              <div class="prp-points">
+                <div class="prp-point"><i class="fas fa-check-circle"></i> Pain-free treatment protocols</div>
+                <div class="prp-point"><i class="fas fa-check-circle"></i> Metal-free ceramic &amp; zirconia restorations</div>
+                <div class="prp-point"><i class="fas fa-check-circle"></i> Invisalign-certified provider</div>
+                <div class="prp-point"><i class="fas fa-check-circle"></i> Advanced dental implant systems</div>
+                <div class="prp-point"><i class="fas fa-check-circle"></i> Same-day emergency dental slots</div>
+              </div>
+              <a href="https://wa.me/916364123431?text=Hello%2C%20I%20need%20a%20dental%20appointment%20at%20Vega%20Curre." class="btn btn-white mt-3 btn-lg" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK CTA -->
+  <section class="section-sm">
+    <div class="container reveal">
+      <div class="cta-banner">
+        <div class="content">
+          <h2>Ready for a Healthier, Brighter Smile?</h2>
+          <p>Book a consultation with Dr. Priya Trimukhe — walk-in and same-day emergency slots available.</p>
+          <div class="cta-actions">
+            <a href="/booking.html?dept=Dental" class="btn btn-white btn-lg"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+            <a href="https://wa.me/916364123431?text=Hello%2C%20I%20would%20like%20a%20dental%20consultation%20at%20Vega%20Curre." class="btn btn-ghost btn-lg" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -284,7 +287,7 @@
           <div class="footer-links">
             <a href="/"><i class="fas fa-chevron-right"></i> Home</a>
             <a href="/about.html"><i class="fas fa-chevron-right"></i> About &amp; Doctors</a>
-            <a href="/treatments.html"><i class="fas fa-chevron-right"></i> Treatments</a>
+            <a href="/treatments.html"><i class="fas fa-chevron-right"></i> All Treatments</a>
             <a href="/booking.html"><i class="fas fa-chevron-right"></i> Book Appointment</a>
             <a href="/contact.html"><i class="fas fa-chevron-right"></i> Contact &amp; Location</a>
           </div>
@@ -324,72 +327,5 @@
   </div>
 
   <script src="/js/main.js" type="module"></script>
-  <script>
-    // Pre-fill date with today's date
-    const dateInput = document.getElementById('date');
-    if (dateInput) {
-      const today = new Date();
-      const yyyy = today.getFullYear();
-      const mm = String(today.getMonth() + 1).padStart(2, '0');
-      const dd = String(today.getDate()).padStart(2, '0');
-      dateInput.min = `${yyyy}-${mm}-${dd}`;
-    }
-
-    // WhatsApp form submission
-    document.getElementById('bookingForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const name   = document.getElementById('name').value.trim();
-      const phone  = document.getElementById('phone').value.trim();
-      const date   = document.getElementById('date').value;
-      const time   = document.getElementById('time').value || 'Flexible';
-      const dept   = document.getElementById('department').value;
-      const msg    = document.getElementById('message').value.trim();
-
-      if (!name || !phone || !date || !dept) {
-        alert('Please fill in all required fields (Name, Phone, Date, Speciality).');
-        return;
-      }
-
-      const text = encodeURIComponent(
-        `*New Appointment Request — Vega Curre*\n\n` +
-        `*Name:* ${name}\n` +
-        `*Mobile:* ${phone}\n` +
-        `*Date:* ${date}\n` +
-        `*Time:* ${time}\n` +
-        `*Speciality:* ${dept}\n` +
-        `*Notes:* ${msg || 'None'}\n\n` +
-        `_Sent via vegacurre.in_`
-      );
-
-      window.open(`https://wa.me/916364123431?text=${text}`, '_blank');
-    });
-  </script>
-
-  <style>
-    /* booking.html scoped */
-    .booking-page {
-      padding: 3rem 0 5rem;
-      min-height: calc(100vh - 80px);
-      background: var(--c-bg);
-    }
-    .booking-brand-icon {
-      margin-bottom: 1.5rem;
-      width: 52px; height: 52px; font-size: 1.4rem;
-    }
-    .form-required { color: var(--c-red); }
-    .form-note {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.55);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      margin-bottom: 1.25rem;
-    }
-    /* Override form-note when inside form panel (not sidebar) */
-    .booking-form-panel .form-note {
-      color: var(--c-light);
-    }
-  </style>
 </body>
 </html>

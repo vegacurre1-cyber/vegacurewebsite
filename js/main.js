@@ -27,27 +27,50 @@ if (mobileMenuBtn && navLinks) {
     }
   });
 
-  // Close when a nav link is clicked (unless it's a dropdown toggle)
-  navLinks.querySelectorAll('.nav-link').forEach(link => {
+  // Handle nav items (including dropdown parents)
+  const allLinks = navLinks.querySelectorAll('.nav-link, .dropdown-item');
+  
+  allLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      const dropdown = link.closest('.nav-item-dropdown');
-      if (dropdown && window.innerWidth <= 768) {
-        // Toggle dropdown on mobile click
-        e.preventDefault();
-        e.stopPropagation();
+      const isMobile = window.innerWidth <= 768;
+      
+      // Top-level dropdown parent?
+      const parentDropdown = link.closest('.nav-item-dropdown');
+      const isTopLevelToggle = parentDropdown && link.classList.contains('nav-link') && parentDropdown.querySelector('.dropdown-menu');
+      
+      // Nested dropdown parent?
+      const submenuParent = link.closest('.dropdown-submenu');
+      const isSubmenuToggle = submenuParent && link.classList.contains('dropdown-item') && submenuParent.querySelector('.submenu');
+
+      if (isMobile && (isTopLevelToggle || isSubmenuToggle)) {
+        const toggleTarget = isTopLevelToggle ? parentDropdown : submenuParent;
         
-        // Close other open dropdowns first
-        navLinks.querySelectorAll('.nav-item-dropdown.open').forEach(openD => {
-          if (openD !== dropdown) openD.classList.remove('open');
-        });
-        
-        dropdown.classList.toggle('open');
+        if (!toggleTarget.classList.contains('open')) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close siblings at the same level
+          const siblings = toggleTarget.parentElement.querySelectorAll(isTopLevelToggle ? '.nav-item-dropdown.open' : '.dropdown-submenu.open');
+          siblings.forEach(s => {
+            if (s !== toggleTarget) s.classList.remove('open');
+          });
+          
+          toggleTarget.classList.add('open');
+        } else {
+          // Already open - let it navigate
+          if (link.classList.contains('nav-link')) {
+            // Top level nav-link closure handled by page reload, 
+            // but for smooth UX we can just let it go.
+          }
+        }
       } else {
         // Normal link behavior
-        navLinks.classList.remove('open');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        const icon = mobileMenuBtn.querySelector('i');
-        if (icon) icon.className = 'fas fa-bars';
+        if (!link.closest('.nav-item-dropdown') || !isMobile) {
+          navLinks.classList.remove('open');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          const icon = mobileMenuBtn.querySelector('i');
+          if (icon) icon.className = 'fas fa-bars';
+        }
       }
     });
   });
@@ -357,13 +380,268 @@ function initBookingPopup() {
   }
 }
 
+// ──────────────────────────────────────────────────────────────
+// 11. PREMIUM HERO SLIDER (Swiper Initialization)
+// ──────────────────────────────────────────────────────────────
+function initHeroSlider() {
+  const sliderEl = document.querySelector('.hero-slider');
+  if (sliderEl && typeof Swiper !== 'undefined') {
+    new Swiper('.hero-slider', {
+      loop: true,
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      speed: 1000,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+}
+
+// ──────────────────────────────────────────────────────────────
+// 12. SPECIALTY CARD SLIDER (Aster-style carousel)
+// ──────────────────────────────────────────────────────────────
+function initSpecSlider() {
+  const el = document.querySelector('.spec-slider');
+  if (!el || typeof Swiper === 'undefined') return;
+  new Swiper('.spec-slider', {
+    slidesPerView: 3,
+    spaceBetween: 28,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    speed: 700,
+    navigation: {
+      nextEl: '.spec-btn-next',
+      prevEl: '.spec-btn-prev',
+    },
+    breakpoints: {
+      0:    { slidesPerView: 1.15, spaceBetween: 16 },
+      640:  { slidesPerView: 2.1,  spaceBetween: 20 },
+      1024: { slidesPerView: 3,    spaceBetween: 28 },
+    },
+  });
+}
+
+// ──────────────────────────────────────────────────────────────
+// 13. CLINICAL VIDEO SLIDER
+// ──────────────────────────────────────────────────────────────
+function initVideoSlider() {
+  const el = document.querySelector('.video-slider');
+  if (!el || typeof Swiper === 'undefined') return;
+  new Swiper('.video-slider', {
+    slidesPerView: 3,
+    spaceBetween: 24,
+    loop: true,
+    speed: 800,
+    centeredSlides: false,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.video-btn-next',
+      prevEl: '.video-btn-prev',
+    },
+    pagination: {
+      el: '.video-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      0:    { slidesPerView: 1.1, spaceBetween: 16 },
+      768:  { slidesPerView: 2.1, spaceBetween: 20 },
+      1024: { slidesPerView: 3,   spaceBetween: 24 },
+    },
+  });
+}
+
+// ──────────────────────────────────────────────────────────────
+// 13. DYNAMIC SERVICE & DOCTOR FILTERING
+// ──────────────────────────────────────────────────────────────
+function initServiceFilter() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const service = urlParams.get('service');
+  const dept = urlParams.get('dept');
+  
+  if (service || dept) {
+    document.body.classList.add('filtered-view');
+    
+    // Mapping for display names
+    const names = {
+      'ortho': 'Orthopedics & Sports Medicine',
+      'orthopedics': 'Orthopedics & Sports Medicine',
+      'dental': 'Advanced Dental Care',
+      'pediatrics': 'Pediatrics & Child Health',
+      'peds': 'Pediatrics & Child Health',
+      'obgyn': 'Obstetrics & Gynaecology',
+      'gynecology': 'Obstetrics & Gynaecology',
+      'gynaecology': 'Obstetrics & Gynaecology',
+      'physio': 'Physiotherapy & Rehab',
+      'physiotherapy': 'Physiotherapy & Rehab',
+      'surgery': 'General & Laparoscopic Surgery',
+      'neurology': 'Neurology & Nerve Care',
+      'neuro': 'Neurology & Nerve Care',
+      'ent': 'Ear, Nose & Throat (ENT)',
+      'other': 'Specialized Medical Services'
+    };
+
+    // Mapping for focus areas (subtitle)
+    const focus = {
+      'ortho': 'musculoskeletal',
+      'orthopedics': 'musculoskeletal',
+      'dental': 'oral health',
+      'peds': 'child development',
+      'pediatrics': 'child development',
+      'obgyn': 'women\'s health',
+      'gynecology': 'women\'s health',
+      'gynaecology': 'women\'s health',
+      'neuro': 'neurological',
+      'neurology': 'neurological',
+      'surgery': 'surgical',
+      'ent': 'ENT',
+      'physio': 'rehabilitative',
+      'physiotherapy': 'rehabilitative'
+    };
+
+    // Handle Treatments Filtering
+    if (service) {
+      const activeServiceName = document.getElementById('active-dept-tag');
+      const sections = document.querySelectorAll('section[data-service]');
+      const activeSections = document.querySelectorAll(`section[data-service="${service}"]`);
+      
+      if (activeSections.length > 0) {
+        sections.forEach(s => s.classList.remove('active-service'));
+        activeSections.forEach(s => s.classList.add('active-service'));
+        if (activeServiceName) activeServiceName.textContent = names[service] || service.toUpperCase();
+        
+        scrollToFirst(activeSections[0]);
+      }
+    }
+
+    // Handle Doctor Filtering (About Page)
+    if (dept) {
+      // Normalize slug for internal consistency
+      const slugMap = {
+        'peds': 'pediatrics',
+        'neuro': 'neurology',
+        'physio': 'physio',
+        'physiotherapy': 'physio',
+        'gynaecology': 'obgyn',
+        'gynecology': 'obgyn'
+      };
+      const normalizedDept = slugMap[dept] || dept;
+
+      const docCards = document.querySelectorAll('.doctor-card[data-dept]');
+      const activeDocs = document.querySelectorAll(`.doctor-card[data-dept="${normalizedDept}"]`);
+      const activeDeptTag = document.getElementById('active-dept-tag');
+      
+      if (activeDocs.length > 0) {
+        docCards.forEach(c => c.classList.remove('active-dept'));
+        activeDocs.forEach(c => c.classList.add('active-dept'));
+        if (activeDeptTag) activeDeptTag.textContent = names[dept] || dept.toUpperCase();
+        
+        // Premium Landing View Logic
+        const deptHeroSection = document.getElementById('dept-hero-section');
+        const deptHeroImg = document.getElementById('dept-hero-img');
+        const deptHeroTitle = document.getElementById('dept-hero-title');
+        const allDocsHeader = document.getElementById('all-doctors-header');
+        const deptDocsHeader = document.getElementById('dept-doctors-header');
+        const foundersHeader = document.getElementById('founders-header');
+        const visitingHeader = document.getElementById('visiting-header');
+        const deptNameInline = document.getElementById('dept-name-inline');
+        const deptFocusInline = document.getElementById('dept-focus-inline');
+
+        if (deptHeroSection) {
+          deptHeroSection.style.display = 'block';
+          if (deptHeroTitle) deptHeroTitle.textContent = names[dept] || `Department of ${dept.toUpperCase()}`;
+          if (deptHeroImg) {
+            // Use normalized slug for image naming to ensure they exist
+            deptHeroImg.src = `./images/dept-${normalizedDept}.png`;
+            deptHeroImg.onerror = () => { deptHeroSection.style.display = 'none'; };
+          }
+        }
+
+        if (allDocsHeader) allDocsHeader.style.display = 'none';
+        if (foundersHeader) foundersHeader.style.display = 'none';
+        if (visitingHeader) visitingHeader.style.display = 'none';
+        
+        if (deptDocsHeader) {
+          deptDocsHeader.style.display = 'block';
+          if (deptNameInline) deptNameInline.textContent = names[dept] || dept.toUpperCase();
+          if (deptFocusInline) deptFocusInline.textContent = focus[dept] || 'specialized';
+        }
+
+        scrollToFirst(activeDocs[0]);
+      }
+    }
+  }
+}
+
+function scrollToFirst(element) {
+  if (!element) return;
+  setTimeout(() => {
+    const navH = 80;
+    const bannerH = 60;
+    const offset = element.getBoundingClientRect().top + window.pageYOffset - navH - bannerH - 20;
+    window.scrollTo({ top: offset, behavior: 'smooth' });
+  }, 400);
+}
+
+// ──────────────────────────────────────────────────────────────
+// 14. DOCTOR SPECIALIST SLIDER
+// ──────────────────────────────────────────────────────────────
+function initDocSlider() {
+  const el = document.querySelector('.doc-slider');
+  if (!el || typeof Swiper === 'undefined') return;
+  new Swiper('.doc-slider', {
+    slidesPerView: 3,
+    spaceBetween: 28,
+    loop: true,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    speed: 700,
+    navigation: {
+      nextEl: '.doc-btn-next',
+      prevEl: '.doc-btn-prev',
+    },
+    breakpoints: {
+      0:    { slidesPerView: 1.15, spaceBetween: 16 },
+      640:  { slidesPerView: 2.1,  spaceBetween: 20 },
+      1024: { slidesPerView: 3,    spaceBetween: 28 },
+    },
+  });
+}
+
 // Auto-run when ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initChatbot();
     initBookingPopup();
+    initHeroSlider();
+    initSpecSlider();
+    initDocSlider();
+    initVideoSlider();
+    initServiceFilter();
   });
 } else {
   initChatbot();
   initBookingPopup();
+  initHeroSlider();
+  initSpecSlider();
+  initDocSlider();
+  initVideoSlider();
+  initServiceFilter();
 }
+
