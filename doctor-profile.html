@@ -40,8 +40,66 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="/" class="nav-link">Home</a></li>
-        <li><a href="/about.html" class="nav-link active">About</a></li>
-        <li><a href="/about.html#doctors" class="nav-link active">Doctors</a></li>
+        <li><a href="/about.html" class="nav-link">About</a></li>
+        <li class="nav-item-dropdown">
+          <a href="/about.html#doctors" class="nav-link">Doctors <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="/about.html#doctors" class="dropdown-item"><i class="fas fa-user-md"></i> All Specialists</a></li>
+            <div class="dropdown-divider"></div>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=ortho" class="dropdown-item">Orthopedics <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=prashanthkumar" class="submenu-item">Dr. Prashanthkumar</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=dental" class="dropdown-item">Dental Care <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=priyatrimukhe" class="submenu-item">Dr. Priya Trimukhe</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=pediatrics" class="dropdown-item">Pediatrics <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=spkumar" class="submenu-item">Dr. S P Kumar</a></li>
+                <li><a href="/doctor-profile.html?doc=varshahegde" class="submenu-item">Dr. Varsha Hegde</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=obgyn" class="dropdown-item">Gynaecology <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=madhurisaha" class="submenu-item">Dr. Madhuri Saha</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=physio" class="dropdown-item">Physiotherapy <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=rajeevkumar" class="submenu-item">Dr. Rajeev Kumar</a></li>
+                <li><a href="/doctor-profile.html?doc=dhatripadsalgi" class="submenu-item">Dr. Dhatri R Padsalgi</a></li>
+                <li><a href="/doctor-profile.html?doc=abhishekpt" class="submenu-item">Dr. Abhishek</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=neurology" class="dropdown-item">Neurology <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=shishiragoudar" class="submenu-item">Dr. Shishirakumar A Goudar</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=surgery" class="dropdown-item">Surgery <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=kalaivani" class="submenu-item">Dr. Kalaivani V.</a></li>
+                <li><a href="/doctor-profile.html?doc=palaniappan" class="submenu-item">Dr. Palaniappan Ramanathan</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-submenu">
+              <a href="/about.html?dept=ent" class="dropdown-item">ENT <i class="fas fa-chevron-right"></i></a>
+              <ul class="submenu">
+                <li><a href="/doctor-profile.html?doc=sahana" class="submenu-item">Dr. Sahana Shilankur S</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="/treatments.html" class="nav-link">Treatments</a></li>
         <li><a href="/contact.html" class="nav-link">Contact</a></li>
         <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav">Book Appointment</a></li>
@@ -151,9 +209,9 @@
         image: './images/dr-prashanthkumar.jpg',
         initials: 'PK',
         overview: [
-          'Dr. Prashanthkumar is a senior orthopedic specialist known for advanced care in trauma, joint disorders, and sports-related injuries.',
-          'His clinical focus includes joint replacement, arthroscopy, ACL and PCL reconstruction, and osteoarthritis management with evidence-based protocols.',
-          'He also supports regenerative orthopedic options such as PRP and GFC-based therapies, guiding patients toward long-term mobility and pain relief.'
+          'Dr. Prashanthkumar is a senior orthopedic specialist recognized for his precision in managing complex musculoskeletal trauma and degenerative joint conditions. With a focus on restoring mobility, he combines years of clinical experience with modern surgical techniques.',
+          'His specialized expertise includes total knee and hip replacements (FIJR), arthroscopic interventions for ACL and PCL repairs, and advanced management of osteoarthritis using evidence-based recovery protocols.',
+          'A proponent of regenerative orthopedics, he integrates PRP (Platelet-Rich Plasma) and GFC (Growth Factor Concentrate) therapies into his practice, providing patients with effective non-surgical alternatives for tissue repair and long-term joint health.'
         ]
       },
       priyatrimukhe: {
@@ -167,9 +225,9 @@
         image: '',
         initials: 'PT',
         overview: [
-          'Dr. Priya Trimukhe delivers comprehensive dental care with a patient-first focus on comfort and long-term oral health outcomes.',
-          'Her practice includes pain-free restorative dentistry, smile correction, Invisalign planning, dental implants, and full-mouth rehabilitation.',
-          'She emphasizes preventive dental education and personalized treatment plans for children, adults, and senior patients.'
+          'Dr. Priya Trimukhe is a compassionate dental surgeon dedicated to delivering pain-free and personalized oral healthcare. She emphasizes a patient-centric approach, ensuring every individual feels comfortable and well-informed throughout their treatment journey.',
+          'Her clinical practice covers a wide spectrum of dental needs, from pain-free root canal treatments and restorative dentistry to advanced cosmetic enhancements like smile makeovers with Invisalign and high-accuracy dental implants.',
+          'She is a strong advocate for preventive dentistry, focusing on long-term oral health education for patients of all ages — from children\'s first dental visits to complex full-mouth rehabilitation for seniors.'
         ]
       },
       shishiragoudar: {
@@ -183,9 +241,9 @@
         image: '',
         initials: 'SG',
         overview: [
-          'Dr. Shishirakumar A Goudar manages both common and complex neurological disorders with a structured diagnostic approach.',
-          'He evaluates and treats stroke, epilepsy, headaches, neuropathy, and other nervous system conditions with modern neuro-clinical protocols.',
-          'He also plans follow-up and rehabilitation pathways for patients requiring long-term neurological monitoring.'
+          'Dr. Shishirakumar A Goudar is a senior neurology specialist known for his methodical diagnostic approach to complex brain and nerve-related disorders. He combines clinical empathy with advanced neuro-medical knowledge.',
+          'His expertise includes the management of acute stroke, epilepsy, chronic migraines, peripheral neuropathy, and movement disorders like Parkinson\'s disease. He utilizes modern neuro-clinical protocols to ensure optimal patient outcomes.',
+          'Dedicated to the long-term well-being of his patients, he designs comprehensive neurological rehabilitation pathways, helping individuals regain functional independence after neurological events or chronic illness.'
         ]
       },
       madhurisaha: {
@@ -199,9 +257,9 @@
         image: '',
         initials: 'MS',
         overview: [
-          'Dr. Madhuri Saha provides complete women-focused healthcare spanning preventive gynecology, menstrual health, and fertility counseling.',
-          'Her clinical interests include antenatal care, high-risk pregnancy monitoring, and minimally invasive gynecological procedures.',
-          'She combines compassionate counseling with evidence-based decision making for every stage of women’s health.'
+          'Dr. Madhuri Saha provides expert, women-centric healthcare with a focus on compassionate clinical guidance. Her practice encompasses the entire spectrum of gynecological and obstetric health.',
+          'She specializes in high-risk pregnancy monitoring, comprehensive antenatal and postnatal care, and minimally invasive gynecological surgeries (FMAS). Her approach integrates evidence-based medicine with personalized patient counseling.',
+          'Beyond maternal care, she addresses complex gynecological issues such as PCOS, menstrual irregularities, and menopausal health, empowering women with the knowledge to make informed decisions about their well-being.'
         ]
       },
       spkumar: {
@@ -215,9 +273,9 @@
         image: '',
         initials: 'SK',
         overview: [
-          'Dr. S P Kumar offers dedicated pediatric care for infants, children, and adolescents with special attention to family guidance.',
-          'His scope includes vaccination planning, growth and development tracking, and treatment of acute pediatric illnesses.',
-          'He supports parents with practical preventive-care advice and individualized follow-up schedules for healthy child development.'
+          'Dr. S P Kumar is a dedicated pediatrician committed to the healthy growth and development of infants, children, and adolescents. He believes in a collaborative approach with parents to ensure sustained childhood wellness.',
+          'His scope of care includes routine vaccinations, growth milestone tracking, nutritional guidance, and the management of common childhood infections and acute illnesses.',
+          'With a gentle clinical manner, he ensures that every child feels at ease during consultations, while providing parents with practical, preventive health advice for their child\'s physical and emotional development.'
         ]
       },
       varshahegde: {
@@ -231,9 +289,9 @@
         image: '',
         initials: 'VH',
         overview: [
-          'Dr. Varsha Hegde focuses on preventive and developmental pediatric care in early childhood and school-age years.',
-          'She provides clinical support for routine pediatric concerns, nutrition guidance, and developmental milestone assessment.',
-          'Her consultations prioritize child comfort and collaborative planning with parents for sustained wellness.'
+          'Dr. Varsha Hegde focuses on preventive pediatric care and developmental health in early childhood. She is known for her meticulous approach to child health assessment.',
+          'Her clinical interests include monitoring developmental milestones, managing childhood allergies, and providing structured nutrition plans for healthy growth.',
+          'She prioritizes child comfort and works closely with families to establish long-term wellness routines, ensuring a solid foundation for health as children transition through school-age years.'
         ]
       },
       kalaivani: {
@@ -247,9 +305,9 @@
         image: '',
         initials: 'KV',
         overview: [
-          'Dr. Kalaivani V. is experienced in minimally invasive and advanced general surgical interventions for diverse abdominal conditions.',
-          'Her expertise includes laparoscopic procedures, hernia repair, and structured perioperative care for faster recovery.',
-          'She works with a safety-first approach and clear surgical counseling for patients and families before and after procedures.'
+          'Dr. Kalaivani V. is a highly qualified general surgeon with international fellowships and a focus on minimally invasive surgical techniques. She is dedicated to achieving optimal surgical outcomes with faster recovery times.',
+          'Her expertise spans across advanced laparoscopic procedures, including gallbladder surgery, appendix removal, and complex hernia repairs (FALS). She utilizes a safety-first approach to ensure patient safety and comfort.',
+          'She provides detailed perioperative counseling, ensuring that patients and their families are fully informed about the procedure, the recovery roadmap, and long-term post-surgical care.'
         ]
       },
       palaniappan: {
@@ -263,9 +321,9 @@
         image: '',
         initials: 'PR',
         overview: [
-          'Dr. Palaniappan Ramanathan provides cancer-focused surgical consultation supported by strong general surgery expertise.',
-          'He is trained in oncological surgery and guides patients through diagnosis discussions, treatment planning, and operative care.',
-          'His approach emphasizes clarity, multidisciplinary coordination, and outcome-oriented recovery pathways.'
+          'Dr. Palaniappan Ramanathan is a surgical oncologist trained at the prestigious AIIMS, New Delhi. He brings a high level of surgical precision to the management of both general and oncological conditions.',
+          'His clinical focus includes complex general surgeries and specialized oncological procedures. He works within a multidisciplinary framework to ensure comprehensive care for every patient.',
+          'He is known for his clarity in discussing diagnosis and treatment pathways, prioritizing patient empowerment and outcome-oriented recovery through every stage of the surgical journey.'
         ]
       },
       sahana: {
@@ -279,9 +337,9 @@
         image: '',
         initials: 'SS',
         overview: [
-          'Dr. Sahana Shilankur S manages ENT conditions with balanced medical and procedural care pathways.',
-          'Her consultations address sinus concerns, hearing disorders, throat issues, and vestibular symptoms such as vertigo.',
-          'She focuses on early diagnosis and tailored treatment to improve breathing, hearing, and voice-related quality of life.'
+          'Dr. Sahana Shilankur S manages a wide range of ENT conditions with a balanced approach of medical and procedural interventions. She is committed to improving the quality of life through better hearing and breathing.',
+          'Her expertise includes the treatment of chronic sinusitis, nasal polyps, hearing loss, and tonsillitis. She also specializes in managing vestibular disorders such as vertigo and dizziness.',
+          'She focuses on early and accurate diagnosis using modern ENT diagnostic tools, tailoring treatment plans to the specific needs of each patient for sustainable relief from persistent ENT concerns.'
         ]
       },
       rajeevkumar: {
@@ -295,9 +353,9 @@
         image: '',
         initials: 'RK',
         overview: [
-          'Dr. Rajeev Kumar designs rehabilitation plans for post-surgical recovery, sports injuries, and chronic pain management.',
-          'He uses movement correction, strengthening, and function-restoration techniques for sustainable physical recovery.',
-          'His programs are structured with measurable milestones to help patients return safely to work, sport, and daily activity.'
+          'Dr. Rajeev Kumar is the lead physiotherapist at Vega Curre, specializing in advanced rehabilitation programs for post-surgical recovery and sports injuries. He focuses on restoring full functional mobility.',
+          'His therapeutic approach includes movement correction, targeted strengthening exercises, and evidence-based techniques for chronic pain management and musculoskeletal recovery.',
+          'He structures every rehabilitation journey with measurable milestones, ensuring that patients can safely return to their work, sports, and daily activities with confidence and strength.'
         ]
       },
       dhatripadsalgi: {
@@ -311,9 +369,9 @@
         image: '',
         initials: 'DP',
         overview: [
-          'Dr. Dhatri R Padsalgi supports patients with muscle, joint, and posture-related pain through targeted physiotherapy interventions.',
-          'Her focus areas include ergonomic correction, movement retraining, and long-term conditioning for pain recurrence prevention.',
-          'She aligns therapy plans with patient lifestyle and recovery goals for practical day-to-day functional improvement.'
+          'Dr. Dhatri R Padsalgi is a consultant physiotherapist dedicated to managing musculoskeletal pain and improving postural health. She utilizes targeted interventions to achieve sustainable pain relief.',
+          'Her clinical focus includes ergonomic assessment and correction, movement retraining, and specialized physiotherapy for neck and back pain recurrence prevention.',
+          'She aligns therapy goals with the patient\'s lifestyle, providing practical advice and exercises that can be easily integrated into daily routines for continuous functional improvement.'
         ]
       },
       abhishekpt: {
@@ -327,9 +385,9 @@
         image: '',
         initials: 'AB',
         overview: [
-          'Dr. Abhishek provides physiotherapy support in pediatric and neurological rehabilitation settings.',
-          'He works on mobility, coordination, and strength restoration using structured and progressive rehabilitation routines.',
-          'His care model emphasizes safe movement recovery and patient-family education for continuity outside clinic sessions.'
+          'Dr. Abhishek provides specialized physiotherapy support in pediatric and neurological settings, helping patients overcome mobility challenges through structured care.',
+          'He focuses on improving coordination, balance, and physical strength in patients recovering from neurological events or pediatric developmental delays.',
+          'His care model emphasizes safety and progressive improvement, working closely with families to ensure rehabilitation continues effectively beyond clinic sessions.'
         ]
       }
     };
