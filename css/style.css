@@ -166,21 +166,6 @@ button { cursor: pointer; font-family: inherit; }
   line-height: 1.2;
 }
 
-.diagnostics-highlight-card::before {
-  content: 'ACTIVE MODULE';
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 0.6rem;
-  font-weight: 800;
-  color: var(--c-primary);
-  opacity: 0;
-  transition: all 0.3s var(--ease);
-}
-
-.diagnostics-highlight-card:hover::before {
-  opacity: 1;
-}
 .diag-pills { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.5rem; }
 .diag-pill {
   display: flex;
@@ -1122,31 +1107,6 @@ button { cursor: pointer; font-family: inherit; }
   border-color: var(--c-primary);
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
   transform: translateY(-8px);
-}
-
-.doctor-card::before {
-  content: 'ACTIVE MODULE';
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 0.55rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: white;
-  background: rgba(15, 23, 42, 0.3);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
-  padding: 3px 10px;
-  border-radius: 100px;
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: all 0.3s var(--ease);
-  z-index: 5;
-}
-
-.doctor-card:hover::before {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Colored top banner with avatar overlapping */
@@ -2710,29 +2670,6 @@ body.filtered-view #doctors {
   transform: translateY(-8px);
 }
 
-.specialty-card::before {
-  content: 'ACTIVE MODULE';
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 0.6rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: var(--c-primary);
-  background: rgba(15, 23, 42, 0.05);
-  padding: 4px 10px;
-  border-radius: 100px;
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: all 0.3s var(--ease);
-  z-index: 2;
-}
-
-.specialty-card:hover::before {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .specialty-card:hover::after {
   transform: scaleX(1);
 }
@@ -2920,6 +2857,10 @@ body.filtered-view #doctors {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
+}
+
+.hub-card[id] {
+  scroll-margin-top: 120px;
 }
 
 .hub-card {
