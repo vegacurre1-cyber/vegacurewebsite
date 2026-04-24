@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Profile | Vega Curre Multispeciality Clinic</title>
+  <meta name="description" content="Detailed doctor profile at Vega Curre Multispeciality Clinic, including qualifications, specialties, language support, and consultation details." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="top-bar-item"><i class="fas fa-map-marker-alt"></i> 2nd Floor, Shop No. 24 & 25, 3rd A Cross, Bhuvaneshwari Nagar,<br>Dasarahalli Main Road, Hebbal Kempapura, Bengaluru - 560024</span>
+        <span class="top-bar-item">
+          <i class="fas fa-clock"></i>
+          <div class="timing-stack">
+            <span>Mon – Sat: 10 AM – 8:30 PM</span>
+            <span>Sun: 10 AM – 12 PM (Prior Appt)</span>
+          </div>
+        </span>
+      </div>
+      <div class="top-bar-right">
+        <span class="top-bar-item"><i class="fas fa-phone-alt"></i> +91 63641 23431</span>
+        <span class="emergency-pill"><i class="fas fa-calendar-check"></i> Book Online 24/7</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand">
+        <img src="./logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" />
+      </a>
+      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="nav-link">Home</a></li>
+        <li><a href="/about.html" class="nav-link active">About</a></li>
+        <li><a href="/about.html#doctors" class="nav-link active">Doctors</a></li>
+        <li><a href="/treatments.html" class="nav-link">Treatments</a></li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav">Book Appointment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section doctor-detail-wrap">
+      <div class="container">
+        <div class="doctor-breadcrumb">
+          <a href="/">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <a href="/about.html#doctors">Doctors</a>
+          <i class="fas fa-chevron-right"></i>
+          <span id="crumbName">Doctor Profile</span>
+        </div>
+
+        <article class="doctor-detail-card" id="doctorDetailCard">
+          <div class="doctor-detail-media">
+            <img id="doctorImage" src="./images/dr-prashanthkumar.jpg" alt="Doctor" />
+            <div id="doctorInitial" class="doctor-initial-avatar" style="display:none;">VC</div>
+          </div>
+
+          <div class="doctor-detail-main">
+            <h1 id="doctorName">Doctor Name</h1>
+            <p id="doctorHeadline" class="doctor-headline"></p>
+            <p id="doctorQual" class="doctor-qual-line"></p>
+
+            <div class="doctor-meta-grid">
+              <div class="doctor-meta-block">
+                <h3>Speciality</h3>
+                <p id="doctorSpeciality"></p>
+              </div>
+              <div class="doctor-meta-block">
+                <h3>Languages</h3>
+                <p id="doctorLanguages"></p>
+              </div>
+              <div class="doctor-meta-block">
+                <h3>Availability</h3>
+                <p id="doctorTiming"></p>
+              </div>
+              <div class="doctor-meta-block">
+                <h3>Hospital</h3>
+                <p>Vega Curre Multispeciality Clinic, Hebbal Kempapura, Bengaluru</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="doctor-detail-actions">
+            <a href="tel:+916364123431" class="btn btn-outline btn-block"><i class="fas fa-phone-alt"></i> Call Us</a>
+            <a id="doctorBooking" href="/booking.html" class="btn btn-primary btn-block"><i class="fas fa-calendar-check"></i> Request Appointment</a>
+          </aside>
+        </article>
+
+        <section class="doctor-overview-panel">
+          <h2>Overview</h2>
+          <p id="doctorOverview1"></p>
+          <p id="doctorOverview2"></p>
+          <p id="doctorOverview3"></p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">VEGA CURRE</div>
+          <p class="footer-desc">A premier Multispeciality Clinic providing world-class Orthopedic, Dental, and comprehensive healthcare at Hebbal Kempapura, Bengaluru.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="/"><i class="fas fa-chevron-right"></i> Home</a>
+            <a href="/about.html"><i class="fas fa-chevron-right"></i> About &amp; Doctors</a>
+            <a href="/booking.html"><i class="fas fa-chevron-right"></i> Book Appointment</a>
+            <a href="/contact.html"><i class="fas fa-chevron-right"></i> Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>2nd Floor, Shop 24 &amp; 25, 3rd A Cross, Bhuvaneshwari Nagar, Dasarahalli Main Rd, Hebbal Kempapura, Bengaluru – 560024</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 63641 23431</span></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>vegacurre@gmail.com</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Vega Curre Multispeciality Clinic. All rights reserved.</span>
+        <span>Hebbal Kempapura, Bengaluru.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" type="module"></script>
+  <script>
+    const doctors = {
+      prashanthkumar: {
+        name: 'Dr. Prashanthkumar',
+        headline: 'Consultant Orthopedic Surgeon and Trauma Specialist',
+        qualifications: 'MBBS, D Ortho, (DNB), FIJR - Fellowship in Joint Replacement',
+        speciality: 'Orthopedics and Sports Medicine',
+        languages: 'English, Hindi, Kannada',
+        timing: '10:00 AM - 8:30 PM | Sun: 10 AM - 12 PM (Prior Appointment)',
+        booking: '/booking.html?dept=Orthopedics',
+        image: './images/dr-prashanthkumar.jpg',
+        initials: 'PK',
+        overview: [
+          'Dr. Prashanthkumar is a senior orthopedic specialist known for advanced care in trauma, joint disorders, and sports-related injuries.',
+          'His clinical focus includes joint replacement, arthroscopy, ACL and PCL reconstruction, and osteoarthritis management with evidence-based protocols.',
+          'He also supports regenerative orthopedic options such as PRP and GFC-based therapies, guiding patients toward long-term mobility and pain relief.'
+        ]
+      },
+      priyatrimukhe: {
+        name: 'Dr. Priya Trimukhe',
+        headline: 'Consultant Dental Surgeon',
+        qualifications: 'BDS - Bachelor of Dental Surgery',
+        speciality: 'Advanced Dental Care and Cosmetic Dentistry',
+        languages: 'English, Hindi, Kannada, Marathi',
+        timing: '10:00 AM - 8:30 PM | Sun: 10 AM - 12 PM (Prior Appointment)',
+        booking: '/booking.html?dept=Dental',
+        image: '',
+        initials: 'PT',
+        overview: [
+          'Dr. Priya Trimukhe delivers comprehensive dental care with a patient-first focus on comfort and long-term oral health outcomes.',
+          'Her practice includes pain-free restorative dentistry, smile correction, Invisalign planning, dental implants, and full-mouth rehabilitation.',
+          'She emphasizes preventive dental education and personalized treatment plans for children, adults, and senior patients.'
+        ]
+      },
+      shishiragoudar: {
+        name: 'Dr. Shishirakumar A Goudar',
+        headline: 'Consultant Neurology Specialist',
+        qualifications: 'MBBS, MD General Medicine, (DNB) Neurology',
+        speciality: 'Neurology and Nerve Care',
+        languages: 'English, Hindi, Kannada',
+        timing: 'By Prior Appointment',
+        booking: '/booking.html?dept=Neurology',
+        image: '',
+        initials: 'SG',
+        overview: [
+          'Dr. Shishirakumar A Goudar manages both common and complex neurological disorders with a structured diagnostic approach.',
+          'He evaluates and treats stroke, epilepsy, headaches, neuropathy, and other nervous system conditions with modern neuro-clinical protocols.',
+          'He also plans follow-up and rehabilitation pathways for patients requiring long-term neurological monitoring.'
+        ]
+      },
+      madhurisaha: {
+        name: 'Dr. Madhuri Saha',
+        headline: 'Consultant Obstetrician and Gynaecologist',
+        qualifications: 'MBBS, (DNB), PDDMLE, FMAS',
+        speciality: 'Obstetrics and Gynaecology',
+        languages: 'English, Hindi, Kannada, Bengali',
+        timing: 'Mon, Wed, Thu, Fri: 5:00 PM - 7:00 PM',
+        booking: '/booking.html?dept=Gynaecology',
+        image: '',
+        initials: 'MS',
+        overview: [
+          'Dr. Madhuri Saha provides complete women-focused healthcare spanning preventive gynecology, menstrual health, and fertility counseling.',
+          'Her clinical interests include antenatal care, high-risk pregnancy monitoring, and minimally invasive gynecological procedures.',
+          'She combines compassionate counseling with evidence-based decision making for every stage of women’s health.'
+        ]
+      },
+      spkumar: {
+        name: 'Dr. S P Kumar',
+        headline: 'Consultant Paediatrician',
+        qualifications: 'MBBS, DCH, FID',
+        speciality: 'Pediatrics and Child Health',
+        languages: 'English, Hindi, Kannada',
+        timing: '6:00 PM - 8:30 PM',
+        booking: '/booking.html?dept=Pediatrics',
+        image: '',
+        initials: 'SK',
+        overview: [
+          'Dr. S P Kumar offers dedicated pediatric care for infants, children, and adolescents with special attention to family guidance.',
+          'His scope includes vaccination planning, growth and development tracking, and treatment of acute pediatric illnesses.',
+          'He supports parents with practical preventive-care advice and individualized follow-up schedules for healthy child development.'
+        ]
+      },
+      varshahegde: {
+        name: 'Dr. Varsha Hegde',
+        headline: 'Consultant in Pediatrics and Child Health',
+        qualifications: 'MBBS, DCH',
+        speciality: 'Pediatrics and Child Development',
+        languages: 'English, Hindi, Kannada',
+        timing: 'By Prior Appointment',
+        booking: '/booking.html?dept=Pediatrics',
+        image: '',
+        initials: 'VH',
+        overview: [
+          'Dr. Varsha Hegde focuses on preventive and developmental pediatric care in early childhood and school-age years.',
+          'She provides clinical support for routine pediatric concerns, nutrition guidance, and developmental milestone assessment.',
+          'Her consultations prioritize child comfort and collaborative planning with parents for sustained wellness.'
+        ]
+      },
+      kalaivani: {
+        name: 'Dr. Kalaivani V.',
+        headline: 'General and Laparoscopic Surgeon',
+        qualifications: 'MBBS, MS, FRCS, FIAGES, FALS (Hernia)',
+        speciality: 'General Surgery and Laparoscopic Surgery',
+        languages: 'English, Hindi, Kannada, Tamil',
+        timing: 'On-Call Appointment',
+        booking: '/booking.html?dept=Surgery',
+        image: '',
+        initials: 'KV',
+        overview: [
+          'Dr. Kalaivani V. is experienced in minimally invasive and advanced general surgical interventions for diverse abdominal conditions.',
+          'Her expertise includes laparoscopic procedures, hernia repair, and structured perioperative care for faster recovery.',
+          'She works with a safety-first approach and clear surgical counseling for patients and families before and after procedures.'
+        ]
+      },
+      palaniappan: {
+        name: 'Dr. Palaniappan Ramanathan',
+        headline: 'General and Surgical Oncologist',
+        qualifications: 'MBBS, MS (Gen Surgery), MCh (Surgical Oncology), AIIMS',
+        speciality: 'General Surgery and Surgical Oncology',
+        languages: 'English, Hindi, Kannada, Tamil',
+        timing: 'Mon - Fri: 4:30 PM - 6:00 PM',
+        booking: '/booking.html?dept=Surgery',
+        image: '',
+        initials: 'PR',
+        overview: [
+          'Dr. Palaniappan Ramanathan provides cancer-focused surgical consultation supported by strong general surgery expertise.',
+          'He is trained in oncological surgery and guides patients through diagnosis discussions, treatment planning, and operative care.',
+          'His approach emphasizes clarity, multidisciplinary coordination, and outcome-oriented recovery pathways.'
+        ]
+      },
+      sahana: {
+        name: 'Dr. Sahana Shilankur S',
+        headline: 'Otorhinolaryngologist (ENT Specialist)',
+        qualifications: 'MBBS, DLO',
+        speciality: 'Ear, Nose, and Throat (ENT)',
+        languages: 'English, Hindi, Kannada',
+        timing: 'On-Call Appointment',
+        booking: '/booking.html?dept=ENT',
+        image: '',
+        initials: 'SS',
+        overview: [
+          'Dr. Sahana Shilankur S manages ENT conditions with balanced medical and procedural care pathways.',
+          'Her consultations address sinus concerns, hearing disorders, throat issues, and vestibular symptoms such as vertigo.',
+          'She focuses on early diagnosis and tailored treatment to improve breathing, hearing, and voice-related quality of life.'
+        ]
+      },
+      rajeevkumar: {
+        name: 'Dr. Rajeev Kumar (PT)',
+        headline: 'Lead Physiotherapist',
+        qualifications: 'BPT, MPT (Physiotherapy)',
+        speciality: 'Physiotherapy and Rehabilitation',
+        languages: 'English, Hindi, Kannada',
+        timing: '4:30 PM - 8:00 PM',
+        booking: '/booking.html?dept=Physiotherapy',
+        image: '',
+        initials: 'RK',
+        overview: [
+          'Dr. Rajeev Kumar designs rehabilitation plans for post-surgical recovery, sports injuries, and chronic pain management.',
+          'He uses movement correction, strengthening, and function-restoration techniques for sustainable physical recovery.',
+          'His programs are structured with measurable milestones to help patients return safely to work, sport, and daily activity.'
+        ]
+      },
+      dhatripadsalgi: {
+        name: 'Dr. Dhatri R Padsalgi (PT)',
+        headline: 'Consultant Physiotherapist',
+        qualifications: 'BPT (Physiotherapy)',
+        speciality: 'Musculoskeletal Rehabilitation',
+        languages: 'English, Hindi, Kannada',
+        timing: 'By Appointment',
+        booking: '/booking.html?dept=Physiotherapy',
+        image: '',
+        initials: 'DP',
+        overview: [
+          'Dr. Dhatri R Padsalgi supports patients with muscle, joint, and posture-related pain through targeted physiotherapy interventions.',
+          'Her focus areas include ergonomic correction, movement retraining, and long-term conditioning for pain recurrence prevention.',
+          'She aligns therapy plans with patient lifestyle and recovery goals for practical day-to-day functional improvement.'
+        ]
+      },
+      abhishekpt: {
+        name: 'Dr. Abhishek (PT)',
+        headline: 'Consultant Physiotherapist',
+        qualifications: 'BPT (Physiotherapy)',
+        speciality: 'Pediatric and Neuro Rehabilitation',
+        languages: 'English, Hindi, Kannada',
+        timing: 'By Appointment',
+        booking: '/booking.html?dept=Physiotherapy',
+        image: '',
+        initials: 'AB',
+        overview: [
+          'Dr. Abhishek provides physiotherapy support in pediatric and neurological rehabilitation settings.',
+          'He works on mobility, coordination, and strength restoration using structured and progressive rehabilitation routines.',
+          'His care model emphasizes safe movement recovery and patient-family education for continuity outside clinic sessions.'
+        ]
+      }
+    };
+
+    function initDoctorProfile() {
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get('doc');
+      const selected = doctors[key] || doctors.prashanthkumar;
+
+      document.title = `${selected.name} | Vega Curre Multispeciality Clinic`;
+      document.getElementById('crumbName').textContent = selected.name;
+      document.getElementById('doctorName').textContent = selected.name;
+      document.getElementById('doctorHeadline').textContent = selected.headline;
+      document.getElementById('doctorQual').textContent = selected.qualifications;
+      document.getElementById('doctorSpeciality').textContent = selected.speciality;
+      document.getElementById('doctorLanguages').textContent = selected.languages;
+      document.getElementById('doctorTiming').textContent = selected.timing;
+      document.getElementById('doctorOverview1').textContent = selected.overview[0] || '';
+      document.getElementById('doctorOverview2').textContent = selected.overview[1] || '';
+      document.getElementById('doctorOverview3').textContent = selected.overview[2] || '';
+
+      const bookingBtn = document.getElementById('doctorBooking');
+      bookingBtn.href = selected.booking;
+
+      const img = document.getElementById('doctorImage');
+      const initial = document.getElementById('doctorInitial');
+      img.alt = selected.name;
+
+      if (selected.image) {
+        img.src = selected.image;
+        img.style.display = 'block';
+        initial.style.display = 'none';
+      } else {
+        img.style.display = 'none';
+        initial.style.display = 'grid';
+        initial.textContent = selected.initials || 'DR';
+      }
+    }
+
+    initDoctorProfile();
+  </script>
+</body>
+</html>
