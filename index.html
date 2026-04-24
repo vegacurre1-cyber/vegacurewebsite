@@ -43,7 +43,7 @@
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="/" class="navbar-brand">
-        <img src="./logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" />
+        <img src="./logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" fetchpriority="high" loading="eager" />
       </a>
 
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
@@ -141,7 +141,7 @@
     <div class="swiper-wrapper">
       <!-- Slide 1: General/Clinic -->
       <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./clinic-reception.png" alt="Vega Curre Clinic Reception"></div>
+        <div class="slide-bg"><img src="./clinic-reception.png" alt="Vega Curre Clinic Reception" fetchpriority="high" loading="eager"></div>
         <div class="container">
           <div class="slide-content">
             <div class="slide-text-overlay">
@@ -158,7 +158,7 @@
       </div>
       <!-- Slide 2: Orthopedics -->
       <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-ortho.png" alt="Orthopedic Excellence"></div>
+        <div class="slide-bg"><img src="./images/hero-ortho.png" alt="Orthopedic Excellence" fetchpriority="high" loading="eager"></div>
         <div class="container">
           <div class="slide-content">
             <div class="slide-text-overlay">
@@ -175,7 +175,7 @@
       </div>
       <!-- Slide 3: Dental -->
       <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-dental.png" alt="Advanced Dental Care"></div>
+        <div class="slide-bg"><img src="./images/hero-dental.png" alt="Advanced Dental Care" loading="lazy"></div>
         <div class="container">
           <div class="slide-content">
             <div class="slide-text-overlay">
@@ -192,7 +192,7 @@
       </div>
       <!-- Slide 4: Pediatrics -->
       <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-peds.png" alt="Compassionate Pediatric Care"></div>
+        <div class="slide-bg"><img src="./images/hero-peds.png" alt="Compassionate Pediatric Care" loading="lazy"></div>
         <div class="container">
           <div class="slide-content">
             <div class="slide-text-overlay">
@@ -209,7 +209,7 @@
       </div>
       <!-- Slide 5: Gynaecology -->
       <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-obgyn.png" alt="Specialist Women's Care"></div>
+        <div class="slide-bg"><img src="./images/hero-obgyn.png" alt="Specialist Women's Care" loading="lazy"></div>
         <div class="container">
           <div class="slide-content">
             <div class="slide-text-overlay">
@@ -226,7 +226,7 @@
       </div>
       <!-- Slide 6: Physiotherapy -->
       <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-physio.png" alt="Advanced Physiotherapy"></div>
+        <div class="slide-bg"><img src="./images/hero-physio.png" alt="Advanced Physiotherapy" loading="lazy"></div>
         <div class="container">
           <div class="slide-content">
             <div class="slide-text-overlay">
@@ -243,7 +243,7 @@
       </div>
       <!-- Slide 7: Neurology -->
       <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-neuro.png" alt="Expert Neurology Care"></div>
+        <div class="slide-bg"><img src="./images/hero-neuro.png" alt="Expert Neurology Care" loading="lazy"></div>
         <div class="container">
           <div class="slide-content">
             <div class="slide-text-overlay">
@@ -469,6 +469,8 @@
             src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80"
             alt="Modern clinic interiors at Vega Curre"
             width="900" height="600"
+            loading="lazy"
+            decoding="async"
           />
           <div class="why-badge">
             <h4>METROPOLIS | MEDALL</h4>
@@ -661,7 +663,9 @@
               <div class="doc-top-banner">
                 <div class="owner-badge">Hospital Founder</div>
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-dental">PT</div>
+                  <div class="doc-avatar doc-avatar-dental">
+                    <img src="./images/dr-priyatrimukhe.png" alt="Dr. Priya Trimukhe" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -682,7 +686,9 @@
             <div class="doctor-card doc-theme-peds">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-peds">SK</div>
+                  <div class="doc-avatar doc-avatar-peds">
+                    <img src="./images/dr-spkumar.png" alt="Dr. S P Kumar" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -703,7 +709,9 @@
             <div class="doctor-card doc-theme-peds">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-peds">VH</div>
+                  <div class="doc-avatar doc-avatar-peds">
+                    <img src="./images/dr-varshahegde.png" alt="Dr. Varsha Hegde" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -724,7 +732,9 @@
             <div class="doctor-card doc-theme-obgyn">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-obgyn">MS</div>
+                  <div class="doc-avatar doc-avatar-obgyn">
+                    <img src="./images/dr-madhurisaha.png" alt="Dr. Madhuri Saha" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -745,7 +755,9 @@
             <div class="doctor-card doc-theme-physio">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-physio">RK</div>
+                  <div class="doc-avatar doc-avatar-physio">
+                    <img src="./images/dr-rajeevkumar.png" alt="Dr. Rajeev Kumar" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -766,7 +778,9 @@
             <div class="doctor-card doc-theme-physio">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-physio">DP</div>
+                  <div class="doc-avatar doc-avatar-physio">
+                    <img src="./images/dr-dhatripadsalgi.png" alt="Dr. Dhatri R Padsalgi" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -787,7 +801,9 @@
             <div class="doctor-card doc-theme-physio">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-physio">AB</div>
+                  <div class="doc-avatar doc-avatar-physio">
+                    <img src="./images/dr-abhishek.png" alt="Dr. Abhishek" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -808,7 +824,9 @@
             <div class="doctor-card doc-theme-neuro">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-neuro">SG</div>
+                  <div class="doc-avatar doc-avatar-neuro">
+                    <img src="./images/dr-shishiragoudar.png" alt="Dr. Shishirakumar A Goudar" loading="lazy">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -829,7 +847,9 @@
             <div class="doctor-card doc-theme-surgery">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-surgery">KV</div>
+                  <div class="doc-avatar doc-avatar-surgery">
+                    <img src="./images/dr-kalaivani.png" alt="Dr. Kalaivani V." loading="lazy" decoding="async">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -850,7 +870,9 @@
             <div class="doctor-card doc-theme-surgery">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-surgery">PR</div>
+                  <div class="doc-avatar doc-avatar-surgery">
+                    <img src="./images/dr-palaniappan.png" alt="Dr. Palaniappan Ramanathan" loading="lazy" decoding="async">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">
@@ -871,7 +893,9 @@
             <div class="doctor-card doc-theme-ent">
               <div class="doc-top-banner">
                 <div class="doc-photo-ring">
-                  <div class="doc-avatar doc-avatar-ent">SS</div>
+                  <div class="doc-avatar doc-avatar-ent">
+                    <img src="./images/dr-sahana.png" alt="Dr. Sahana Shilankur S" loading="lazy" decoding="async">
+                  </div>
                 </div>
               </div>
               <div class="doc-card-body">

@@ -2111,6 +2111,11 @@ footer {
   .top-bar-left, .top-bar-right { gap: 1rem; width: 100%; justify-content: space-between; }
   .top-bar .container { flex-direction: column; gap: 0.5rem; }
   .top-bar-item { white-space: normal; }
+  
+  /* Optimization: Faster taps on mobile */
+  .btn, .nav-link, .dropdown-item, .chat-opt-btn, .sb-btn {
+    touch-action: manipulation;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2215,6 +2220,14 @@ footer {
   .page-hero h1 { font-size: 2.2rem; }
 
   .whatsapp-float { bottom: 1.25rem; right: 1.25rem; }
+  
+  /* Mobile Speed: Simplify complex animations */
+  .reveal-left, .reveal-right {
+    transform: translateY(20px) !important;
+  }
+  .reveal-left.active, .reveal-right.active {
+    transform: translateY(0) !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3558,4 +3571,52 @@ body {
 /* Smooth internal scroll for treatment pages on mobile */
 html {
   scroll-behavior: smooth;
+}
+
+/* ================================================================
+   18. BACK TO TOP BUTTON
+   ================================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 5.5rem; /* Above WhatsApp float */
+  right: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--c-primary);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--c-primary-light);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 5rem;
+    right: 1.25rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.1rem;
+  }
 }

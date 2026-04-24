@@ -101,8 +101,10 @@ if (navbar) {
 }
 
 // ──────────────────────────────────────────────────────────────
-// 3. SCROLL REVEAL ANIMATION
+// 3. SCROLL REVEAL ANIMATION (Optimized for Mobile Speed)
 // ──────────────────────────────────────────────────────────────
+let revealTicking = false;
+
 function runReveal() {
   const threshold = 80;
   document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
@@ -111,9 +113,17 @@ function runReveal() {
       el.classList.add('active');
     }
   });
+  revealTicking = false;
 }
 
-window.addEventListener('scroll', runReveal, { passive: true });
+const onScrollReveal = () => {
+  if (!revealTicking) {
+    requestAnimationFrame(runReveal);
+    revealTicking = true;
+  }
+};
+
+window.addEventListener('scroll', onScrollReveal, { passive: true });
 window.addEventListener('load', runReveal);
 
 // ──────────────────────────────────────────────────────────────
@@ -199,7 +209,18 @@ if (subnavLinks.length) {
     });
   }
 
-  window.addEventListener('scroll', updateSubnav, { passive: true });
+  let subnavTicking = false;
+  function onScrollSubnav() {
+    if (!subnavTicking) {
+      requestAnimationFrame(() => {
+        updateSubnav();
+        subnavTicking = false;
+      });
+      subnavTicking = true;
+    }
+  }
+
+  window.addEventListener('scroll', onScrollSubnav, { passive: true });
   updateSubnav();
 }
 
@@ -624,6 +645,27 @@ function initDocSlider() {
   });
 }
 
+// ──────────────────────────────────────────────────────────────
+// 15. BACK TO TOP BUTTON
+// ──────────────────────────────────────────────────────────────
+function initBackToTop() {
+  const btnHTML = `<button id="backToTop" class="back-to-top" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>`;
+  document.body.insertAdjacentHTML('beforeend', btnHTML);
+  const btn = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Auto-run when ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
@@ -634,6 +676,7 @@ if (document.readyState === 'loading') {
     initDocSlider();
     initVideoSlider();
     initServiceFilter();
+    initBackToTop();
   });
 } else {
   initChatbot();
@@ -643,5 +686,6 @@ if (document.readyState === 'loading') {
   initDocSlider();
   initVideoSlider();
   initServiceFilter();
+  initBackToTop();
 }
 
