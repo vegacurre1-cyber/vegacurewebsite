@@ -245,7 +245,7 @@ if (dateField && !dateField.min) {
 function initChatbot() {
   const chatHTML = `
     <div id="vc-chatbot-container">
-      <button id="vc-chatbot-toggle" aria-label="Open Chat Help"><i class="fas fa-comment-dots"></i></button>
+      <button id="vc-chatbot-toggle" aria-label="Open Chat Help"><i class="fas fa-headset"></i></button>
       <div id="vc-chatbot-window" class="chat-hidden">
         <div class="chat-header">
           <div class="chat-header-info">
