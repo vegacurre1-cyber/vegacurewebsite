@@ -666,7 +666,69 @@ function initBackToTop() {
   });
 }
 
-// Auto-run when ready
+// ──────────────────────────────────────────────────────────────
+// 16. ELITE CUSTOM CURSOR & MAGNETIC BUTTONS
+// ──────────────────────────────────────────────────────────────
+function initEliteInteractions() {
+  if (window.innerWidth <= 1024) return; // Disable on touch devices
+
+  const cursor = document.createElement('div');
+  const cursorFollower = document.createElement('div');
+  cursor.id = 'elite-cursor';
+  cursorFollower.id = 'elite-cursor-follower';
+  document.body.appendChild(cursor);
+  document.body.appendChild(cursorFollower);
+
+  let mouseX = 0, mouseY = 0;
+  let followerX = 0, followerY = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    
+    cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+  });
+
+  const animateFollower = () => {
+    followerX += (mouseX - followerX) * 0.15;
+    followerY += (mouseY - followerY) * 0.15;
+    cursorFollower.style.transform = `translate3d(${followerX}px, ${followerY}px, 0)`;
+    requestAnimationFrame(animateFollower);
+  };
+  animateFollower();
+
+  // Interaction States
+  const interactiveEls = document.querySelectorAll('a, button, .swiper-button-next, .swiper-button-prev, .chat-opt-btn, .hub-card, .specialty-card');
+  
+  interactiveEls.forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursorFollower.classList.add('active');
+      cursor.classList.add('active');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursorFollower.classList.remove('active');
+      cursor.classList.remove('active');
+    });
+  });
+
+  // Magnetic Effect
+  const magneticButtons = document.querySelectorAll('.btn-primary, .btn-nav, .mobile-menu-btn');
+  magneticButtons.forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = `translate(0, 0)`;
+    });
+  });
+}
+
+// Update initialization
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     initChatbot();
@@ -677,6 +739,7 @@ if (document.readyState === 'loading') {
     initVideoSlider();
     initServiceFilter();
     initBackToTop();
+    initEliteInteractions();
   });
 } else {
   initChatbot();
@@ -687,5 +750,6 @@ if (document.readyState === 'loading') {
   initVideoSlider();
   initServiceFilter();
   initBackToTop();
+  initEliteInteractions();
 }
 
