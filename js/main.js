@@ -27,64 +27,49 @@ if (mobileMenuBtn && navLinks) {
     }
   });
 
-  // Handle nav items (including dropdown parents)
-  const allLinks = navLinks.querySelectorAll('.nav-link, .dropdown-item');
+  // Handle all nav links (top-level and dropdown)
+  const allLinks = navLinks.querySelectorAll('a');
   
   allLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       const isMobile = window.innerWidth <= 768;
-      
-      // Top-level dropdown parent?
-      const parentDropdown = link.closest('.nav-item-dropdown');
-      const isTopLevelToggle = parentDropdown && link.classList.contains('nav-link') && parentDropdown.querySelector('.dropdown-menu');
-      
-      // Nested dropdown parent?
-      const submenuParent = link.closest('.dropdown-submenu');
-      const isSubmenuToggle = submenuParent && link.classList.contains('dropdown-item') && submenuParent.querySelector('.submenu');
+      if (!isMobile) return;
 
-      if (isMobile && (isTopLevelToggle || isSubmenuToggle)) {
-        const toggleTarget = isTopLevelToggle ? parentDropdown : submenuParent;
-        
-        if (!toggleTarget.classList.contains('open')) {
+      const parentLi = link.parentElement;
+      const hasSubmenu = parentLi.classList.contains('nav-item-dropdown') || parentLi.classList.contains('dropdown-submenu');
+      const submenu = parentLi.querySelector('.dropdown-menu, .submenu');
+
+      if (hasSubmenu && submenu) {
+        // If not open yet, open it and prevent navigation
+        if (!parentLi.classList.contains('open')) {
           e.preventDefault();
           e.stopPropagation();
           
-          // Close siblings at the same level
-          const siblings = toggleTarget.parentElement.querySelectorAll(isTopLevelToggle ? '.nav-item-dropdown.open' : '.dropdown-submenu.open');
-          siblings.forEach(s => {
-            if (s !== toggleTarget) s.classList.remove('open');
-          });
-          
-          toggleTarget.classList.add('open');
-        } else {
-          // Already open - let it navigate
-          if (link.classList.contains('nav-link')) {
-            // Top level nav-link closure handled by page reload, 
-            // but for smooth UX we can just let it go.
+          // Close siblings at same level
+          const siblings = parentLi.parentElement.children;
+          for (let s of siblings) {
+            if (s !== parentLi) s.classList.remove('open');
           }
+          
+          parentLi.classList.add('open');
+        } else {
+          // Already open, allow navigation
+          // But close the menu so it's fresh if we hit back
+          setTimeout(() => {
+            navLinks.classList.remove('open');
+            parentLi.classList.remove('open');
+          }, 100);
         }
       } else {
-        // Normal link behavior
-        if (!link.closest('.nav-item-dropdown') || !isMobile) {
-          navLinks.classList.remove('open');
-          mobileMenuBtn.setAttribute('aria-expanded', 'false');
-          const icon = mobileMenuBtn.querySelector('i');
-          if (icon) icon.className = 'fas fa-bars';
-        }
+        // Final link - navigate and close menu
+        navLinks.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) icon.className = 'fas fa-bars';
+        
+        // Also close any lingering open submenus
+        navLinks.querySelectorAll('.open').forEach(el => el.classList.remove('open'));
       }
-    });
-  });
-
-  // Handle dropdown internal links (prevent bubble-up that closes the menu incorrectly)
-  navLinks.querySelectorAll('.dropdown-item').forEach(item => {
-    item.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      const icon = mobileMenuBtn.querySelector('i');
-      if (icon) icon.className = 'fas fa-bars';
-      // Remove 'open' class from parent dropdown so it's fresh next time
-      const dropdown = item.closest('.nav-item-dropdown');
-      if (dropdown) dropdown.classList.remove('open');
     });
   });
 }
