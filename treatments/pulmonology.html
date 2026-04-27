@@ -12,15 +12,16 @@
 </head>
 <body>
 
-  <!-- TOP BAR -->
+  <!-- ░░░ TOP BAR ░░░ -->
   <div class="top-bar">
     <div class="container">
       <div class="top-bar-left">
-        <span class="top-bar-item"><i class="fas fa-map-marker-alt"></i> 2nd Floor, Shop No. 24 &amp; 25, 3rd A Cross, Bhuvaneshwari Nagar,<br>Dasarahalli Main Road, Hebbal Kempapura, Bengaluru - 560024</span>
+        <span class="top-bar-item"><i class="fas fa-map-marker-alt"></i> 2nd Floor, Shop No. 24 & 25, 3rd A Cross, Bhuvaneshwari Nagar,<br>Dasarahalli Main Road, Hebbal Kempapura, Bengaluru - 560024</span>
         <span class="top-bar-item">
-          <i class="fas fa-clock"></i>
+          <i class="fas fa-clock"></i> 
           <div class="timing-stack">
             <span>Mon – Sat: 10 AM – 8:30 PM</span>
+            <span class="live-indicator"><span class="dot"></span> Open Now</span>
             <span>Sun: 10 AM – 12 PM (Prior Appt)</span>
           </div>
         </span>
@@ -32,13 +33,13 @@
     </div>
   </div>
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
+  <!-- ░░░ NAVIGATION (Liquid Glass & Floating) ░░░ -->
+  <nav class="navbar liquid-glass" id="navbar">
     <div class="container">
       <a href="/" class="navbar-brand">
         <img src="/logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" />
       </a>
-      <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
         <i class="fas fa-bars"></i>
       </button>
       <ul class="nav-links" id="navLinks">
@@ -46,10 +47,10 @@
         <li><a href="/about.html" class="nav-link">About</a></li>
         <li class="nav-item-dropdown">
           <a href="/treatments.html" class="nav-link active">Departments <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
+                    <ul class="dropdown-menu">
             <li><a href="/treatments.html" class="dropdown-item"><i class="fas fa-th-large"></i> All Departments</a></li>
             <div class="dropdown-divider"></div>
-            
+
             <li class="dropdown-submenu">
               <a href="/treatments/ortho.html" class="dropdown-item"><i class="fas fa-bone"></i> Orthopedics <i class="fas fa-chevron-right"></i></a>
               <ul class="submenu">
@@ -113,6 +114,7 @@
             <li><a href="/treatments/diabetes.html" class="dropdown-item"><i class="fas fa-heartbeat"></i> Diabetes &amp; Endocrinology</a></li>
             <li><a href="/treatments/pulmonology.html" class="dropdown-item"><i class="fas fa-lungs"></i> Pulmonology &amp; Allergy</a></li>
           </ul>
+
         </li>
         <li class="nav-item-dropdown">
           <a href="/contact.html" class="nav-link">Contact <i class="fas fa-chevron-down"></i></a>
@@ -129,7 +131,7 @@
 
   <!-- PAGE HERO -->
   <header class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=2070&auto=format&fit=crop');">
-    <div class="container page-hero-content reveal">
+    <div class="container page-hero-content">
       <div class="breadcrumb">
         <a href="/">Home</a>
         <i class="fas fa-chevron-right breadcrumb-sep"></i>
@@ -271,55 +273,75 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ░░░ FOOTER ░░░ -->
   <footer>
     <div class="container">
       <div class="footer-grid">
+        <!-- Brand col -->
         <div>
           <div class="footer-brand-name">VEGA CURRE</div>
-          <p class="footer-desc">A premier Multispeciality Clinic providing world-class Orthopedic, Dental, and comprehensive healthcare at Hebbal Kempapura, Bengaluru.</p>
+          <p class="footer-desc">A premier Multispeciality Clinic providing world-class Orthopedic, Dental, and comprehensive healthcare with advanced <span style="color:var(--c-red); font-weight:700;">LAB</span> &amp; Diagnostics at Hebbal Kempapura, Bengaluru.</p>
           <div class="footer-socials">
             <a href="#" class="social-btn" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-btn" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://wa.me/916364123431" class="social-btn" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
+
+        <!-- Quick Links -->
         <div class="footer-col">
           <h4>Quick Links</h4>
           <div class="footer-links">
             <a href="/"><i class="fas fa-chevron-right"></i> Home</a>
             <a href="/about.html"><i class="fas fa-chevron-right"></i> About &amp; Doctors</a>
-            <a href="/treatments.html"><i class="fas fa-chevron-right"></i> All Departments</a>
+            <a href="/treatments.html"><i class="fas fa-chevron-right"></i> Departments</a>
             <a href="/booking.html"><i class="fas fa-chevron-right"></i> Book Appointment</a>
             <a href="/contact.html"><i class="fas fa-chevron-right"></i> Contact &amp; Location</a>
           </div>
         </div>
+
+        <!-- Specialities -->
         <div class="footer-col">
           <h4>Departments</h4>
           <div class="footer-links">
-            <a href="/treatments.html#ortho"><i class="fas fa-chevron-right"></i> Orthopedics</a>
-            <a href="/treatments.html#dental"><i class="fas fa-chevron-right"></i> Dental Care</a>
-            <a href="/treatments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a>
-            <a href="/treatments.html#gynaecology"><i class="fas fa-chevron-right"></i> Gynaecology</a>
-            <a href="/treatments.html#physiotherapy"><i class="fas fa-chevron-right"></i> Physiotherapy</a>
-            <a href="/treatments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a>
-            <a href="/treatments.html#ent"><i class="fas fa-chevron-right"></i> ENT</a>
-            <a href="/treatments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a>
-            <a href="/treatments.html#diabetes"><i class="fas fa-chevron-right"></i> Diabetes</a>
-            <a href="/treatments.html#pulmonology"><i class="fas fa-chevron-right"></i> Pulmonology</a>
+            <a href="/treatments/ortho.html"><i class="fas fa-chevron-right"></i> Orthopedics</a>
+            <a href="/treatments/dental.html"><i class="fas fa-chevron-right"></i> Dental Care</a>
+            <a href="/treatments/pediatrics.html"><i class="fas fa-chevron-right"></i> Pediatrics</a>
+            <a href="/treatments/gynaecology.html"><i class="fas fa-chevron-right"></i> Gynaecology</a>
+            <a href="/treatments/physiotherapy.html"><i class="fas fa-chevron-right"></i> Physiotherapy</a>
+            <a href="/treatments/neurology.html"><i class="fas fa-chevron-right"></i> Neurology</a>
+            <a href="/treatments/ent.html"><i class="fas fa-chevron-right"></i> ENT</a>
+            <a href="/treatments/surgery.html"><i class="fas fa-chevron-right"></i> Surgery</a>
+            <a href="/treatments/diabetes.html"><i class="fas fa-chevron-right"></i> Diabetes</a>
+            <a href="/treatments/pulmonology.html"><i class="fas fa-chevron-right"></i> Pulmonology</a>
           </div>
         </div>
+
+        <!-- Contact -->
         <div class="footer-col">
           <h4>Contact Us</h4>
-          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>2nd Floor, Shop 24 &amp; 25, Bhuvaneshwari Nagar, Dasarahalli Main Rd, Hebbal Kempapura, Bengaluru – 560024</span></div>
-          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i><span>+91 63641 23431</span></div>
-          <div class="footer-contact-item"><i class="fas fa-envelope"></i><span>vegacurre@gmail.com</span></div>
-          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Mon – Sat: 10 AM – 8 PM</span></div>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>2nd Floor, Shop 24 &amp; 25, Bhuvaneshwari Nagar, Dasarahalli Main Rd, Hebbal Kempapura, Bengaluru – 560024</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 63641 23431</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>vegacurre@gmail.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Mon – Sat: 10 AM – 8:30 PM | Sun: 10 AM – 12 PM (Appt)</span>
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         <span>&copy; 2026 Vega Curre Multispeciality Clinic. All rights reserved.</span>
-        <span>Hebbal Kempapura, Bengaluru.</span>
+        <span>Designed with care for better health outcomes.</span>
       </div>
     </div>
   </footer>
@@ -331,3 +353,7 @@
   <script src="/js/main.js" type="module"></script>
 </body>
 </html>
+
+
+
+

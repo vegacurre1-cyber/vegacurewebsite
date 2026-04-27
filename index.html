@@ -40,11 +40,11 @@
     </div>
   </div>
 
-  <!-- ░░░ NAVBAR ░░░ -->
-  <nav class="navbar" id="navbar">
+  <!-- ░░░ NAVIGATION (Liquid Glass & Floating) ░░░ -->
+  <nav class="navbar liquid-glass" id="navbar">
     <div class="container">
       <a href="/" class="navbar-brand">
-        <img src="./logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" loading="eager" />
+        <img src="./logo-full.png" alt="Vega Curre Multispeciality Clinic Logo" class="brand-logo-img" loading="eager" style="height: 40px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));" />
       </a>
 
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" title="Menu">
@@ -59,7 +59,7 @@
           <ul class="dropdown-menu">
             <li><a href="/treatments.html" class="dropdown-item"><i class="fas fa-th-large"></i> All Departments</a></li>
             <div class="dropdown-divider"></div>
-            
+
             <li class="dropdown-submenu">
               <a href="/treatments/ortho.html" class="dropdown-item"><i class="fas fa-bone"></i> Orthopedics <i class="fas fa-chevron-right"></i></a>
               <ul class="submenu">
@@ -122,150 +122,277 @@
 
             <li><a href="/treatments/diabetes.html" class="dropdown-item"><i class="fas fa-heartbeat"></i> Diabetes &amp; Endocrinology</a></li>
             <li><a href="/treatments/pulmonology.html" class="dropdown-item"><i class="fas fa-lungs"></i> Pulmonology &amp; Allergy</a></li>
+            <div class="dropdown-divider"></div>
+            <li><a href="/contact.html" class="dropdown-item"><i class="fas fa-microscope"></i> Diagnostics &amp; Lab</a></li>
           </ul>
         </li>
-        <li class="nav-item-dropdown">
-          <a href="/contact.html" class="nav-link">Contact <i class="fas fa-chevron-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="/contact.html" class="dropdown-item"><i class="fas fa-map-location-dot"></i> Visit Clinic</a></li>
-            <li><a href="https://wa.me/916364123431" class="dropdown-item" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a></li>
-            <li><a href="mailto:vegacurre@gmail.com" class="dropdown-item"><i class="fas fa-envelope"></i> Email Us</a></li>
-          </ul>
-        </li>
+        <li><a href="/contact.html" class="nav-link">Contact</a></li>
         <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav">Book Appointment</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ░░░ HERO SLIDER ░░░ -->
+  <!-- ░░░ HERO SLIDER — Editorial Split-Screen ░░░ -->
   <header class="hero-slider swiper">
     <div class="swiper-wrapper">
-      <!-- Slide 1: General/Clinic -->
-      <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/medical_studio_background.png" alt="Vega Curre Premium Clinic" loading="eager" style="object-position: center 30%;"></div>
 
-        <div class="container">
-          <div class="slide-content">
-            <div class="slide-text-overlay">
-              <span class="slide-tag"><i class="fas fa-hospital"></i> Premium Clinical Care</span>
-              <h1 class="slide-title">Vega Curre <span class="highlight">Multispeciality</span> Clinic</h1>
-              <p class="slide-desc">Experience 5-star hospitality in healthcare at our state-of-the-art facility in Hebbal Kempapura.</p>
-              <div class="slide-actions">
-                <a href="/booking.html" class="btn btn-primary btn-lg">Book Appointment</a>
-                <a href="/about.html" class="btn btn-ghost btn-lg">Meet Our Doctors</a>
-              </div>
+      <!-- Slide 1: Clinic Overview -->
+      <div class="swiper-slide hero-slide" style="--slide-accent:#10B981;">
+        <div class="hero-left-panel">
+          <span class="hero-slide-num">01 / 07</span>
+          <span class="hero-dept-watermark">VEGA</span>
+          <div class="hero-slide-content">
+            <span class="slide-tag"><i class="fas fa-hospital"></i> Premium Clinical Care</span>
+            <h1 class="slide-title">Vega Curre<span class="highlight">Multispeciality Clinic</span></h1>
+            <p class="slide-desc">10+ board-certified specialists, 9 departments and advanced diagnostics — all under one roof in Hebbal Kempapura, Bengaluru.</p>
+            <div class="slide-actions">
+              <a href="/booking.html" class="btn btn-primary btn-lg">Book Appointment</a>
+              <a href="/contact.html" class="btn btn-ghost btn-lg">Contact Us</a>
+            </div>
+          </div>
+          <div class="hero-stat-strip">
+            <div class="hero-stat-item"><span class="stat-val">10+</span><span class="stat-lbl">Specialists</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">9</span><span class="stat-lbl">Departments</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">5K+</span><span class="stat-lbl">Patients Served</span></div>
+          </div>
+        </div>
+        <div class="hero-panel-accent"></div>
+        <div class="hero-right-panel">
+          <img src="./images/medical_studio_background.png" alt="Vega Curre Premium Clinic" loading="eager" style="object-position: center 30%;">
+          <div class="hero-float-card">
+            <div class="hfc-icon"><i class="fas fa-award"></i></div>
+            <div class="hfc-info">
+              <strong>Trusted Multispeciality Clinic</strong>
+              <span>Hebbal Kempapura, Bengaluru</span>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Slide 2: Orthopedics -->
-      <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-ortho.png" alt="Orthopedic Excellence" loading="eager"></div>
-        <div class="container">
-          <div class="slide-content">
-            <div class="slide-text-overlay">
-              <span class="slide-tag"><i class="fas fa-bone"></i> Orthopedic Excellence</span>
-              <h1 class="slide-title">Advanced <span class="highlight">Joint & Spine</span> Care</h1>
-              <p class="slide-desc">From Robotic-aligned Knee Replacements to PRP Regenerative Therapy.</p>
-              <div class="slide-actions">
-                <a href="/treatments/ortho.html" class="btn btn-primary btn-lg">View Ortho Services</a>
-                <a href="/booking.html?dept=Orthopedics" class="btn btn-ghost btn-lg">Book Consultation</a>
-              </div>
+      <div class="swiper-slide hero-slide" style="--slide-accent:#0096C7;">
+        <div class="hero-left-panel">
+          <span class="hero-slide-num">02 / 07</span>
+          <span class="hero-dept-watermark">ORTHO</span>
+          <div class="hero-slide-content">
+            <span class="slide-tag"><i class="fas fa-bone"></i> Orthopedic Excellence</span>
+            <h1 class="slide-title">Advanced<span class="highlight">Joint & Spine Care</span></h1>
+            <p class="slide-desc">Robotic-aligned Knee Replacements, Arthroscopy and PRP Regenerative Therapy by Dr. Prashanthkumar — MBBS D Ortho (DNB) FIJR.</p>
+            <div class="slide-actions">
+              <a href="/treatments/ortho.html" class="btn btn-primary btn-lg">View Ortho Services</a>
+              <a href="/booking.html?dept=Orthopedics" class="btn btn-ghost btn-lg">Book Now</a>
+            </div>
+          </div>
+          <div class="hero-stat-strip">
+            <div class="hero-stat-item"><span class="stat-val">15+</span><span class="stat-lbl">Yrs Experience</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">PRP</span><span class="stat-lbl">Regenerative Therapy</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">FIJR</span><span class="stat-lbl">Fellowship</span></div>
+          </div>
+        </div>
+        <div class="hero-panel-accent"></div>
+        <div class="hero-right-panel">
+          <img src="./images/hero-ortho.png" alt="Orthopedic Excellence" loading="eager">
+          <div class="hero-float-card">
+            <div class="hfc-icon"><i class="fas fa-bone"></i></div>
+            <div class="hfc-info">
+              <strong>Dr. Prashanthkumar</strong>
+              <span>MS Ortho · FIJR · Joint Replacement</span>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Slide 3: Dental -->
-      <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-dental.png" alt="Advanced Dental Care" loading="lazy"></div>
-        <div class="container">
-          <div class="slide-content">
-            <div class="slide-text-overlay">
-              <span class="slide-tag"><i class="fas fa-tooth"></i> Precision Dentistry</span>
-              <h1 class="slide-title">Crafting <span class="highlight">Perfect Smiles</span> with Precision</h1>
-              <p class="slide-desc">Experience pain-free dental implants and advanced cosmetic makeovers.</p>
-              <div class="slide-actions">
-                <a href="/treatments/dental.html" class="btn btn-primary btn-lg">Explore Dental Care</a>
-                <a href="https://wa.me/916364123431" class="btn btn-ghost btn-lg"><i class="fab fa-whatsapp"></i> Chat with Dentist</a>
-              </div>
+      <div class="swiper-slide hero-slide" style="--slide-accent:#0D9488;">
+        <div class="hero-left-panel">
+          <span class="hero-slide-num">03 / 07</span>
+          <span class="hero-dept-watermark">DENTAL</span>
+          <div class="hero-slide-content">
+            <span class="slide-tag"><i class="fas fa-tooth"></i> Precision Dentistry</span>
+            <h1 class="slide-title">Crafting<span class="highlight">Perfect Smiles</span></h1>
+            <p class="slide-desc">Pain-free dental implants, Invisalign, and cosmetic smile makeovers by Dr. Priya Trimukhe — BDS.</p>
+            <div class="slide-actions">
+              <a href="/treatments/dental.html" class="btn btn-primary btn-lg">Explore Dental Care</a>
+              <a href="/booking.html?dept=Dental" class="btn btn-ghost btn-lg">Book Now</a>
+            </div>
+          </div>
+          <div class="hero-stat-strip">
+            <div class="hero-stat-item"><span class="stat-val">BDS</span><span class="stat-lbl">Qualified</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">6+</span><span class="stat-lbl">Procedures</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">100%</span><span class="stat-lbl">Pain-Free</span></div>
+          </div>
+        </div>
+        <div class="hero-panel-accent"></div>
+        <div class="hero-right-panel">
+          <img src="./images/hero-dental.png" alt="Advanced Dental Care" loading="lazy">
+          <div class="hero-float-card">
+            <div class="hfc-icon"><i class="fas fa-tooth"></i></div>
+            <div class="hfc-info">
+              <strong>Dr. Priya Trimukhe</strong>
+              <span>BDS · Cosmetic &amp; Implant Dentistry</span>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Slide 4: Pediatrics -->
-      <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-peds.png" alt="Compassionate Pediatric Care" loading="lazy"></div>
-        <div class="container">
-          <div class="slide-content">
-            <div class="slide-text-overlay">
-              <span class="slide-tag"><i class="fas fa-baby"></i> Compassionate Care</span>
-              <h1 class="slide-title">Your Child's <span class="highlight">Health Journey</span> Matters</h1>
-              <p class="slide-desc">Expert pediatric care for your little ones — from newborn screenings to vaccinations.</p>
-              <div class="slide-actions">
-                <a href="/treatments/pediatrics.html" class="btn btn-primary btn-lg">Pediatric Services</a>
-                <a href="/booking.html?dept=Pediatrics" class="btn btn-ghost btn-lg">Book Slot</a>
-              </div>
+      <div class="swiper-slide hero-slide" style="--slide-accent:#F59E0B;">
+        <div class="hero-left-panel">
+          <span class="hero-slide-num">04 / 07</span>
+          <span class="hero-dept-watermark">PEDS</span>
+          <div class="hero-slide-content">
+            <span class="slide-tag"><i class="fas fa-baby"></i> Compassionate Care</span>
+            <h1 class="slide-title">Your Child's<span class="highlight">Health Journey</span></h1>
+            <p class="slide-desc">Expert paediatric care from newborn screenings to vaccinations by Dr. S P Kumar (MBBS DCH FID) and Dr. Varsha Hegde.</p>
+            <div class="slide-actions">
+              <a href="/treatments/pediatrics.html" class="btn btn-primary btn-lg">Pediatric Services</a>
+              <a href="/booking.html?dept=Pediatrics" class="btn btn-ghost btn-lg">Book Now</a>
+            </div>
+          </div>
+          <div class="hero-stat-strip">
+            <div class="hero-stat-item"><span class="stat-val">2</span><span class="stat-lbl">Paediatricians</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">VAX</span><span class="stat-lbl">Centre</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">0–18</span><span class="stat-lbl">Age Range</span></div>
+          </div>
+        </div>
+        <div class="hero-panel-accent"></div>
+        <div class="hero-right-panel">
+          <img src="./images/hero-peds.png" alt="Compassionate Pediatric Care" loading="lazy">
+          <div class="hero-float-card">
+            <div class="hfc-icon"><i class="fas fa-baby"></i></div>
+            <div class="hfc-info">
+              <strong>Pediatrics Department</strong>
+              <span>Dr. S P Kumar · Dr. Varsha Hegde</span>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Slide 5: Gynaecology -->
-      <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-obgyn.png" alt="Specialist Women's Care" loading="lazy"></div>
-        <div class="container">
-          <div class="slide-content">
-            <div class="slide-text-overlay">
-              <span class="slide-tag"><i class="fas fa-female"></i> Women's Wellness</span>
-              <h1 class="slide-title">Specialised Care for <span class="highlight">Every Stage</span> of Life</h1>
-              <p class="slide-desc">From prenatal care to advanced gynaecological wellness — expertise you can trust.</p>
-              <div class="slide-actions">
-                <a href="/about.html?dept=obgyn" class="btn btn-primary btn-lg">Meet Our Specialist</a>
-                <a href="/booking.html?dept=Gynecology" class="btn btn-ghost btn-lg">Book Consultation</a>
-              </div>
+      <div class="swiper-slide hero-slide" style="--slide-accent:#A855F7;">
+        <div class="hero-left-panel">
+          <span class="hero-slide-num">05 / 07</span>
+          <span class="hero-dept-watermark">OBG</span>
+          <div class="hero-slide-content">
+            <span class="slide-tag"><i class="fas fa-female"></i> Women's Wellness</span>
+            <h1 class="slide-title">Specialised Care for<span class="highlight">Every Stage of Life</span></h1>
+            <p class="slide-desc">Prenatal care, PCOS management and comprehensive gynaecology by Dr. Madhuri Saha — MBBS DNB FMAS.</p>
+            <div class="slide-actions">
+              <a href="/treatments/gynaecology.html" class="btn btn-primary btn-lg">Women's Health</a>
+              <a href="/booking.html?dept=Gynaecology" class="btn btn-ghost btn-lg">Book Consultation</a>
+            </div>
+          </div>
+          <div class="hero-stat-strip">
+            <div class="hero-stat-item"><span class="stat-val">DNB</span><span class="stat-lbl">Qualified</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">FMAS</span><span class="stat-lbl">Fellowship</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">3</span><span class="stat-lbl">Days / Week</span></div>
+          </div>
+        </div>
+        <div class="hero-panel-accent"></div>
+        <div class="hero-right-panel">
+          <img src="./images/hero-obgyn.png" alt="Specialist Women's Care" loading="lazy">
+          <div class="hero-float-card">
+            <div class="hfc-icon"><i class="fas fa-female"></i></div>
+            <div class="hfc-info">
+              <strong>Dr. Madhuri Saha</strong>
+              <span>MBBS · DNB · FMAS · Women's Health</span>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Slide 6: Physiotherapy -->
-      <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-physio.png" alt="Advanced Physiotherapy" loading="lazy"></div>
-        <div class="container">
-          <div class="slide-content">
-            <div class="slide-text-overlay">
-              <span class="slide-tag"><i class="fas fa-running"></i> Rapid Recovery</span>
-              <h1 class="slide-title">Restore <span class="highlight">Mobility & Strength</span> with Experts</h1>
-              <p class="slide-desc">Personalised rehabilitation programs to get you back to your best, faster.</p>
-              <div class="slide-actions">
-                <a href="/about.html?dept=physio" class="btn btn-primary btn-lg">View Rehab Programs</a>
-                <a href="https://wa.me/916364123431" class="btn btn-ghost btn-lg"><i class="fab fa-whatsapp"></i> Chat with PT</a>
-              </div>
+      <div class="swiper-slide hero-slide" style="--slide-accent:#22C55E;">
+        <div class="hero-left-panel">
+          <span class="hero-slide-num">06 / 07</span>
+          <span class="hero-dept-watermark">PHYSIO</span>
+          <div class="hero-slide-content">
+            <span class="slide-tag"><i class="fas fa-running"></i> Rapid Recovery</span>
+            <h1 class="slide-title">Restore<span class="highlight">Mobility &amp; Strength</span></h1>
+            <p class="slide-desc">Post-surgical, sports and neurological rehabilitation by Dr. Rajeev Kumar (MPT) and a dedicated physiotherapy team.</p>
+            <div class="slide-actions">
+              <a href="/treatments/physiotherapy.html" class="btn btn-primary btn-lg">View Rehab Programs</a>
+              <a href="https://wa.me/916364123431" class="btn btn-ghost btn-lg"><i class="fab fa-whatsapp"></i> Chat with PT</a>
+            </div>
+          </div>
+          <div class="hero-stat-strip">
+            <div class="hero-stat-item"><span class="stat-val">3</span><span class="stat-lbl">Expert PTs</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">MPT</span><span class="stat-lbl">Qualified Lead</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">4:30</span><span class="stat-lbl">PM Onwards</span></div>
+          </div>
+        </div>
+        <div class="hero-panel-accent"></div>
+        <div class="hero-right-panel">
+          <img src="./images/hero-physio.png" alt="Advanced Physiotherapy" loading="lazy">
+          <div class="hero-float-card">
+            <div class="hfc-icon"><i class="fas fa-running"></i></div>
+            <div class="hfc-info">
+              <strong>Physiotherapy Studio</strong>
+              <span>Dr. Rajeev Kumar · MPT Musculoskeletal</span>
             </div>
           </div>
         </div>
       </div>
+
       <!-- Slide 7: Neurology -->
-      <div class="swiper-slide hero-slide">
-        <div class="slide-bg"><img src="./images/hero-neuro.png" alt="Expert Neurology Care" loading="lazy"></div>
-        <div class="container">
-          <div class="slide-content">
-            <div class="slide-text-overlay">
-              <span class="slide-tag"><i class="fas fa-brain"></i> Neurological Excellence</span>
-              <h1 class="slide-title">Advanced Care for <span class="highlight">Complex Conditions</span></h1>
-              <p class="slide-desc">Expert management of stroke, migraines, and neurological disorders by senior specialists.</p>
-              <div class="slide-actions">
-                <a href="/about.html?dept=neurology" class="btn btn-primary btn-lg">Neuro Specialist</a>
-                <a href="/booking.html?dept=Neurology" class="btn btn-ghost btn-lg">Schedule Visit</a>
-              </div>
+      <div class="swiper-slide hero-slide" style="--slide-accent:#6366F1;">
+        <div class="hero-left-panel">
+          <span class="hero-slide-num">07 / 07</span>
+          <span class="hero-dept-watermark">NEURO</span>
+          <div class="hero-slide-content">
+            <span class="slide-tag"><i class="fas fa-brain"></i> Neurological Excellence</span>
+            <h1 class="slide-title">Advanced Care for<span class="highlight">Complex Conditions</span></h1>
+            <p class="slide-desc">Stroke, epilepsy, migraine and neuropathy management by Dr. Shishirakumar A Goudar — MBBS MD DM Neurology.</p>
+            <div class="slide-actions">
+              <a href="/treatments/neurology.html" class="btn btn-primary btn-lg">Neuro Services</a>
+              <a href="/booking.html?dept=Neurology" class="btn btn-ghost btn-lg">Schedule Visit</a>
+            </div>
+          </div>
+          <div class="hero-stat-strip">
+            <div class="hero-stat-item"><span class="stat-val">DM</span><span class="stat-lbl">Neurology</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">MD</span><span class="stat-lbl">Medicine</span></div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-item"><span class="stat-val">Appt</span><span class="stat-lbl">Based Visits</span></div>
+          </div>
+        </div>
+        <div class="hero-panel-accent"></div>
+        <div class="hero-right-panel">
+          <img src="./images/hero-neuro.png" alt="Expert Neurology Care" loading="lazy">
+          <div class="hero-float-card">
+            <div class="hfc-icon"><i class="fas fa-brain"></i></div>
+            <div class="hfc-info">
+              <strong>Dr. Shishirakumar A Goudar</strong>
+              <span>MBBS · MD · DM Neurology</span>
             </div>
           </div>
         </div>
       </div>
+
     </div>
-    <!-- Add Pagination & Nav -->
     <div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </header>
+
+  <!-- ░░░ HERO WAVE DIVIDER ░░░ -->
+  <div class="hero-wave" style="line-height: 0; background: var(--c-bg); margin-top: -1px;">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; display: block; transform: rotate(180deg);">
+      <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="var(--c-primary-dark)"></path>
+    </svg>
+  </div>
 
 
   <!-- ░░░ STATS BAR ░░░ -->
@@ -292,20 +419,71 @@
     </div>
   </div>
 
+  <!-- ░░░ CLINICAL PRECISION & DIAGNOSTIC DEPTH (Premium Section) ░░░ -->
+  <section class="section-lg" style="background: var(--c-primary-dark); color: #fff; overflow: hidden; position: relative;">
+    <div class="container">
+      <div class="grid-2 reveal">
+        <div class="precision-content">
+          <div class="section-eyebrow" style="background: rgba(16,185,129,0.15); color: var(--c-accent-glow);"><i class="fas fa-microscope"></i> Diagnostic Authority</div>
+          <h2 class="section-title" style="color: #fff;">Clinical Precision <br>& Diagnostic Depth</h2>
+          <p class="section-subtitle" style="color: var(--c-text-dark-secondary);">We don't just treat symptoms; we decode biological data. Our specialists utilize advanced clinical decision support systems (CDSS) to ensure zero-error outcomes for every surgery and treatment plan.</p>
+          
+          <ul class="mt-4 flex flex-col gap-3">
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle" style="color: var(--c-accent-glow);"></i> <span>Real-time Clinical Scoring (NEWS2)</span></li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle" style="color: var(--c-accent-glow);"></i> <span>AI-Assisted Drug Interaction Checks</span></li>
+            <li class="flex items-center gap-3"><i class="fas fa-check-circle" style="color: var(--c-accent-glow);"></i> <span>Robotic Precision in Orthopedic Alignment</span></li>
+          </ul>
+        </div>
+
+        <div class="precision-visual" style="position: relative;">
+          <div class="liquid-glass" style="padding: 2.5rem; border-radius: 32px; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+            <div class="flex justify-between items-center mb-6">
+              <h3 style="font-size: 1.1rem; color: #fff;">Our Clinical Standards</h3>
+              <span style="padding: 4px 14px; background: rgba(16,185,129,0.18); color: var(--c-accent-glow); border-radius: 99px; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px;">CERTIFIED</span>
+            </div>
+
+            <div class="flex justify-center gap-5 mb-6">
+              <div class="clinical-dial minor">
+                <div class="flex flex-col items-center">
+                  <span style="font-size: 1.5rem;">10+</span>
+                  <span style="font-size: 0.6rem; opacity: 0.6;">SPECIALISTS</span>
+                </div>
+              </div>
+              <div class="clinical-dial minor">
+                <div class="flex flex-col items-center">
+                  <span style="font-size: 1.5rem;">5K+</span>
+                  <span style="font-size: 0.6rem; opacity: 0.6;">PATIENTS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="interaction-check" style="background: rgba(0,0,0,0.4); padding: 1.25rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.08);">
+              <div class="flex gap-3 items-center mb-2">
+                <i class="fas fa-award" style="color: var(--c-accent-glow);"></i>
+                <span style="font-size: 0.75rem; font-weight: 700; color: #fff;">FELLOWSHIP TRAINED SURGEONS</span>
+              </div>
+              <p style="font-size: 0.85rem; color: var(--c-text-dark-secondary); line-height: 1.5;">Our orthopedic and surgical teams hold international fellowships — <strong>FIJR, FMAS, FRCS, FALS</strong> — ensuring world-class precision in every procedure at Vega Curre.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ░░░ PATHFINDER SECTION (UX Clarification) ░░░ -->
   <section class="section-sm" style="background: var(--c-primary-bg); padding-bottom: 0;">
     <div class="container">
       <div class="grid-2 reveal">
-        <div class="path-card">
-          <div class="path-icon"><i class="fas fa-hospital-user"></i></div>
+        <div class="path-card" style="background: white; border: 1px solid var(--c-border); box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+          <div class="path-icon" style="color: var(--c-primary-light);"><i class="fas fa-hospital-user"></i></div>
           <div class="path-content">
             <h3>Find by Department</h3>
             <p>Select a medical specialty to view available treatments and procedures.</p>
-            <a href="/treatments.html" class="btn btn-outline btn-sm">Browse Departments</a>
+            <a href="/treatments.html" class="btn btn-outline btn-sm" style="border-radius: 999px;">Browse Departments</a>
           </div>
         </div>
-        <div class="path-card highlight">
-          <div class="path-icon"><i class="fas fa-user-md"></i></div>
+        <div class="path-card highlight" style="background: linear-gradient(135deg, #ffffff, #f0fdf4); border: 1px solid var(--c-green-bg); box-shadow: 0 10px 30px -5px rgba(16,185,129,0.15);">
+          <div class="path-icon" style="color: var(--c-accent-glow);"><i class="fas fa-user-md"></i></div>
           <div class="path-content">
             <h3>Find by Specialist</h3>
             <p>Know your doctor? View detailed profiles and credentials of our senior specialists.</p>
@@ -321,7 +499,7 @@
     <div class="container">
       <div class="section-header reveal">
         <div class="header-info">
-          <div class="section-eyebrow"><i class="fas fa-stethoscope"></i> Our Specialities</div>
+          <div class="section-eyebrow"><i class="fas fa-stethoscope"></i> Our Departments</div>
           <h2 class="section-title">Centres of Excellence</h2>
           <p class="section-subtitle">From advanced surgical interventions to everyday family health — we cover every medical need with board-certified experts.</p>
         </div>
@@ -333,38 +511,38 @@
         <div class="swiper-wrapper">
 
           <div class="swiper-slide">
-            <div class="specialty-card">
-              <div class="spec-icon"><i class="fas fa-bone"></i></div>
-              <h3>Orthopedics &amp; Sports Medicine</h3>
-              <p>Joint replacement, arthroscopy, fractures, PRP knee rejuvenation therapy, sports injuries, and full musculoskeletal care.</p>
-              <a href="/treatments/ortho.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <div class="specialty-card liquid-glass-light" style="padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(16,185,129,0.1); transition: all 0.4s ease;">
+              <div class="spec-icon" style="background: var(--c-primary-bg); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; margin-bottom: 1.5rem;"><i class="fas fa-bone" style="color: var(--c-primary); font-size: 1.5rem;"></i></div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Orthopedics</h3>
+              <p style="font-size: 0.95rem; color: var(--c-muted); line-height: 1.6; margin-bottom: 1.5rem;">Advanced surgical care for bone, joint, and spinal health. Specialists in Robotic Alignment and PRF.</p>
+              <a href="/treatments/ortho.html" class="card-link" style="color: var(--c-primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">Clinical Details <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="specialty-card">
-              <div class="spec-icon"><i class="fas fa-tooth"></i></div>
-              <h3>Advanced Dental Care</h3>
-              <p>Pain-free dentistry covering implants, braces, root canal, whitening, and full cosmetic smile makeovers.</p>
-              <a href="/treatments/dental.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <div class="specialty-card liquid-glass-light" style="padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(16,185,129,0.1); transition: all 0.4s ease;">
+              <div class="spec-icon" style="background: var(--c-primary-bg); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; margin-bottom: 1.5rem;"><i class="fas fa-tooth" style="color: var(--c-primary); font-size: 1.5rem;"></i></div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Advanced Dental</h3>
+              <p style="font-size: 0.95rem; color: var(--c-muted); line-height: 1.6; margin-bottom: 1.5rem;">Pain-free dentistry covering implants, braces, and cosmetic smiles. State-of-the-art sterilization protocols.</p>
+              <a href="/treatments/dental.html" class="card-link" style="color: var(--c-primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">View Procedures <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="specialty-card">
-              <div class="spec-icon"><i class="fas fa-baby"></i></div>
-              <h3>Pediatrics &amp; Child Health</h3>
-              <p>Compassionate healthcare from infancy to adolescence — vaccinations, growth monitoring, and illness management.</p>
-              <a href="/treatments/pediatrics.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <div class="specialty-card liquid-glass-light" style="padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(16,185,129,0.1); transition: all 0.4s ease;">
+              <div class="spec-icon" style="background: var(--c-primary-bg); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; margin-bottom: 1.5rem;"><i class="fas fa-baby" style="color: var(--c-primary); font-size: 1.5rem;"></i></div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Pediatrics</h3>
+              <p style="font-size: 0.95rem; color: var(--c-muted); line-height: 1.6; margin-bottom: 1.5rem;">Compassionate healthcare from infancy to adolescence. Growth monitoring and vaccination excellence.</p>
+              <a href="/treatments/pediatrics.html" class="card-link" style="color: var(--c-primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">Child Health <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="specialty-card">
-              <div class="spec-icon"><i class="fas fa-female"></i></div>
-              <h3>Obstetrics &amp; Gynaecology</h3>
-              <p>Specialist care in women's health — prenatal &amp; postnatal care, PCOS management, and wellness checkups.</p>
-              <a href="/treatments/gynaecology.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            <div class="specialty-card liquid-glass-light" style="padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(16,185,129,0.1); transition: all 0.4s ease;">
+              <div class="spec-icon" style="background: var(--c-primary-bg); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 16px; margin-bottom: 1.5rem;"><i class="fas fa-female" style="color: var(--c-primary); font-size: 1.5rem;"></i></div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Gynaecology</h3>
+              <p style="font-size: 0.95rem; color: var(--c-muted); line-height: 1.6; margin-bottom: 1.5rem;">Expert care in women's health, PCOS management, and prenatal wellness checkups.</p>
+              <a href="/treatments/gynaecology.html" class="card-link" style="color: var(--c-primary); font-weight: 700; display: flex; align-items: center; gap: 0.5rem;">Women's Health <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
@@ -1166,8 +1344,8 @@
               loading="lazy"
               title="Vega Curre Clinic Location"
               style="border:0;"
-              allowfullscreen="" 
-              referrerpolicy="no-referrer-when-downgrade">
+              allowfullscreen=""
+              referrerpolicy="strict-origin-when-cross-origin">
             </iframe>
           </div>
         </div>
@@ -1206,16 +1384,16 @@
         <div class="footer-col">
           <h4>Departments</h4>
           <div class="footer-links">
-            <a href="/treatments.html#ortho"><i class="fas fa-chevron-right"></i> Orthopedics</a>
-            <a href="/treatments.html#dental"><i class="fas fa-chevron-right"></i> Dental Care</a>
-            <a href="/treatments.html#pediatrics"><i class="fas fa-chevron-right"></i> Pediatrics</a>
-            <a href="/treatments.html#gynaecology"><i class="fas fa-chevron-right"></i> Gynaecology</a>
-            <a href="/treatments.html#physiotherapy"><i class="fas fa-chevron-right"></i> Physiotherapy</a>
-            <a href="/treatments.html#neurology"><i class="fas fa-chevron-right"></i> Neurology</a>
-            <a href="/treatments.html#ent"><i class="fas fa-chevron-right"></i> ENT</a>
-            <a href="/treatments.html#surgery"><i class="fas fa-chevron-right"></i> Surgery</a>
-            <a href="/treatments.html#diabetes"><i class="fas fa-chevron-right"></i> Diabetes</a>
-            <a href="/treatments.html#pulmonology"><i class="fas fa-chevron-right"></i> Pulmonology</a>
+            <a href="/treatments/ortho.html"><i class="fas fa-chevron-right"></i> Orthopedics</a>
+            <a href="/treatments/dental.html"><i class="fas fa-chevron-right"></i> Dental Care</a>
+            <a href="/treatments/pediatrics.html"><i class="fas fa-chevron-right"></i> Pediatrics</a>
+            <a href="/treatments/gynaecology.html"><i class="fas fa-chevron-right"></i> Gynaecology</a>
+            <a href="/treatments/physiotherapy.html"><i class="fas fa-chevron-right"></i> Physiotherapy</a>
+            <a href="/treatments/neurology.html"><i class="fas fa-chevron-right"></i> Neurology</a>
+            <a href="/treatments/ent.html"><i class="fas fa-chevron-right"></i> ENT</a>
+            <a href="/treatments/surgery.html"><i class="fas fa-chevron-right"></i> Surgery</a>
+            <a href="/treatments/diabetes.html"><i class="fas fa-chevron-right"></i> Diabetes</a>
+            <a href="/treatments/pulmonology.html"><i class="fas fa-chevron-right"></i> Pulmonology</a>
           </div>
         </div>
 
@@ -1259,3 +1437,6 @@
   <script src="/js/main.js" type="module"></script>
 </body>
 </html>
+
+
+

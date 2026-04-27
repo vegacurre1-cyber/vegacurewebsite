@@ -228,7 +228,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ──────────────────────────────────────────────────────────────
-// 8. SET TODAY AS MINIMUM DATE for booking form
+// 8. DYNAMIC OPEN / CLOSED INDICATOR
+// Mon–Sat 10:00–20:30 | Sun 10:00–12:00
+// ──────────────────────────────────────────────────────────────
+(function updateClinicStatus() {
+  const indicators = document.querySelectorAll('.live-indicator');
+  if (!indicators.length) return;
+
+  const now  = new Date();
+  const day  = now.getDay();   // 0=Sun, 1=Mon … 6=Sat
+  const mins = now.getHours() * 60 + now.getMinutes();
+
+  const open10  = 10 * 60;
+  const close830 = 20 * 60 + 30;
+  const close12  = 12 * 60;
+
+  let isOpen = false;
+  if (day >= 1 && day <= 6) isOpen = mins >= open10 && mins < close830;  // Mon–Sat
+  if (day === 0)             isOpen = mins >= open10 && mins < close12;   // Sun
+
+  indicators.forEach(el => {
+    const dot = el.querySelector('.dot');
+    if (isOpen) {
+      el.innerHTML = '<span class="dot"></span> Open Now';
+      el.style.color = '';
+      if (dot) dot.style.background = '';
+    } else {
+      el.innerHTML = '<span class="dot dot-closed"></span> Closed';
+      el.style.color = 'rgba(255,255,255,0.55)';
+    }
+  });
+})();
+
+// ──────────────────────────────────────────────────────────────
+// 8b. SET TODAY AS MINIMUM DATE for booking form
 // ──────────────────────────────────────────────────────────────
 const dateField = document.getElementById('date');
 if (dateField && !dateField.min) {
