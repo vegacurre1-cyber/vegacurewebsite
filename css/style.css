@@ -5101,11 +5101,24 @@ html {
   box-shadow: 0 8px 24px rgba(0,0,0,0.1);
   transition: var(--t-slow);
   border: 1px solid var(--c-border);
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
 }
 
 .leadership-card:hover {
   transform: translateY(-12px);
   box-shadow: 0 20px 50px rgba(0, 119, 182, 0.2);
+}
+
+.leadership-clickable {
+  cursor: pointer;
+}
+
+.leadership-clickable:hover .profile-link-btn {
+  opacity: 1;
+  transform: translateX(4px);
 }
 
 .leadership-image {
@@ -5168,6 +5181,18 @@ html {
   border-radius: 999px;
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+.profile-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--c-primary);
+  font-weight: 700;
+  opacity: 0.8;
+  transition: var(--t);
+  width: fit-content;
+  margin-top: 1rem;
 }
 
 /* ══════════════════════════════════════════════════════════════
