@@ -13,7 +13,8 @@
       "WebFetch(domain:www.fortishealthcare.com)",
       "WebFetch(domain:www.operationtechnology.com)",
       "WebFetch(domain:www.oscprofessional.com)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "WebFetch(domain:www.asterhospitals.in)"
     ]
   }
 }

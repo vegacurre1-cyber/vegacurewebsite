@@ -1219,19 +1219,19 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 /* ══════════════════════════════════════════════════════════════
-   10.2 SERVICE QUICK ACCESS BAR
+   10.2 SERVICE QUICK ACCESS BAR (Enhanced)
    ═════════════════════════════════════════════════════════════ */
 .service-quick-bar {
-  background: var(--c-primary-bg);
-  padding: 3.5rem 0;
+  background: linear-gradient(135deg, var(--c-primary-bg) 0%, #E0F7FF 100%);
+  padding: 4.5rem 0;
   border-bottom: 1px solid var(--c-border);
 }
 
 .service-icons-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-  max-width: 900px;
+  gap: 2.5rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -1239,66 +1239,111 @@ button { cursor: pointer; font-family: inherit; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   text-decoration: none;
   color: var(--c-text);
   transition: var(--t-slow);
-  padding: 1.5rem;
-  border-radius: 16px;
+  padding: 2.2rem 1.8rem;
+  border-radius: 20px;
   background: white;
-  border: 1px solid var(--c-border);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 2px solid var(--c-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-icon-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-primary-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--t-slow);
 }
 
 .service-icon-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 119, 182, 0.15);
-  border-color: var(--c-primary);
-  background: linear-gradient(135deg, white 0%, var(--c-primary-bg) 100%);
+  transform: translateY(-12px);
+  box-shadow: 0 16px 40px rgba(0, 119, 182, 0.18);
+  border-color: var(--c-primary-light);
+  background: linear-gradient(135deg, white 0%, rgba(0, 119, 182, 0.04) 100%);
+}
+
+.service-icon-card:hover::before {
+  transform: scaleX(1);
 }
 
 .service-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
   background: var(--c-primary-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: var(--c-primary);
-  transition: var(--t);
+  transition: var(--t-slow);
 }
 
 .service-icon-card:hover .service-icon {
-  background: var(--c-primary);
+  background: linear-gradient(135deg, var(--c-primary), var(--c-primary-light));
   color: white;
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(5deg);
 }
 
 .service-label {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--c-text);
   text-align: center;
   transition: var(--t);
+  font-family: var(--ff-head);
+}
+
+.service-desc {
+  font-size: 0.85rem;
+  color: var(--c-muted);
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .service-icon-card:hover .service-label {
   color: var(--c-primary);
 }
 
-@media (max-width: 900px) {
-  .service-icons-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-  .service-icon-card { padding: 1.2rem; }
-  .service-icon { width: 48px; height: 48px; font-size: 1.4rem; }
+.service-icon-card:hover .service-desc {
+  color: var(--c-text);
+}
+
+@media (max-width: 1024px) {
+  .service-icons-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .service-icon-card { padding: 2rem 1.5rem; }
+  .service-icon { width: 64px; height: 64px; font-size: 2rem; }
+  .service-label { font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .service-quick-bar { padding: 3.5rem 0; }
+  .service-icons-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .service-icon-card { padding: 1.8rem 1.2rem; }
+  .service-icon { width: 56px; height: 56px; font-size: 1.6rem; }
+  .service-label { font-size: 0.95rem; }
+  .service-desc { font-size: 0.8rem; }
 }
 
 @media (max-width: 600px) {
   .service-quick-bar { padding: 2.5rem 0; }
-  .service-icons-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-  .service-icon-card { padding: 1rem; gap: 0.8rem; }
-  .service-icon { width: 44px; height: 44px; font-size: 1.2rem; }
-  .service-label { font-size: 0.85rem; }
+  .service-icons-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .service-icon-card { padding: 1.5rem 1.2rem; }
+  .service-icon { width: 50px; height: 50px; font-size: 1.4rem; }
+  .service-label { font-size: 0.9rem; }
+  .service-desc { font-size: 0.75rem; }
 }
 
 /* Suppress old elements if HTML still references them */
