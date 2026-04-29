@@ -5887,3 +5887,51 @@ html {
     width: 100%;
   }
 }
+
+/* ░░░ COLLAPSIBLE BLOG CARDS ░░░ */
+.blog-collapsible .blog-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.blog-collapsible .blog-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.blog-header-only {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog-toggle-indicator {
+  color: var(--c-primary);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.blog-expandable {
+  animation: slideDown 0.3s ease;
+  padding: 1rem 0 0 0;
+  border-top: 1px solid rgba(0, 119, 182, 0.1);
+  margin-top: 1rem;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
