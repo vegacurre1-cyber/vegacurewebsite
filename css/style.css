@@ -4902,7 +4902,382 @@ html {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   27. TESTIMONIALS PAGE
+   27. CENTRES OF EXCELLENCE & TRUST SECTION
+   ═════════════════════════════════════════════════════════════ */
+.centres-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.centre-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 2px solid var(--c-border);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: var(--t-slow);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.centre-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--c-primary), var(--c-accent-glow));
+  opacity: 0;
+  transition: opacity var(--t-slow);
+}
+
+.centre-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 119, 182, 0.2);
+  border-color: var(--c-primary-light);
+}
+
+.centre-card:hover::before {
+  opacity: 1;
+}
+
+.centre-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  transition: var(--t-slow);
+}
+
+.centre-card:hover .centre-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.centre-card h3 {
+  font-size: 1.25rem;
+  color: var(--c-text);
+  margin: 0;
+  font-weight: 700;
+}
+
+.centre-card p {
+  font-size: 0.95rem;
+  color: var(--c-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.centre-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.centre-features span {
+  font-size: 0.9rem;
+  color: var(--c-text);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.centre-features i {
+  color: var(--c-accent-glow);
+  font-size: 0.85rem;
+}
+
+.centre-link {
+  color: var(--c-primary);
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--t);
+  margin-top: auto;
+}
+
+.centre-link:hover {
+  color: var(--c-primary-light);
+  gap: 0.8rem;
+}
+
+/* Trust & Certifications Grid */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.trust-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid var(--c-border);
+  transition: var(--t-slow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trust-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 119, 182, 0.12);
+  border-color: var(--c-primary-light);
+}
+
+.trust-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: white;
+  transition: var(--t-slow);
+}
+
+.trust-card:hover .trust-icon {
+  transform: scale(1.1);
+}
+
+.trust-card h4 {
+  font-size: 1.05rem;
+  color: var(--c-text);
+  margin: 0;
+  font-weight: 700;
+}
+
+.trust-card p {
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .centres-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .centre-card { padding: 2rem 1.5rem; }
+  .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .trust-card { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .centres-grid { grid-template-columns: 1fr; }
+  .centre-card { padding: 1.5rem; }
+  .trust-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   28. LEADERSHIP TEAM SECTION
+   ═════════════════════════════════════════════════════════════ */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.leadership-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  transition: var(--t-slow);
+  border: 1px solid var(--c-border);
+}
+
+.leadership-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 119, 182, 0.2);
+}
+
+.leadership-image {
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.leadership-placeholder {
+  font-size: 4rem;
+  opacity: 0.3;
+}
+
+.leadership-content {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.leadership-card h3 {
+  font-size: 1.35rem;
+  color: var(--c-text);
+  margin: 0;
+  font-weight: 700;
+}
+
+.leadership-card .role {
+  color: var(--c-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.leadership-card .bio {
+  color: var(--c-muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--c-border);
+  margin-top: 1rem;
+}
+
+.credentials span {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background: var(--c-primary-bg);
+  color: var(--c-primary);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   29. HEALTH PACKAGES SECTION
+   ═════════════════════════════════════════════════════════════ */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin: 3rem 0;
+}
+
+.package-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border: 2px solid var(--c-border);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  transition: var(--t-slow);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.package-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--c-accent-glow);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.package-badge.premium-badge {
+  background: linear-gradient(135deg, var(--c-primary), var(--c-primary-light));
+}
+
+.package-card.premium {
+  border-color: var(--c-primary);
+  box-shadow: 0 12px 35px rgba(0, 119, 182, 0.15);
+  transform: scale(1.02);
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 119, 182, 0.18);
+  border-color: var(--c-primary-light);
+}
+
+.package-card.premium:hover {
+  transform: scale(1.04) translateY(-10px);
+}
+
+.package-card h3 {
+  font-size: 1.25rem;
+  color: var(--c-text);
+  margin: 0;
+  font-weight: 700;
+}
+
+.package-desc {
+  color: var(--c-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.package-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--c-text);
+}
+
+.feature i {
+  color: var(--c-accent-glow);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .leadership-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .leadership-image { height: 240px; }
+  .packages-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .package-card.premium { transform: scale(1); }
+  .package-card.premium:hover { transform: translateY(-10px); }
+}
+
+@media (max-width: 480px) {
+  .leadership-grid { grid-template-columns: 1fr; }
+  .packages-grid { grid-template-columns: 1fr; }
+  .package-card { padding: 2rem 1.5rem; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   30. TESTIMONIALS PAGE
    ═════════════════════════════════════════════════════════════ */
 .inner-page-hero {
   background: linear-gradient(135deg, var(--c-primary-dark), var(--c-primary));
