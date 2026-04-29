@@ -2,7 +2,18 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "WebSearch",
+      "WebFetch(domain:www.webstacks.com)",
+      "WebFetch(domain:colorwhistle.com)",
+      "WebFetch(domain:www.apollohospitals.com)",
+      "WebFetch(domain:www.fortishealthcare.com)",
+      "WebFetch(domain:www.operationtechnology.com)",
+      "WebFetch(domain:www.oscprofessional.com)",
+      "Bash(git commit *)"
     ]
   }
 }
