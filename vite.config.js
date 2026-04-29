@@ -11,6 +11,8 @@ export default defineConfig({
         booking:             resolve(__dirname, 'booking.html'),
         contact:             resolve(__dirname, 'contact.html'),
         doctorProfile:       resolve(__dirname, 'doctor-profile.html'),
+        blogs:               resolve(__dirname, 'blogs.html'),
+        blogSingle:          resolve(__dirname, 'blog-single.html'),
         treatmentOrtho:      resolve(__dirname, 'treatments/ortho.html'),
         treatmentDental:     resolve(__dirname, 'treatments/dental.html'),
         treatmentPediatrics: resolve(__dirname, 'treatments/pediatrics.html'),

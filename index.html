@@ -128,6 +128,7 @@
           </ul>
         </li>
         <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        <li><a href="/blogs.html" class="nav-link ">Blogs</a></li>
         <li><a href="/booking.html" class="btn btn-primary btn-sm btn-nav">Book Appointment</a></li>
       </ul>
     </div>
@@ -1457,127 +1458,55 @@
           <h2 class="section-title">Blog & Health Insights</h2>
           <p class="section-subtitle">Expert-written articles and health tips from our specialists to help you make informed decisions about your wellness.</p>
         </div>
-        <a href="#" class="view-all-link">Read All Articles <i class="fas fa-chevron-right"></i></a>
+        <a href="/blogs.html" class="view-all-link">Read All Articles <i class="fas fa-chevron-right"></i></a>
       </div>
 
       <div class="blog-grid reveal">
-        <!-- Article 1: Collapsible -->
-        <article class="blog-card blog-collapsible">
-          <button class="blog-toggle" onclick="toggleBlogCard(this)">
-            <div class="blog-image" style="background: linear-gradient(135deg, #0077B6, #0096C7); display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-bone" style="font-size: 3.5rem; color: rgba(255,255,255,0.3);"></i>
+        <!-- Article 1 -->
+        <article class="blog-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="blog-image" style="height: 200px; overflow: hidden; position: relative;">
+            <img src="/images/blog-knee-pain.png" alt="5 Myths About Knee Pain" style="width: 100%; height: 100%; object-fit: cover;" />
+            <span style="position: absolute; top: 1rem; left: 1rem; background: var(--c-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Orthopedics</span>
+          </div>
+          <div class="blog-content" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <div class="blog-meta" style="font-size: 0.85rem; color: var(--c-muted); margin-bottom: 0.5rem;">
+              <span><i class="far fa-calendar-alt"></i> Apr 28, 2026</span>
             </div>
-            <div class="blog-content blog-header-only">
-              <div class="blog-meta">
-                <span class="blog-date">Apr 28, 2026</span>
-                <span class="blog-category">Orthopedics</span>
-              </div>
-              <h3>5 Myths About Knee Pain You Need to Stop Believing</h3>
-              <div class="blog-toggle-indicator"><i class="fas fa-chevron-down"></i></div>
-            </div>
-          </button>
-          <div class="blog-content blog-expandable" style="display: none;">
-            <p><strong>Myth 1: Knee pain always requires surgery.</strong> Reality: Most knee conditions (70-80%) can be managed conservatively with physical therapy, medications, and innovative treatments like PRP therapy. Surgery is only needed for severe structural damage like torn ligaments.<br><br><strong>Myth 2: Rest is always the best cure.</strong> Reality: While initial rest is important, prolonged immobility weakens muscles. Gradual, guided rehabilitation is crucial for recovery.<br><br><strong>Myth 3: Older people always develop knee problems.</strong> Reality: Age alone doesn't cause knee pain. Lifestyle, weight, and activity level are bigger factors. Many elderly patients maintain perfect knee health through proper care.<br><br><strong>Myth 4: X-rays show all knee problems.</strong> Reality: MRI is often needed to detect soft tissue damage, cartilage issues, and early degenerative changes that X-rays miss.<br><br><strong>Myth 5: PRP therapy is experimental.</strong> Reality: PRP (Platelet Rich Plasma) therapy is now widely accepted, with extensive clinical research supporting its effectiveness for joint pain and cartilage repair.</p>
+            <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--c-text);"><a href="/blog-single.html?id=knee-pain-myths" style="color: inherit; text-decoration: none;">5 Myths About Knee Pain You Need to Stop Believing</a></h3>
+            <p style="font-size: 0.9rem; color: var(--c-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">Think knee pain always means surgery? Think again. We debunk the most common myths about knee pain and explore non-surgical treatments.</p>
+            <a href="/blog-single.html?id=knee-pain-myths" class="blog-link" style="color: var(--c-primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Read Full Article <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
 
-        <!-- Article 2: Collapsible -->
-        <article class="blog-card blog-collapsible">
-          <button class="blog-toggle" onclick="toggleBlogCard(this)">
-            <div class="blog-image" style="background: linear-gradient(135deg, #059669, #10B981); display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-tooth" style="font-size: 3.5rem; color: rgba(255,255,255,0.3);"></i>
+        <!-- Article 2 -->
+        <article class="blog-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="blog-image" style="height: 200px; overflow: hidden; position: relative;">
+            <img src="/images/blog-dental.png" alt="Dental Implants vs Bridges" style="width: 100%; height: 100%; object-fit: cover;" />
+            <span style="position: absolute; top: 1rem; left: 1rem; background: var(--c-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Dental</span>
+          </div>
+          <div class="blog-content" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <div class="blog-meta" style="font-size: 0.85rem; color: var(--c-muted); margin-bottom: 0.5rem;">
+              <span><i class="far fa-calendar-alt"></i> Apr 22, 2026</span>
             </div>
-            <div class="blog-content blog-header-only">
-              <div class="blog-meta">
-                <span class="blog-date">Apr 22, 2026</span>
-                <span class="blog-category">Dental</span>
-              </div>
-              <h3>Dental Implants vs Bridges: Which Is Right for You?</h3>
-              <div class="blog-toggle-indicator"><i class="fas fa-chevron-down"></i></div>
-            </div>
-          </button>
-          <div class="blog-content blog-expandable" style="display: none;">
-            <p><strong>Dental Implants:</strong> A titanium post is surgically placed into the jawbone, serving as an artificial tooth root. A crown is then attached on top. Success rate: 95-98%. Lifespan: 20-30+ years. Cost: Higher initial investment but longer-lasting.<br><br><strong>Key Benefits of Implants:</strong> No bone loss, looks and feels natural, doesn't require grinding adjacent teeth, very durable, maintains jawbone health.<br><br><strong>Dental Bridges:</strong> A prosthetic tooth (or teeth) is anchored to adjacent natural teeth. Success rate: 85-90%. Lifespan: 5-15 years. Cost: Lower initial cost.<br><br><strong>Key Benefits of Bridges:</strong> Faster procedure, less invasive, immediate results, lower cost.<br><br><strong>Comparison:</strong> Implants require more surgery and healing time (3-6 months) but last much longer and preserve jawbone. Bridges are quicker but require damage to healthy adjacent teeth and need replacement every 7-10 years. At Vega Curre, Dr. Priya Trimukhe helps you choose based on your jawbone health, budget, and long-term goals.</p>
+            <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--c-text);"><a href="/blog-single.html?id=implants-vs-bridges" style="color: inherit; text-decoration: none;">Dental Implants vs Bridges: Which Is Right for You?</a></h3>
+            <p style="font-size: 0.9rem; color: var(--c-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">Choosing between dental implants and bridges? Learn the pros, cons, and long-term implications of each to make the right choice.</p>
+            <a href="/blog-single.html?id=implants-vs-bridges" class="blog-link" style="color: var(--c-primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Read Full Article <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
 
-        <!-- Article 3: Collapsible -->
-        <article class="blog-card blog-collapsible">
-          <button class="blog-toggle" onclick="toggleBlogCard(this)">
-            <div class="blog-image" style="background: linear-gradient(135deg, #4338CA, #6366F1); display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-baby" style="font-size: 3.5rem; color: rgba(255,255,255,0.3);"></i>
-            </div>
-            <div class="blog-content blog-header-only">
-              <div class="blog-meta">
-                <span class="blog-date">Apr 15, 2026</span>
-                <span class="blog-category">Pediatrics</span>
-              </div>
-              <h3>When Should You Visit a Pediatrician? A Parent's Guide</h3>
-              <div class="blog-toggle-indicator"><i class="fas fa-chevron-down"></i></div>
-            </div>
-          </button>
-          <div class="blog-content blog-expandable" style="display: none;">
-            <p><strong>Routine Checkups:</strong> Newborns (within 3-5 days of birth), monthly until 6 months, then quarterly through age 2, then annual checkups.<br><br><strong>Vaccinations:</strong> Follow the recommended immunization schedule: 2, 4, 6, 12, 15, 18, 24 months, then annually. Missing vaccines puts children at risk for preventable diseases.<br><br><strong>When to Visit Immediately:</strong><br>• Fever above 100.4°F in infants under 3 months<br>• Difficulty breathing or wheezing<br>• Unconsciousness or extreme lethargy<br>• Persistent vomiting or diarrhea (dehydration risk)<br>• Severe abdominal pain<br>• Rashes that don't fade when pressed<br>• Severe injuries or falls<br><br><strong>When to Schedule an Appointment:</strong><br>• Recurrent ear infections<br>• Chronic cough lasting over 2 weeks<br>• Growth concerns or developmental delays<br>• Sleep or feeding problems<br>• Behavioral or emotional concerns<br>• School performance issues<br><br>Dr. S P Kumar and Dr. Varsha Hegde at Vega Curre provide comprehensive pediatric care from newborns through adolescence, ensuring your child reaches every developmental milestone.</p>
+        <!-- Article 3 -->
+        <article class="blog-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div class="blog-image" style="height: 200px; overflow: hidden; position: relative;">
+            <img src="/images/blog-peds.png" alt="Visit a Pediatrician" style="width: 100%; height: 100%; object-fit: cover;" />
+            <span style="position: absolute; top: 1rem; left: 1rem; background: var(--c-primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Pediatrics</span>
           </div>
-        </article>
-
-        <!-- Article 4: Collapsible -->
-        <article class="blog-card blog-collapsible">
-          <button class="blog-toggle" onclick="toggleBlogCard(this)">
-            <div class="blog-image" style="background: linear-gradient(135deg, #701A75, #A21CAF); display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-female" style="font-size: 3.5rem; color: rgba(255,255,255,0.3);"></i>
+          <div class="blog-content" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+            <div class="blog-meta" style="font-size: 0.85rem; color: var(--c-muted); margin-bottom: 0.5rem;">
+              <span><i class="far fa-calendar-alt"></i> Apr 15, 2026</span>
             </div>
-            <div class="blog-content blog-header-only">
-              <div class="blog-meta">
-                <span class="blog-date">Apr 8, 2026</span>
-                <span class="blog-category">Women's Health</span>
-              </div>
-              <h3>PCOS Management: What Every Woman Should Know</h3>
-              <div class="blog-toggle-indicator"><i class="fas fa-chevron-down"></i></div>
-            </div>
-          </button>
-          <div class="blog-content blog-expandable" style="display: none;">
-            <p><strong>What is PCOS?</strong> Polycystic Ovary Syndrome affects 1 in 10 women of childbearing age. It's characterized by irregular periods, excess androgen (male hormone), and multiple cysts on ovaries.<br><br><strong>Common Symptoms:</strong><br>• Irregular or missing periods<br>• Excess hair growth (hirsutism)<br>• Acne and oily skin<br>• Weight gain or difficulty losing weight<br>• Fertility problems<br>• Dark skin patches (acanthosis nigricans)<br>• Mood disorders (anxiety, depression)<br><br><strong>Lifestyle Management (First-Line):</strong><br>1. Weight management: 5-10% weight loss can restore ovulation<br>2. Regular exercise: 150 minutes/week helps insulin sensitivity<br>3. Anti-inflammatory diet: Reduce refined carbs, increase fiber<br>4. Stress management: Yoga, meditation, adequate sleep<br>5. Track your cycle: Understanding patterns helps treatment planning<br><br><strong>Medical Treatments:</strong><br>• Birth control pills: Regulate hormones and periods<br>• Metformin: Improves insulin sensitivity<br>• Anti-androgen medications: Reduce excess hair growth<br>• Fertility treatments: If pregnancy is desired<br><br><strong>Long-Term Health Risks if Untreated:</strong> Type 2 diabetes, heart disease, endometrial cancer. Early intervention prevents these complications. Dr. Madhuri Saha provides holistic PCOS management combining lifestyle and medical approaches for each patient's unique needs.</p>
-          </div>
-        </article>
-
-        <!-- Article 5: Collapsible -->
-        <article class="blog-card blog-collapsible">
-          <button class="blog-toggle" onclick="toggleBlogCard(this)">
-            <div class="blog-image" style="background: linear-gradient(135deg, #1E1B4B, #4338CA); display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-brain" style="font-size: 3.5rem; color: rgba(255,255,255,0.3);"></i>
-            </div>
-            <div class="blog-content blog-header-only">
-              <div class="blog-meta">
-                <span class="blog-date">Apr 1, 2026</span>
-                <span class="blog-category">Neurology</span>
-              </div>
-              <h3>Migraine vs Headache: Understanding the Difference</h3>
-              <div class="blog-toggle-indicator"><i class="fas fa-chevron-down"></i></div>
-            </div>
-          </button>
-          <div class="blog-content blog-expandable" style="display: none;">
-            <p><strong>Tension Headache:</strong><br>• Mild to moderate pain (not disabling)<br>• Bilateral (both sides of head)<br>• Pressing/tightness sensation<br>• Lasts 30 minutes to several hours<br>• No nausea or vomiting<br>• Triggered by stress, poor posture, muscle tension<br><br><strong>Migraine Headache:</strong><br>• Moderate to severe pain (often disabling)<br>• Usually unilateral (one side of head)<br>• Throbbing/pulsating sensation<br>• Lasts 4-72 hours<br>• Accompanied by nausea, vomiting, light sensitivity<br>• May have aura (visual disturbances) 20-30 minutes before<br>• Triggered by hormones, certain foods, weather changes, sleep disruption<br><br><strong>Common Migraine Triggers:</strong> Skipping meals, dehydration, caffeine withdrawal, chocolate, aged cheese, processed meats, red wine, hormonal changes, stress, lack of sleep, bright lights, loud noises.<br><br><strong>Prevention Strategies:</strong><br>1. Identify and avoid triggers (keep a headache diary)<br>2. Maintain regular sleep schedule<br>3. Stay hydrated (2-3 liters daily)<br>4. Regular exercise (30 min, 5 days/week)<br>5. Stress management techniques<br>6. Preventive medications if frequent<br><br><strong>When to See a Neurologist:</strong> If migraines occur more than 4 days/month, or if headache pattern changes. Dr. Shishirakumar at Vega Curre specializes in migraine management with both preventive and acute treatment options.</p>
-          </div>
-        </article>
-
-        <!-- Article 6: Collapsible -->
-        <article class="blog-card blog-collapsible">
-          <button class="blog-toggle" onclick="toggleBlogCard(this)">
-            <div class="blog-image" style="background: linear-gradient(135deg, #9F1239, #E11D48); display: flex; align-items: center; justify-content: center;">
-              <i class="fas fa-heartbeat" style="font-size: 3.5rem; color: rgba(255,255,255,0.3);"></i>
-            </div>
-            <div class="blog-content blog-header-only">
-              <div class="blog-meta">
-                <span class="blog-date">Mar 25, 2026</span>
-                <span class="blog-category">Wellness</span>
-              </div>
-              <h3>Post-Surgical Recovery: Tips for Faster Healing</h3>
-              <div class="blog-toggle-indicator"><i class="fas fa-chevron-down"></i></div>
-            </div>
-          </button>
-          <div class="blog-content blog-expandable" style="display: none;">
-            <p><strong>Week 1-2: Acute Recovery Phase</strong><br>• Follow post-op instructions religiously<br>• Take prescribed antibiotics to prevent infection<br>• Elevate surgical area above heart when possible<br>• Use ice packs (15 min on, 15 min off) for swelling<br>• Wear compression garments as recommended<br>• Avoid heavy lifting (over 5 lbs)<br>• Sleep with extra pillows for elevation<br><br><strong>Week 3-6: Healing Phase</strong><br>• Begin light physical therapy as cleared<br>• Gradually increase activity level<br>• Continue taking pain medication as needed<br>• Eat protein-rich foods (promotes healing)<br>• Stay hydrated<br>• Avoid smoking (delays wound healing)<br>• Limit alcohol (interferes with medication)<br><br><strong>Nutrition for Healing:**<br>• Protein: 25-30g per meal (chicken, fish, eggs, legumes)<br>• Vitamin C: Supports collagen formation<br>• Zinc: Essential for tissue repair<br>• Iron: Prevents post-op anemia<br>• Avoid: Processed foods, excess sugar, caffeine<br><br><strong>Physical Therapy Guidelines:**<br>• Start only when cleared by surgeon<br>• Progressive exercises prevent stiffness<br>• Ice before PT, heat after<br>• Pain should not increase during therapy<br>• Report any complications immediately<br><br><strong>Red Flags - See Doctor Immediately:**<br>• Increasing pain despite medication<br>• Fever above 101°F<br>• Wound drainage or foul smell<br>• Redness, swelling, or separation of wound<br>• Calf pain or leg swelling (clot risk)<br>• Shortness of breath or chest pain<br><br>Our surgical teams at Vega Curre provide detailed post-operative instructions and follow-up care to ensure optimal recovery and prevent complications.</p>
+            <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--c-text);"><a href="/blog-single.html?id=pediatrician-visit-guide" style="color: inherit; text-decoration: none;">When Should You Visit a Pediatrician? A Parent's Guide</a></h3>
+            <p style="font-size: 0.9rem; color: var(--c-muted); line-height: 1.6; margin-bottom: 1.5rem; flex-grow: 1;">A comprehensive guide for parents on routine checkups, vaccination schedules, and when to seek immediate attention.</p>
+            <a href="/blog-single.html?id=pediatrician-visit-guide" class="blog-link" style="color: var(--c-primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">Read Full Article <i class="fas fa-arrow-right"></i></a>
           </div>
         </article>
       </div>
