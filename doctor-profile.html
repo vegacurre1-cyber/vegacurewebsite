@@ -168,21 +168,124 @@
             </div>
           </div>
 
-          <aside class="doctor-detail-actions">
-            <a href="tel:+916364123431" class="btn btn-outline btn-block"><i class="fas fa-phone-alt"></i> Call Us</a>
-            <a id="doctorBooking" href="/booking.html" class="btn btn-primary btn-block"><i class="fas fa-calendar-check"></i> Request Appointment</a>
+<aside class="doctor-detail-actions">
+            <a href="tel:+916364123431" class="btn btn-outline btn-block"><i class="fas fa-phone-alt"></i> Call Us Now</a>
+            <a id="doctorBooking" href="/booking.html" class="btn btn-primary btn-block"><i class="fas fa-calendar-check"></i> Book Appointment</a>
+            <a href="https://wa.me/916364123431" class="btn btn-wa btn-block" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
           </aside>
         </article>
 
-        <section class="doctor-overview-panel">
-          <h2>Overview</h2>
-          <p id="doctorOverview1"></p>
-          <p id="doctorOverview2"></p>
-          <p id="doctorOverview3"></p>
+        <!-- Quick Actions Banner -->
+        <div class="quick-actions-banner">
+          <div class="quick-action-item">
+            <i class="fas fa-star"></i>
+            <div><strong>4.9</strong><span>Google Rating</span></div>
+          </div>
+          <div class="quick-action-item">
+            <i class="fas fa-users"></i>
+            <div><strong>5000+</strong><span>Patients</span></div>
+          </div>
+          <div class="quick-action-item">
+            <i class="fas fa-award"></i>
+            <div><strong>15+</strong><span>Years Exp.</span></div>
+          </div>
+          <div class="quick-action-item">
+            <i class="fas fa-calendar-check"></i>
+            <div><span>Same Day</span><span>Slots Available</span></div>
+          </div>
+        </div>
+
+        <!-- Treatments & Procedures Quick View -->
+        <section class="treatments-quick-view">
+          <h3><i class="fas fa-stethoscope"></i> Treatments & Procedures</h3>
+          <div class="treatments-tags" id="treatmentsTags">
+            <!-- Populated by JavaScript based on doctor -->
+          </div>
+        </section>
+
+        <!-- Enhanced Overview with Trust Badges -->
+        <section class="doctor-overview-panel enhanced">
+          <div class="overview-header">
+            <h2>About <span id="overviewDoctorName">Doctor</span></h2>
+            <div class="trust-badges">
+              <span class="trust-badge"><i class="fas fa-verified"></i> Verified</span>
+              <span class="trust-badge"><i class="fas fa-award"></i> Award Winning</span>
+              <span class="trust-badge"><i class="fas fa-user-md"></i> Senior Specialist</span>
+            </div>
+          </div>
+          <div class="overview-content">
+            <p id="doctorOverview1"></p>
+            <p id="doctorOverview2"></p>
+            <p id="doctorOverview3"></p>
+          </div>
+          
+          <!-- Key Highlights -->
+          <div class="key-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Book online in 30 seconds</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Same-day appointment available</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Free follow-up consultation</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>All insurance accepted</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Patient Testimonials for This Department -->
+        <section class="doctor-testimonials">
+          <h3><i class="fas fa-heart"></i> What Patients Say</h3>
+          <div class="testimonials-grid">
+            <div class="testimonial-card-mini">
+              <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testi-text">"Excellent treatment and very professional staff. Highly recommend this doctor for any orthopedic issues."</p>
+              <p class="testi-author">— Ramesh K., Orthopedics</p>
+            </div>
+            <div class="testimonial-card-mini">
+              <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+              <p class="testi-text">"Very thorough and explained everything clearly. The follow-up care was exceptional."</p>
+              <p class="testi-author">— Ananya S., Treatment</p>
+            </div>
+          </div>
+          <a href="/testimonials.html" class="view-more-testimonials">View All Testimonials <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <!-- FAQ Quick Section -->
+        <section class="doctor-faq">
+          <h3><i class="fas fa-question-circle"></i> Quick Answers</h3>
+          <div class="faq-mini-list">
+            <div class="faq-mini-item">
+              <strong>How to book an appointment?</strong>
+              <p>Click "Book Appointment" above, or WhatsApp us, or call +91 63641 23431</p>
+            </div>
+            <div class="faq-mini-item">
+              <strong>What are the consultation charges?</strong>
+              <p>Fees vary by department. Contact our team for current pricing.</p>
+            </div>
+            <div class="faq-mini-item">
+              <strong>Is parking available?</strong>
+              <p>Yes, free parking at the clinic premises.</p>
+            </div>
+          </div>
         </section>
       </div>
     </section>
   </main>
+
+  <!-- Sticky Mobile CTA -->
+  <div class="sticky-cta">
+    <a href="tel:+916364123431" class="sticky-cta-call"><i class="fas fa-phone-alt"></i> Call</a>
+    <a href="/booking.html" class="sticky-cta-book"><i class="fas fa-calendar-check"></i> Book Now</a>
+    <a href="https://wa.me/916364123431" class="sticky-cta-wa" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  </div>
 
   <footer>
     <div class="container">
