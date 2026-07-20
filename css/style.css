@@ -4568,6 +4568,33 @@ body.filtered-view #doctors {
   gap: 0.8rem;
 }
 
+.doctor-website-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.15rem;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-decoration: none;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.doctor-website-link i {
+  font-size: 0.85rem;
+  color: #38bdf8;
+}
+
+.doctor-website-link:hover {
+  color: #e2e8f0;
+  border-color: rgba(56, 189, 248, 0.55);
+  background: rgba(56, 189, 248, 0.08);
+}
+
 .doctor-overview-panel {
   margin-top: 1.4rem;
   background: white;
@@ -5402,9 +5429,10 @@ html {
    ═════════════════════════════════════════════════════════════ */
 .leadership-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, minmax(280px, 420px));
   gap: 3rem;
-  margin: 3rem 0;
+  margin: 3rem auto;
+  justify-content: center;
 }
 
 .leadership-card {

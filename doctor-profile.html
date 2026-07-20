@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doctor Profile | Vega Curre Multispeciality Clinic</title>
   <meta name="description" content="Detailed doctor profile at Vega Curre Multispeciality Clinic, including qualifications, specialties, language support, and consultation details." />
+  <!-- SEO -->
+  <link rel="canonical" href="https://vegacurre.com/doctor-profile.html" />
+  <meta property="og:title" content="Doctor Profile | Vega Curre Multispeciality Clinic" />
+  <meta property="og:description" content="Detailed doctor profile at Vega Curre Multispeciality Clinic, including qualifications, specialties, language support, and consultation details." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vegacurre.com/doctor-profile.html" />
+  <meta property="og:image" content="https://vegacurre.com/logo-full.png" />
+  <meta property="og:site_name" content="Vega Curre Multispeciality Clinic" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Doctor Profile | Vega Curre Multispeciality Clinic" />
+  <meta name="twitter:description" content="Detailed doctor profile at Vega Curre Multispeciality Clinic, including qualifications, specialties, language support, and consultation details." />
+  <meta name="twitter:image" content="https://vegacurre.com/logo-full.png" />
+  <meta name="google-site-verification" content="okwuPcPzlUmicFKgy9esxhoqZEZUs7G9EMwvlqc8uaE" />
+  <!-- /SEO -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="icon" type="image/png" href="/logo.png" />
@@ -104,7 +118,7 @@
             <li class="dropdown-submenu">
               <a href="/treatments/ent.html" class="dropdown-item"><i class="fas fa-ear-listen"></i> ENT <i class="fas fa-chevron-right"></i></a>
               <ul class="submenu">
-                <li><a href="/doctor-profile.html?doc=sahana" class="submenu-item">Dr. Sahana Shilankur S</a></li>
+                <li><a href="/doctor-profile.html?doc=sahana" class="submenu-item">Dr. Sahana Shailankur S</a></li>
               </ul>
             </li>
 
@@ -139,7 +153,7 @@
 
         <article class="doctor-detail-card" id="doctorDetailCard">
           <div class="doctor-detail-media">
-            <img id="doctorImage" src="./images/dr-prashanthkumar.jpg" alt="Doctor" loading="eager" decoding="async" />
+            <img id="doctorImage" src="./images/dr-prashanthkumar-profile.jpg?v=3" alt="Doctor" loading="eager" decoding="async" />
             <div id="doctorInitial" class="doctor-initial-avatar" style="display:none;">VC</div>
           </div>
 
@@ -172,6 +186,10 @@
             <a href="tel:+916364123431" class="btn btn-outline btn-block"><i class="fas fa-phone-alt"></i> Call Us Now</a>
             <a id="doctorBooking" href="/booking.html" class="btn btn-primary btn-block"><i class="fas fa-calendar-check"></i> Book Appointment</a>
             <a href="https://wa.me/916364123431" class="btn btn-wa btn-block" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp Booking</a>
+            <a id="doctorWebsite" href="#" class="doctor-website-link" target="_blank" rel="noopener" style="display:none;">
+              <i class="fas fa-globe"></i>
+              <span id="doctorWebsiteLabel">Visit Website</span>
+            </a>
           </aside>
         </article>
 
@@ -328,7 +346,9 @@
         languages: 'English, Hindi, Kannada',
         timing: '10:00 AM - 8:30 PM | Sun: 10 AM - 12 PM (Prior Appointment)',
         booking: '/booking.html?dept=Orthopedics',
-        image: './images/dr-prashanthkumar.jpg',
+        image: './images/dr-prashanthkumar-profile.jpg?v=3',
+        website: 'https://drprashantkumarorthocare.com',
+        websiteLabel: 'drprashantkumarorthocare.com',
         initials: 'PK',
         overview: [
           'Dr. Prashanthkumar is a senior orthopedic specialist recognized for his precision in managing complex musculoskeletal trauma and degenerative joint conditions. With a focus on restoring mobility, he combines years of clinical experience with modern surgical techniques.',
@@ -344,7 +364,7 @@
         languages: 'English, Hindi, Kannada, Marathi',
         timing: '10:00 AM - 8:30 PM | Sun: 10 AM - 12 PM (Prior Appointment)',
         booking: '/booking.html?dept=Dental',
-        image: '/images/dr-priyatrimukhe.png',
+        image: './images/dr-priyatrimukhe.jpg?v=2',
         initials: 'PT',
         overview: [
           'Dr. Priya Trimukhe is a compassionate dental surgeon dedicated to delivering pain-free and personalized oral healthcare. She emphasizes a patient-centric approach, ensuring every individual feels comfortable and well-informed throughout their treatment journey.',
@@ -370,13 +390,13 @@
       },
       madhurisaha: {
         name: 'Dr. Madhuri Saha',
-        headline: 'Consultant Obstetrician and Gynaecologist',
-        qualifications: 'MBBS, (DNB), PDDMLE, FMAS',
+        headline: 'Consultant Obstetrician & Gynecologist',
+        qualifications: 'MBBS, DNB (Obstetrics and Gynecology), PGDMLE, Fellowship in Minimal Access Surgery (FMAS)',
         speciality: 'Obstetrics and Gynaecology',
         languages: 'English, Hindi, Kannada, Bengali',
         timing: 'Mon, Wed, Thu, Fri: 5:00 PM - 7:00 PM',
         booking: '/booking.html?dept=Gynaecology',
-        image: '/images/dr-madhurisaha.png',
+        image: './images/dr-madhurisaha.jpg?v=2',
         initials: 'MS',
         overview: [
           'Dr. Madhuri Saha provides expert, women-centric healthcare with a focus on compassionate clinical guidance. Her practice encompasses the entire spectrum of gynecological and obstetric health.',
@@ -418,13 +438,13 @@
       },
       kalaivani: {
         name: 'Dr. Kalaivani V.',
-        headline: 'General and Laparoscopic Surgeon',
-        qualifications: 'MBBS, MS, FRCS, FIAGES, FALS (Hernia)',
+        headline: 'Consultant General and Laparoscopic Surgery',
+        qualifications: 'MBBS, MS, FRCS (Glasgow), FIAGES, PGDHHM, FALS (Hernia)',
         speciality: 'General Surgery and Laparoscopic Surgery',
         languages: 'English, Hindi, Kannada, Tamil',
         timing: 'On-Call Appointment',
         booking: '/booking.html?dept=Surgery',
-        image: '/images/dr-kalaivani.png',
+        image: './images/dr-kalaivani.jpg?v=2',
         initials: 'KV',
         overview: [
           'Dr. Kalaivani V. is a highly qualified general surgeon with international fellowships and a focus on minimally invasive surgical techniques. She is dedicated to achieving optimal surgical outcomes with faster recovery times.',
@@ -434,13 +454,13 @@
       },
       palaniappan: {
         name: 'Dr. Palaniappan Ramanathan',
-        headline: 'General and Surgical Oncologist',
-        qualifications: 'MBBS, MS (Gen Surgery), MCh (Surgical Oncology), AIIMS',
+        headline: 'Senior Consultant – Surgical Oncology',
+        qualifications: 'MBBS, Masters of Surgery in General Surgery, MCh. Surgical Oncology, Minimal Access Oncosurgery Fellowship',
         speciality: 'General Surgery and Surgical Oncology',
         languages: 'English, Hindi, Kannada, Tamil',
         timing: 'Mon - Fri: 4:30 PM - 6:00 PM',
         booking: '/booking.html?dept=Surgery',
-        image: '/images/dr-palaniappan.png',
+        image: './images/dr-palaniappan.jpg?v=2',
         initials: 'PR',
         overview: [
           'Dr. Palaniappan Ramanathan is a surgical oncologist trained at the prestigious AIIMS, New Delhi. He brings a high level of surgical precision to the management of both general and oncological conditions.',
@@ -449,17 +469,17 @@
         ]
       },
       sahana: {
-        name: 'Dr. Sahana Shilankur S',
+        name: 'Dr. Sahana Shailankur S',
         headline: 'Otorhinolaryngologist (ENT Specialist)',
         qualifications: 'MBBS, DLO',
         speciality: 'Ear, Nose, and Throat (ENT)',
         languages: 'English, Hindi, Kannada',
         timing: 'On-Call Appointment',
         booking: '/booking.html?dept=ENT',
-        image: '/images/dr-sahana.png',
+        image: './images/dr-sahana.jpg?v=2',
         initials: 'SS',
         overview: [
-          'Dr. Sahana Shilankur S manages a wide range of ENT conditions with a balanced approach of medical and procedural interventions. She is committed to improving the quality of life through better hearing and breathing.',
+          'Dr. Sahana Shailankur S manages a wide range of ENT conditions with a balanced approach of medical and procedural interventions. She is committed to improving the quality of life through better hearing and breathing.',
           'Her expertise includes the treatment of chronic sinusitis, nasal polyps, hearing loss, and tonsillitis. She also specializes in managing vestibular disorders such as vertigo and dizziness.',
           'She focuses on early and accurate diagnosis using modern ENT diagnostic tools, tailoring treatment plans to the specific needs of each patient for sustainable relief from persistent ENT concerns.'
         ]
@@ -514,12 +534,78 @@
       }
     };
 
+    function setMeta(nameOrProp, content, isProperty) {
+      const attr = isProperty ? 'property' : 'name';
+      let el = document.querySelector(`meta[${attr}="${nameOrProp}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, nameOrProp);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+    }
+
+    function setCanonical(url) {
+      let link = document.querySelector('link[rel="canonical"]');
+      if (!link) {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        document.head.appendChild(link);
+      }
+      link.setAttribute('href', url);
+    }
+
+    function setPhysicianSchema(selected, profileUrl) {
+      const existing = document.getElementById('physician-schema');
+      if (existing) existing.remove();
+      const absoluteImage = selected.image.startsWith('http')
+        ? selected.image
+        : `https://vegacurre.com${selected.image.replace(/^\./, '').split('?')[0]}`;
+      const data = {
+        '@context': 'https://schema.org',
+        '@type': 'Physician',
+        name: selected.name,
+        description: selected.overview[0] || selected.headline,
+        url: profileUrl,
+        image: absoluteImage,
+        medicalSpecialty: selected.speciality,
+        worksFor: {
+          '@type': 'MedicalClinic',
+          name: 'Vega Curre Multispeciality Clinic',
+          url: 'https://vegacurre.com/'
+        }
+      };
+      if (selected.website) data.sameAs = [selected.website];
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.id = 'physician-schema';
+      script.textContent = JSON.stringify(data);
+      document.head.appendChild(script);
+    }
+
     function initDoctorProfile() {
       const params = new URLSearchParams(window.location.search);
       const key = params.get('doc');
+      if (key && !doctors[key]) {
+        window.location.replace('/about.html#doctors');
+        return;
+      }
       const selected = doctors[key] || doctors.prashanthkumar;
+      const docKey = key && doctors[key] ? key : 'prashanthkumar';
+      const profileUrl = `https://vegacurre.com/doctor-profile.html?doc=${docKey}`;
+      const metaDescription = `${selected.name} — ${selected.headline}. ${selected.qualifications}. Available at Vega Curre Multispeciality Clinic, Hebbal Kempapura, Bengaluru.`;
 
       document.title = `${selected.name} | Vega Curre Multispeciality Clinic`;
+      setMeta('description', metaDescription, false);
+      setMeta('og:title', `${selected.name} | Vega Curre Multispeciality Clinic`, true);
+      setMeta('og:description', metaDescription, true);
+      setMeta('og:url', profileUrl, true);
+      setMeta('og:type', 'profile', true);
+      setMeta('twitter:title', `${selected.name} | Vega Curre Multispeciality Clinic`, false);
+      setMeta('twitter:description', metaDescription, false);
+      setCanonical(profileUrl);
+      setPhysicianSchema(selected, profileUrl);
+
       document.getElementById('crumbName').textContent = selected.name;
       document.getElementById('doctorName').textContent = selected.name;
       document.getElementById('doctorHeadline').textContent = selected.headline;
@@ -534,6 +620,16 @@
       const bookingBtn = document.getElementById('doctorBooking');
       bookingBtn.href = selected.booking;
 
+      const websiteLink = document.getElementById('doctorWebsite');
+      const websiteLabel = document.getElementById('doctorWebsiteLabel');
+      if (selected.website) {
+        websiteLink.href = selected.website;
+        websiteLabel.textContent = selected.websiteLabel || 'Visit Website';
+        websiteLink.style.display = 'inline-flex';
+      } else {
+        websiteLink.style.display = 'none';
+      }
+
       const img = document.getElementById('doctorImage');
       const initial = document.getElementById('doctorInitial');
       img.alt = selected.name;
@@ -542,6 +638,8 @@
         img.src = selected.image;
         img.style.display = 'block';
         initial.style.display = 'none';
+        setMeta('og:image', selected.image.startsWith('http') ? selected.image : `https://vegacurre.com${selected.image.replace(/^\./, '').split('?')[0]}`, true);
+        setMeta('twitter:image', selected.image.startsWith('http') ? selected.image : `https://vegacurre.com${selected.image.replace(/^\./, '').split('?')[0]}`, false);
       } else {
         img.style.display = 'none';
         initial.style.display = 'grid';

@@ -350,7 +350,7 @@ function initChatbot() {
         } else if (type === 'treatments') {
           appendBotMsg('We offer expert Orthopedic, Dental, Pediatrics, and more.<br><br><a href="/treatments.html" class="chat-link-btn" style="margin-top: 10px;">See All Treatments</a>', true);
         } else if (type === 'location') {
-          appendBotMsg('We are located at Hebbal Kempapura, Bengaluru.<br><b>Hours:</b> Mon-Sat: 10AM - 8PM.<br><a href="/contact.html" class="chat-link-btn" style="margin-top: 10px;">View Map</a>', true);
+          appendBotMsg('We are located at Hebbal Kempapura, Bengaluru.<br><b>Hours:</b> Mon-Sat: 10AM - 8:30PM | Sun: 10AM - 12PM (Prior Appt).<br><a href="/contact.html" class="chat-link-btn" style="margin-top: 10px;">View Map</a>', true);
         } else if (type === 'contact') {
           appendBotMsg('Click below to chat with our clinic reception directly on WhatsApp!<br><br><a href="https://wa.me/916364123431" target="_blank" class="chat-link-btn chat-wa" style="margin-top: 10px;"><i class="fab fa-whatsapp"></i> WhatsApp Desk</a>', true);
         }
@@ -369,7 +369,7 @@ function initBookingPopup() {
         <button class="popup-close" id="vc-popup-close" aria-label="Close"><i class="fas fa-times"></i></button>
         <div class="popup-modal-grid">
           <div class="popup-image">
-            <img src="./expert-consultation.png" alt="Expert Consultation">
+            <img src="/expert-consultation.png" alt="Expert Consultation">
           </div>
           <div class="popup-content">
             <span class="popup-tag">Limited Time Offer</span>
