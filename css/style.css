@@ -2458,9 +2458,41 @@ footer::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
   padding: 1.5rem 0;
   color: rgba(255,255,255,0.45);
   font-size: 0.82rem;
+}
+
+.site-builder-credit {
+  color: rgba(255,255,255,0.55);
+}
+
+.site-builder-credit strong {
+  color: rgba(255,255,255,0.85);
+  font-weight: 600;
+}
+
+.builder-heart {
+  color: #f43f5e;
+  margin: 0 0.1rem;
+}
+
+.builder-org {
+  color: rgba(255,255,255,0.42);
+  font-weight: 500;
+}
+
+.site-builder-credit a {
+  color: #7dd3fc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-builder-credit a:hover {
+  color: #bae6fd;
+  text-decoration: underline;
 }
 
 /* ──────────────────────────────────────────────────────────────
