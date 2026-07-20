@@ -438,18 +438,22 @@
       },
       kalaivani: {
         name: 'Dr. Kalaivani V.',
-        headline: 'Consultant General and Laparoscopic Surgery',
-        qualifications: 'MBBS, MS, FRCS (Glasgow), FIAGES, PGDHHM, FALS (Hernia)',
-        speciality: 'General Surgery and Laparoscopic Surgery',
-        languages: 'English, Hindi, Kannada, Tamil',
-        timing: 'On-Call Appointment',
+        headline: 'Consultant - General & Laparoscopic Surgeon',
+        qualifications: 'MBBS, MS (General Surgery), FIAGES, PGDHHM',
+        speciality: 'General & Laparoscopic Surgery (22+ Yrs Exp)',
+        languages: 'English, Kannada, Tamil, Hindi, Telugu',
+        timing: 'Mon, Wed, Thu: 4:00 PM – 6:00 PM',
         booking: '/booking.html?dept=Surgery',
         image: './images/dr-kalaivani.jpg?v=2',
         initials: 'KV',
+        treatments: [
+          'Hernia Repair', 'Thyroid Surgeries', 'Colo-proctology', 'Breast Surgeries',
+          'Gallbladder Surgeries', 'Diabetic Foot Care', 'Laparoscopic & Robotic Surgery', 'Varicose Veins'
+        ],
         overview: [
-          'Dr. Kalaivani V. is a highly qualified general surgeon with international fellowships and a focus on minimally invasive surgical techniques. She is dedicated to achieving optimal surgical outcomes with faster recovery times.',
-          'Her expertise spans across advanced laparoscopic procedures, including gallbladder surgery, appendix removal, and complex hernia repairs (FALS). She utilizes a safety-first approach to ensure patient safety and comfort.',
-          'She provides detailed perioperative counseling, ensuring that patients and their families are fully informed about the procedure, the recovery roadmap, and long-term post-surgical care.'
+          'Dr. Kalaivani V. is a Consultant General and Laparoscopic Surgeon with over 22 years of clinical excellence. She completed her MBBS and MS (General Surgery) from Bangalore Medical College in March 2000, graduating as the class topper. She underwent specialized Laparoscopic training in 2006 and Stapled Haemorrhoidopexy training in 2007.',
+          'With 22+ years of surgical experience, Dr. Kalaivani V. performs extensive basic and advanced laparoscopic procedures. Her core fields of expertise include Hernia repairs, Breast surgeries, Thyroid surgeries, Colo-proctology, Gallbladder procedures, Diabetic foot care, Laparoscopic & Robotic surgery, and Varicose veins management.',
+          'Dr. Kalaivani V. holds life memberships in prestigious professional bodies including ASI (Association of Surgeons of India), IMA, AMASI, IAGES, AWR (Association of Hernia Surgeons), and ACRSI (Association of Colorectal Surgeons of India). She also actively serves in key hospital committees including NAAC and NABH accreditation coordination.'
         ]
       },
       palaniappan: {
@@ -616,6 +620,11 @@
       document.getElementById('doctorOverview1').textContent = selected.overview[0] || '';
       document.getElementById('doctorOverview2').textContent = selected.overview[1] || '';
       document.getElementById('doctorOverview3').textContent = selected.overview[2] || '';
+
+      const tagsContainer = document.getElementById('treatmentsTags');
+      if (tagsContainer && selected.treatments && selected.treatments.length > 0) {
+        tagsContainer.innerHTML = selected.treatments.map(t => `<span class="treatment-tag"><i class="fas fa-check"></i> ${t}</span>`).join('');
+      }
 
       const bookingBtn = document.getElementById('doctorBooking');
       bookingBtn.href = selected.booking;
