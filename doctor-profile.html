@@ -161,6 +161,8 @@
             <h1 id="doctorName">Doctor Name</h1>
             <p id="doctorHeadline" class="doctor-headline"></p>
             <p id="doctorQual" class="doctor-qual-line"></p>
+            <p id="doctorRole" class="doctor-role-line" style="font-weight: 600; color: var(--c-primary); margin-top: 0.5rem; font-size: 1.05rem;"></p>
+            <p id="doctorAffiliations" class="doctor-affiliations-line" style="color: var(--c-text); margin-top: 0.25rem; font-size: 0.95rem; font-style: italic;"></p>
 
             <div class="doctor-meta-grid">
               <div class="doctor-meta-block">
@@ -311,6 +313,13 @@
         <div>
           <div class="footer-brand-name">VEGA CURRE</div>
           <p class="footer-desc">A premier Multispeciality Clinic providing world-class Orthopedic, Dental, and comprehensive healthcare at Hebbal Kempapura, Bengaluru.</p>
+          <div class="footer-socials">
+            <a href="https://g.page/vegacurre" class="social-btn" title="Google Business" aria-label="Google Business" target="_blank" rel="noopener"><i class="fab fa-google"></i></a>
+            <a href="https://youtube.com/@orthocaredrPrashanthkumar" class="social-btn" title="YouTube" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/vegacurre?igsh=aGVsYWdyNGZ2OGo4&amp;utm_source=qr" class="social-btn" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/18uZw5Ychr/?mibextid=wwXIfr" class="social-btn" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/916364123431" class="social-btn" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+          </div>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
@@ -341,8 +350,10 @@
     const doctors = {
       prashanthkumar: {
         name: 'Dr. Prashanthkumar',
-        headline: 'Consultant Orthopedic Surgeon and Trauma Specialist',
-        qualifications: 'MBBS, D Ortho, (DNB), FIJR - Fellowship in Joint Replacement',
+        headline: 'Senior Consultant Orthopedic Surgeon',
+        qualifications: 'Joint Replacement, Arthroscopy & Trauma Specialist',
+        role: 'Director of Vega Curre Multispeciality Clinic',
+        affiliations: 'Visiting Consultant: Manipal Hospital, Sparsh Hospital, Hosmat Hospital Bangalore',
         speciality: 'Orthopedics and Sports Medicine',
         languages: 'English, Hindi, Kannada',
         timing: '10:00 AM - 8:30 PM | Sun: 10 AM - 12 PM (Prior Appointment)',
@@ -615,6 +626,25 @@
       document.getElementById('doctorName').textContent = selected.name;
       document.getElementById('doctorHeadline').textContent = selected.headline;
       document.getElementById('doctorQual').textContent = selected.qualifications;
+
+      const roleEl = document.getElementById('doctorRole');
+      const affEl = document.getElementById('doctorAffiliations');
+      if (roleEl) {
+        if (selected.role) {
+          roleEl.textContent = selected.role;
+          roleEl.style.display = 'block';
+        } else {
+          roleEl.style.display = 'none';
+        }
+      }
+      if (affEl) {
+        if (selected.affiliations) {
+          affEl.textContent = selected.affiliations;
+          affEl.style.display = 'block';
+        } else {
+          affEl.style.display = 'none';
+        }
+      }
       document.getElementById('doctorSpeciality').textContent = selected.speciality;
       document.getElementById('doctorLanguages').textContent = selected.languages;
       document.getElementById('doctorTiming').textContent = selected.timing;
